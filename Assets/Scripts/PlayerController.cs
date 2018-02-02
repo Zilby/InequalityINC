@@ -11,6 +11,17 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	public float speed = 2.0f;
 
+	private enum Direction
+	{
+		up = 0,
+		right = 1,
+		down = 2,
+		left = 3,
+		none = 4,
+	}
+
+	private Direction direction = Direction.none;
+
 	/// <summary>
 	/// The current destination of the player. 
 	/// </summary>
@@ -26,10 +37,13 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	private CharacterController cc;
 
+	private Animator ani;
+
 	void Awake()
 	{
 		destination = transform.position;
 		cc = GetComponent<CharacterController>();
+		ani = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
@@ -37,19 +51,24 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
 		{
 			Move(Vector3.up);
+			direction = Direction.up;
 		}
 		else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
 		{
 			Move(Vector3.right);
+			direction = Direction.right;
 		}
 		else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
 		{
 			Move(Vector3.down);
+			direction = Direction.down;
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
 		{
 			Move(Vector3.left);
+			direction = Direction.left;
 		}
+		ani.SetInteger("Direction", (int)direction);
 
 		Vector3 dir = destination - transform.position;
 		// calculate movement at the desired speed:
@@ -63,9 +82,9 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// Moves the player in the specified direction vector. 
 	/// </summary>
-	private void Move(Vector3 direction) {
+	private void Move(Vector3 d) {
 		lastPos = transform.position;
-		destination += (direction) / 1;
+		destination += (d) / 1;
 	}
 
 	/// <summary>
