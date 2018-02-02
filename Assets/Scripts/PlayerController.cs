@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		direction = Direction.none;
 		if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
 		{
 			Move(Vector3.up);
