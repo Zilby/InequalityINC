@@ -16,7 +16,7 @@ public class FadeableUI : MonoBehaviour
 	/// NOTE: This can potentially cause frames to be skipped.
 	/// </summary>
 	[System.NonSerialized]
-	public bool useUnscaledDeltaTimeForUI = false;
+	public bool useUnscaledDeltaTimeForUI = true;
 	/// <summary>
 	/// The canvas group that will be Faded In/Out
 	/// </summary>

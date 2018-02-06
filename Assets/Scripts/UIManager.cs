@@ -62,12 +62,17 @@ public class UIManager : MonoBehaviour
 	public FadeableUI overlay;
 
 	/// <summary>
+	/// The containers for the character portraits. 
+	/// </summary>
+	public List<FadeableUI> leftCharacters;
+	public List<FadeableUI> rightCharacters;
+
+	/// <summary>
 	/// The character portraits for each character
 	/// eg: characterPortraits[1][2] is elevator lady's sad portrait
 	/// </summary>
-	[SerializeField]
-	public List<GameObjectListWrapper> leftCharacterPortraits;
-	public List<GameObjectListWrapper> rightCharacterPortraits;
+	private List<List<GameObject>> leftCharacterPortraits;
+	private List<List<GameObject>> rightCharacterPortraits;
 
 	/// <summary>
 	/// The moving dialogue text for each character
@@ -87,8 +92,26 @@ public class UIManager : MonoBehaviour
 		EndText = FinishText;
 		dialogue0 = Dialogue0;
 		dialogues = new List<dialogueEvent>() { dialogue0, dialogue1, dialogue2, dialogue3 };
-		overlay.useUnscaledDeltaTimeForUI = true;
-		textOverlay.useUnscaledDeltaTimeForUI = true;
+		leftCharacterPortraits = new List<List<GameObject>>();
+		foreach (FadeableUI f in leftCharacters)
+		{
+			List<GameObject> children = new List<GameObject>();
+			foreach (Transform child in f.transform)
+			{
+				children.Add(child.gameObject);
+			}
+			leftCharacterPortraits.Add(children);
+		}
+		rightCharacterPortraits = new List<List<GameObject>>();
+		foreach (FadeableUI f in rightCharacters)
+		{
+			List<GameObject> children = new List<GameObject>();
+			foreach (Transform child in f.transform)
+			{
+				children.Add(child.gameObject);
+			}
+			rightCharacterPortraits.Add(children);
+		}
 	}
 
 
@@ -100,6 +123,7 @@ public class UIManager : MonoBehaviour
 	{
 		GameManager.PauseEvent();
 		ClearTexts();
+		ClearPortraits();
 		textOverlay.SelfFadeIn();
 		StartCoroutine(dialogues[i]());
 	}
@@ -173,7 +197,15 @@ public class UIManager : MonoBehaviour
 	/// <param name="right">Whether the character is on the left or right side.</param>
 	private void SetExpression(int c, int e, bool right)
 	{
-		List<GameObjectListWrapper> portraits = right ? rightCharacterPortraits : leftCharacterPortraits;
+		int side = right ? 1 : 0;
+		ClearPortraits(side);
+		List<FadeableUI> characters = right ? rightCharacters : leftCharacters;
+
+		// fade the new portrait in 
+		characters[c].SelfFadeIn();
+
+		// Set the current expression
+		List<List<GameObject>> portraits = right ? rightCharacterPortraits : leftCharacterPortraits;
 		for (int i = 0; i < portraits[c].Count; ++i)
 		{
 			portraits[c][i].SetActive(i == e);
@@ -181,10 +213,34 @@ public class UIManager : MonoBehaviour
 	}
 
 
-	private void ClearTexts() {
+	private void ClearTexts()
+	{
 		foreach (MoveableText t in characterTexts)
 		{
 			t.ClearText();
+		}
+	}
+
+	/// <summary>
+	/// Clears the character portraits. Optionally has parameter s 
+	/// to only clear the left side (s = 0) or right side (s = 1)
+	/// </summary>
+	/// <param name="s">Optional side parameter</param>
+	private void ClearPortraits(int s = -1)
+	{
+		if (s != 1)
+		{
+			foreach (FadeableUI f in leftCharacters)
+			{
+				f.Hide();
+			}
+		}
+		if (s != 0)
+		{
+			foreach (FadeableUI f in rightCharacters)
+			{
+				f.Hide();
+			}
 		}
 	}
 
@@ -194,11 +250,11 @@ public class UIManager : MonoBehaviour
 		SetExpression(0, 0, false);
 		SetExpression(Character.elevatorLady, Expression.sad, true);
 		yield return CharacterDialogue(0, "Welcome to the team. We’ve got a rocky relationship with the coppers, " +
-		                               "so you should be aware of what you’re getting into before you start");
+									   "so you should be aware of what you’re getting into before you start");
 		SetExpression(Character.player, Expression.neutral, false);
 		SetExpression(1, 1, true);
 		yield return CharacterDialogue(1, "Alright, I’ll give you the rundown. As you already know, Resist and Transmit " +
-		                               "is an underground rebel group that’s trying to bring music back to the radio.");
+									   "is an underground rebel group that’s trying to bring music back to the radio.");
 		FinishText();
 	}
 
