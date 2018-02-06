@@ -92,26 +92,28 @@ public class UIManager : MonoBehaviour
 		EndText = FinishText;
 		dialogue0 = Dialogue0;
 		dialogues = new List<dialogueEvent>() { dialogue0, dialogue1, dialogue2, dialogue3 };
-		leftCharacterPortraits = new List<List<GameObject>>();
-		foreach (FadeableUI f in leftCharacters)
+		leftCharacterPortraits = GetChildren(leftCharacters);
+		rightCharacterPortraits = GetChildren(rightCharacters);
+	}
+
+
+	/// <summary>
+	/// Gets a list of the children of a given list of fadeable UI.
+	/// </summary>
+	/// <returns>The children.</returns>
+	private List<List<GameObject>> GetChildren(List<FadeableUI> l)
+	{
+		List<List<GameObject>> output = new List<List<GameObject>>();
+		foreach (FadeableUI f in l)
 		{
 			List<GameObject> children = new List<GameObject>();
 			foreach (Transform child in f.transform)
 			{
 				children.Add(child.gameObject);
 			}
-			leftCharacterPortraits.Add(children);
+			output.Add(children);
 		}
-		rightCharacterPortraits = new List<List<GameObject>>();
-		foreach (FadeableUI f in rightCharacters)
-		{
-			List<GameObject> children = new List<GameObject>();
-			foreach (Transform child in f.transform)
-			{
-				children.Add(child.gameObject);
-			}
-			rightCharacterPortraits.Add(children);
-		}
+		return output;
 	}
 
 
@@ -213,6 +215,9 @@ public class UIManager : MonoBehaviour
 	}
 
 
+	/// <summary>
+	/// Clears the dialogue texts.
+	/// </summary>
 	private void ClearTexts()
 	{
 		foreach (MoveableText t in characterTexts)
@@ -220,6 +225,7 @@ public class UIManager : MonoBehaviour
 			t.ClearText();
 		}
 	}
+
 
 	/// <summary>
 	/// Clears the character portraits. Optionally has parameter s 
