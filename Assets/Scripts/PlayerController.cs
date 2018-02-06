@@ -5,12 +5,16 @@ using UnityEngine;
 /// <summary>
 /// Controls the player character. 
 /// </summary>
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
 	/// <summary>
 	/// The speed of the player. 
 	/// </summary>
 	public float speed = 2.0f;
 
+	/// <summary>
+	/// The direction of the player. 
+	/// </summary>
 	private enum Direction
 	{
 		up = 0,
@@ -20,6 +24,9 @@ public class PlayerController : MonoBehaviour {
 		none = 4,
 	}
 
+	/// <summary>
+	/// The current direction the player is facing
+	/// </summary>
 	private Direction direction = Direction.none;
 
 	/// <summary>
@@ -37,6 +44,9 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	private CharacterController cc;
 
+	/// <summary>
+	/// The player's animator. 
+	/// </summary>
 	private Animator ani;
 
 	void Awake()
@@ -83,7 +93,8 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// Moves the player in the specified direction vector. 
 	/// </summary>
-	private void Move(Vector3 d) {
+	private void Move(Vector3 d) 
+	{
 		lastPos = transform.position;
 		destination += (d) / 1;
 	}
