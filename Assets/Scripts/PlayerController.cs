@@ -83,12 +83,20 @@ public class PlayerController : MonoBehaviour
 			{
 				moving = false;
 			}
-			ani.SetInteger("Direction", (int)direction);
-			if (destination == transform.position)
-			{
-				ani.StopPlayback();
-			}
 			yield return new WaitForEndOfFrame();
+		}
+	}
+
+
+	private void SetAnimationState()
+	{
+		if (destination == transform.position)
+		{
+			ani.SetInteger("Direction", (int)direction);
+		}
+		else
+		{
+			ani.SetInteger("Direction", (int)Direction.none);
 		}
 	}
 
@@ -110,6 +118,7 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		SetAnimationState();
 		if (moving)
 		{
 			switch (direction)
