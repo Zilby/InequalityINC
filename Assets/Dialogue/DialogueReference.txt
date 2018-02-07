@@ -1,0 +1,21 @@
+This is a reference for dialogue files. 
+
+Available characters: player, elevatorLady
+Available expressions: happy, neutral, sad, excited, anxious
+Available positions: L (left), R (right)
+
+Dialogue line formatting: _character_;_dialogue_;_expression_;_position_
+Example dialogue line: player;Hi, how are you?;happy;R
+
+Options formatting: options;_option_1_:_line_number_;_option_2_:_line_number_
+Example options: options;How are you?:4;Good bye.:8
+
+Note: do not add newlines in the dialogue texts, they will make it harder to determine line numbers. 
+
+Example Dialogue File: 
+player;Hey what's up;happy;R
+elevatorLady;Nothing much man;neutral;L
+player;Oh that's cool;happy;R
+options;Restart:1;Continue:5
+elevatorLady;This is a test;2;L
+player;Test test test test;2;R

@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
 using System;
+using TMPro;
 
 /// <summary>
 /// Manages the main game UI. 
 /// </summary>
 public class UIManager : MonoBehaviour
 {
+
+	public List<Button> dialogueButtons;
 
 	/// <summary>
 	/// The expressions assignable to each character.
@@ -80,6 +83,8 @@ public class UIManager : MonoBehaviour
 	private List<List<GameObject>> rightCharacterPortraits;
 
 	private DialogueParser dParser = new DialogueParser();
+
+	private bool presentingOptions = false;
 
 	// Use this for initialization
 	void Awake()
@@ -253,8 +258,9 @@ public class UIManager : MonoBehaviour
 	private IEnumerator RunDialogue()
 	{
 		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
-		foreach (DialogueParser.DialogueLine d in dParser.Lines)
+		for (int i = 0; i < dParser.Lines.Count; ++i) 
 		{
+			DialogueParser.DialogueLine d = dParser.Lines[i];
 			if (d.character != Character.options)
 			{
 				if (!lastExpression.ContainsKey(d.character) || d.expression != lastExpression[d.character])
@@ -273,10 +279,42 @@ public class UIManager : MonoBehaviour
 			}
 			else
 			{
-				// Add code for presenting in-game options here. 
+				ClearTexts();
+				presentingOptions = true;
+
+				for(int j = 0; j < d.options.Length; ++j)
+				{
+					dialogueButtons[j].gameObject.SetActive(true);
+					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = d.options[j].Split(':')[0];
+					// On click gets called after j is incremented, so we have to save it as a temp value. 
+					int temp = j;
+					dialogueButtons[temp].onClick.AddListener(() => UpdateLine(ref i, int.Parse(d.options[temp].Split(':')[1])));
+				}
+
+				while(presentingOptions)
+				{
+					yield return null;
+				}
 			}
 		}
 		FinishText();
+	}
+
+
+	/// <summary>
+	/// Updates the current dialogue line number once the player has clicked on a dialogue option. 
+	/// </summary>
+	private void UpdateLine(ref int index, int line)
+	{
+		// The line in the file starts at 1 not 0, and i gets 
+		// incremented in the for loop again, so subtract 2. 
+		index = line - 2;
+		presentingOptions = false;
+		foreach(Button b in dialogueButtons)
+		{
+			b.gameObject.SetActive(false);
+			b.onClick.RemoveAllListeners();
+		}
 	}
 
 
