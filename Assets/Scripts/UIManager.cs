@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
-using UnityEngine.SceneManagement;
 using System;
 
 /// <summary>
@@ -30,6 +29,7 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public enum Character
 	{
+		options = -1,
 		player = 0,
 		elevatorLady = 1,
 	}
@@ -62,6 +62,11 @@ public class UIManager : MonoBehaviour
 	public FadeableUI overlay;
 
 	/// <summary>
+	/// The moving dialogue text for each character
+	/// </summary>
+	public List<MoveableText> characterTexts;
+
+	/// <summary>
 	/// The containers for the character portraits. 
 	/// </summary>
 	public List<FadeableUI> leftCharacters;
@@ -74,15 +79,7 @@ public class UIManager : MonoBehaviour
 	private List<List<GameObject>> leftCharacterPortraits;
 	private List<List<GameObject>> rightCharacterPortraits;
 
-	/// <summary>
-	/// The moving dialogue text for each character
-	/// </summary>
-	public List<MoveableText> characterTexts;
-
-	private delegate IEnumerator dialogueEvent();
-	private List<dialogueEvent> dialogues;
-	private dialogueEvent dialogue0, dialogue1, dialogue2, dialogue3;
-
+	private DialogueParser dParser = new DialogueParser();
 
 	// Use this for initialization
 	void Awake()
@@ -90,8 +87,6 @@ public class UIManager : MonoBehaviour
 		PauseEvent = Pause;
 		StartText = BeginText;
 		EndText = FinishText;
-		dialogue0 = Dialogue0;
-		dialogues = new List<dialogueEvent>() { dialogue0, dialogue1, dialogue2, dialogue3 };
 		leftCharacterPortraits = GetChildren(leftCharacters);
 		rightCharacterPortraits = GetChildren(rightCharacters);
 	}
@@ -124,10 +119,11 @@ public class UIManager : MonoBehaviour
 	private void BeginText(int i)
 	{
 		GameManager.PauseEvent();
+		dParser.LoadDialogue(i);
 		ClearTexts();
 		ClearPortraits();
 		textOverlay.SelfFadeIn();
-		StartCoroutine(dialogues[i]());
+		StartCoroutine(RunDialogue());
 	}
 
 
@@ -251,16 +247,35 @@ public class UIManager : MonoBehaviour
 	}
 
 
-	private IEnumerator Dialogue0()
+	/// <summary>
+	/// Runs the dialogue for the scene loaded in the dialogue parser. 
+	/// </summary>
+	private IEnumerator RunDialogue()
 	{
-		SetExpression(0, 0, false);
-		SetExpression(Character.elevatorLady, Expression.sad, true);
-		yield return CharacterDialogue(0, "Welcome to the team. We’ve got a rocky relationship with the coppers, " +
-									   "so you should be aware of what you’re getting into before you start");
-		SetExpression(Character.player, Expression.neutral, false);
-		SetExpression(1, 1, true);
-		yield return CharacterDialogue(1, "Alright, I’ll give you the rundown. As you already know, Resist and Transmit " +
-									   "is an underground rebel group that’s trying to bring music back to the radio.");
+		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
+		foreach (DialogueParser.DialogueLine d in dParser.Lines)
+		{
+			if (d.character != Character.options)
+			{
+				if (!lastExpression.ContainsKey(d.character) || d.expression != lastExpression[d.character])
+				{
+					SetExpression(d.character, d.expression, d.position == "R");
+				}
+				if (!lastExpression.ContainsKey(d.character))
+				{
+					lastExpression.Add(d.character, d.expression);
+				}
+				else
+				{
+					lastExpression[d.character] = d.expression;
+				}
+				yield return CharacterDialogue(d.character, d.content);
+			}
+			else
+			{
+				// Add code for presenting in-game options here. 
+			}
+		}
 		FinishText();
 	}
 
@@ -277,7 +292,4 @@ public class UIManager : MonoBehaviour
 		}
 		Camera.main.GetComponent<BlurOptimized>().enabled = Time.timeScale == 0.0f;
 	}
-
-
-
 }
