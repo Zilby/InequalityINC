@@ -1,0 +1,6 @@
+player;Hey what's up;happy;R
+elevatorLady;Nothing much man;neutral;L
+player;Oh that's cool;happy;R
+options;Restart:line,0;Continue:line,4
+elevatorLady;This is a test;2;L
+player;Test test test test;2;R
