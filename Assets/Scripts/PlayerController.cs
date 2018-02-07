@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Controls the player character. 
 /// </summary>
-public class PlayerController : MonoBehaviour 
+public class PlayerController : MonoBehaviour
 {
 	/// <summary>
 	/// The speed of the player. 
@@ -49,37 +49,85 @@ public class PlayerController : MonoBehaviour
 	/// </summary>
 	private Animator ani;
 
+	private bool moving = false;
+
 	void Awake()
 	{
 		destination = transform.position;
 		cc = GetComponent<CharacterController>();
 		ani = GetComponent<Animator>();
+		StartCoroutine(Facing());
 	}
+
+	private IEnumerator Facing()
+	{
+		for (;;)
+		{
+			if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
+			{
+				yield return Face(Direction.up);
+			}
+			else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
+			{
+				yield return Face(Direction.right);
+			}
+			else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
+			{
+				yield return Face(Direction.down);
+			}
+			else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
+			{
+				yield return Face(Direction.left);
+			}
+			else
+			{
+				moving = false;
+			}
+			ani.SetInteger("Direction", (int)direction);
+			if (destination == transform.position)
+			{
+				ani.StopPlayback();
+			}
+			yield return new WaitForEndOfFrame();
+		}
+	}
+
+
+	private IEnumerator Face(Direction d)
+	{
+		float turnDelay = 0.03f;
+		if (direction == d)
+		{
+			moving = true;
+		}
+		else
+		{
+			yield return new WaitForSecondsRealtime(turnDelay);
+		}
+		direction = d;
+	}
+
 
 	void FixedUpdate()
 	{
-		direction = Direction.none;
-		if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
+		if (moving)
 		{
-			Move(Vector3.up);
-			direction = Direction.up;
+			switch (direction)
+			{
+				case Direction.up:
+					Move(Vector3.up);
+					break;
+				case Direction.right:
+					Move(Vector3.right);
+					break;
+				case Direction.down:
+					Move(Vector3.down);
+					break;
+				case Direction.left:
+					Move(Vector3.left);
+					break;
+			}
 		}
-		else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
-		{
-			Move(Vector3.right);
-			direction = Direction.right;
-		}
-		else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
-		{
-			Move(Vector3.down);
-			direction = Direction.down;
-		}
-		else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
-		{
-			Move(Vector3.left);
-			direction = Direction.left;
-		}
-		ani.SetInteger("Direction", (int)direction);
 
 		Vector3 dir = destination - transform.position;
 		// calculate movement at the desired speed:
@@ -93,7 +141,7 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Moves the player in the specified direction vector. 
 	/// </summary>
-	private void Move(Vector3 d) 
+	private void Move(Vector3 d)
 	{
 		lastPos = transform.position;
 		destination += (d) / 1;
