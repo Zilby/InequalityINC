@@ -77,24 +77,29 @@ public class DialogueParser
 			{
 				{
 					string[] lineData = line.Split(';');
+					DialogueLine lineEntry;
 					if (lineData[0] == "options")
 					{
-						DialogueLine lineEntry = new DialogueLine(
+						lineEntry = new DialogueLine(
 							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), "", 0, "");
 						lineEntry.options = new string[lineData.Length - 1];
 						for (int i = 1; i < lineData.Length; i++)
 						{
 							lineEntry.options[i - 1] = lineData[i];
 						}
-						lines.Add(lineEntry);
+					}
+					else if (lineData[0] == "end") 
+					{
+						lineEntry = new DialogueLine(
+							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), "", 0, "");
 					}
 					else
 					{
-						DialogueLine lineEntry = new DialogueLine(
+						lineEntry = new DialogueLine(
 							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), lineData[1],
 							(UIManager.Expression)Enum.Parse(typeof(UIManager.Expression), lineData[2]), lineData[3]);
-						lines.Add(lineEntry);
 					}
+					lines.Add(lineEntry);
 					line = r.ReadLine();
 				}
 			}

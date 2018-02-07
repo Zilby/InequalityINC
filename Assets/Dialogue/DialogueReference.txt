@@ -10,6 +10,9 @@ Example dialogue line: player;Hi, how are you?;happy;R
 Options formatting: options;_option_1_:_line_number_;_option_2_:_line_number_
 Example options: options;How are you?:4;Good bye.:8
 
+If you want to end a scene before the end of the lines, insert an end statement. 
+End formatting: end; 
+
 Note: do not add newlines in the dialogue texts, they will make it harder to determine line numbers. 
 
 Example Dialogue File: 
@@ -19,3 +22,4 @@ player;Oh that's cool;happy;R
 options;Restart:1;Continue:5
 elevatorLady;This is a test;2;L
 player;Test test test test;2;R
+end;

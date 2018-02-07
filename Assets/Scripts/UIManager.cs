@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public enum Character
 	{
+		end = -2,
 		options = -1,
 		player = 0,
 		elevatorLady = 1,
@@ -70,6 +71,16 @@ public class UIManager : MonoBehaviour
 	public List<MoveableText> characterTexts;
 
 	/// <summary>
+	/// The question text.
+	/// </summary>
+	public TextMeshProUGUI questionText;
+
+	/// <summary>
+	/// The fadeable UI for a question. 
+	/// </summary>
+	public FadeableUI question;
+
+	/// <summary>
 	/// The containers for the character portraits. 
 	/// </summary>
 	public List<FadeableUI> leftCharacters;
@@ -85,6 +96,8 @@ public class UIManager : MonoBehaviour
 	private DialogueParser dParser = new DialogueParser();
 
 	private bool presentingOptions = false;
+
+	private string lastQuestion;
 
 	// Use this for initialization
 	void Awake()
@@ -174,6 +187,7 @@ public class UIManager : MonoBehaviour
 	private IEnumerator CharacterDialogue(int c, string s)
 	{
 		ClearTexts();
+		lastQuestion = s;
 		yield return characterTexts[c].TypeText(s);
 		yield return new WaitForSecondsRealtime(0.1f);
 		yield return WaitForKeypress(KeyCode.Space);
@@ -261,6 +275,10 @@ public class UIManager : MonoBehaviour
 		for (int i = 0; i < dParser.Lines.Count; ++i) 
 		{
 			DialogueParser.DialogueLine d = dParser.Lines[i];
+			if (d.character == Character.end) 
+			{
+				break;
+			}
 			if (d.character != Character.options)
 			{
 				if (!lastExpression.ContainsKey(d.character) || d.expression != lastExpression[d.character])
@@ -291,10 +309,15 @@ public class UIManager : MonoBehaviour
 					dialogueButtons[temp].onClick.AddListener(() => UpdateLine(ref i, int.Parse(d.options[temp].Split(':')[1])));
 				}
 
+				questionText.text = lastQuestion;
+				question.SelfFadeIn();
+
 				while(presentingOptions)
 				{
 					yield return null;
 				}
+
+				question.SelfFadeOut();
 			}
 		}
 		FinishText();
