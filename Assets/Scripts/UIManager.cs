@@ -11,7 +11,9 @@ using TMPro;
 /// </summary>
 public class UIManager : MonoBehaviour
 {
-
+	/// <summary>
+	/// The list of buttons for dialogue. 
+	/// </summary>
 	public List<Button> dialogueButtons;
 
 	/// <summary>
@@ -93,10 +95,19 @@ public class UIManager : MonoBehaviour
 	private List<List<GameObject>> leftCharacterPortraits;
 	private List<List<GameObject>> rightCharacterPortraits;
 
+	/// <summary>
+	/// The dialogue parser for parsing text files. 
+	/// </summary>
 	private DialogueParser dParser = new DialogueParser();
 
+	/// <summary>
+	/// Whether or not we are currently presenting options to the player. 
+	/// </summary>
 	private bool presentingOptions = false;
 
+	/// <summary>
+	/// The last question asked to the player. 
+	/// </summary>
 	private string lastQuestion;
 
 	// Use this for initialization
@@ -341,6 +352,9 @@ public class UIManager : MonoBehaviour
 	}
 
 
+	/// <summary>
+	/// Used when the game pauses. 
+	/// </summary>
 	private void Pause()
 	{
 		if (Time.timeScale == 0.0f)

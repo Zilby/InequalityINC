@@ -20,11 +20,6 @@ public class GameManager : MonoBehaviour
 		PauseEvent = Pause;
 	}
 
-	// Use this for initialization
-	void Start()
-	{
-
-	}
 
 	// Update is called once per frame
 	void Update()
