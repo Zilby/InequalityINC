@@ -21,16 +21,6 @@ public class GameManager : MonoBehaviour
 	}
 
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.T))
-		{
-			UIManager.StartText(0);
-		}
-	}
-
-
 	private void Pause()
 	{
 		Time.timeScale = Time.timeScale == 0.0f ? 1.0f : 0.0f;

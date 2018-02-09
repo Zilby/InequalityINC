@@ -55,6 +55,12 @@ public class PlayerController : MonoBehaviour
 	private bool moving = false;
 
 	/// <summary>
+	/// The current character the player is facing. 
+	/// Null if there isn't one. 
+	/// </summary>
+	private Character characterFacing;
+
+	/// <summary>
 	/// Gets the direction vector based on the current direction 
 	/// the player is facing. 
 	/// </summary>
@@ -72,6 +78,7 @@ public class PlayerController : MonoBehaviour
 					return Vector3.down;
 				case Direction.left:
 					return Vector3.left;
+				case Direction.none:
 				default:
 					return Vector3.zero;
 			}
@@ -88,32 +95,55 @@ public class PlayerController : MonoBehaviour
 	}
 
 
+	void FixedUpdate()
+	{
+		SetAnimationState();
+
+		Move(DirectionVector);
+
+		CheckTalk();
+
+		Vector3 dir = destination - transform.position;
+		// calculate movement at the desired speed:
+		Vector3 movement = dir.normalized * speed * Time.deltaTime;
+		// limit movement to never pass the target position:
+		movement = movement.magnitude > dir.magnitude ? dir : movement;
+		// move the character:
+		cc.Move(movement);
+	}
+
+
 	/// <summary>
 	/// Gets input to determine which direction the player should be facing and whether or not the player is moving. 
+	/// Also handles calling the talk function (since you can't do this during the delay). 
 	/// </summary>
 	private IEnumerator Facing()
 	{
 		for (;;)
 		{
-			if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
+			if (Time.timeScale != 0.0f)
 			{
-				yield return Face(Direction.up);
-			}
-			else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
-			{
-				yield return Face(Direction.right);
-			}
-			else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
-			{
-				yield return Face(Direction.down);
-			}
-			else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
-			{
-				yield return Face(Direction.left);
-			}
-			else
-			{
-				moving = false;
+				if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
+				{
+					yield return Face(Direction.up);
+				}
+				else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
+				{
+					yield return Face(Direction.right);
+				}
+				else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
+				{
+					yield return Face(Direction.down);
+				}
+				else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
+				{
+					yield return Face(Direction.left);
+				}
+				else
+				{
+					moving = false;
+					yield return Talk();
+				}
 			}
 			yield return new WaitForEndOfFrame();
 		}
@@ -155,22 +185,6 @@ public class PlayerController : MonoBehaviour
 	}
 
 
-	void FixedUpdate()
-	{
-		SetAnimationState();
-
-		Move(DirectionVector);
-
-		Vector3 dir = destination - transform.position;
-		// calculate movement at the desired speed:
-		Vector3 movement = dir.normalized * speed * Time.deltaTime;
-		// limit movement to never pass the target position:
-		movement = movement.magnitude > dir.magnitude ? dir : movement;
-		// move the character:
-		cc.Move(movement);
-	}
-
-
 	/// <summary>
 	/// Moves the player in the specified direction vector. 
 	/// </summary>
@@ -181,6 +195,35 @@ public class PlayerController : MonoBehaviour
 			lastPos = transform.position;
 			destination += (d) / 1;
 		}
+	}
+
+
+	/// <summary>
+	/// Checks if there's currently a character in front of the player to talk to. 
+	/// </summary>
+	private void CheckTalk()
+	{
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position, DirectionVector, out hit, 1))
+		{
+			characterFacing = hit.collider.GetComponent<Character>();
+		} else {
+			characterFacing = null;
+		}
+	}
+
+
+	/// <summary>
+	/// Talks to whatever character the player is facing. 
+	/// </summary>
+	private IEnumerator Talk() 
+	{
+		if(Input.GetKey(KeyCode.Space) && characterFacing != null) {
+			UIManager.StartText(characterFacing.DialogueScene);
+			// Delay after talking to avoid accidental second talk. 
+			yield return new WaitForSeconds(0.5f);
+		}
+		yield return null;
 	}
 
 

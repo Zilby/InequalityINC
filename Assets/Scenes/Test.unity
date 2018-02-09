@@ -2044,6 +2044,7 @@ GameObject:
   - component: {fileID: 1573069446}
   - component: {fileID: 1573069445}
   - component: {fileID: 1573069443}
+  - component: {fileID: 1573069444}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -2063,6 +2064,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1573069444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573069442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1ced8df30114ceb90683104c122b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueScene: 
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2323,6 +2336,7 @@ GameObject:
   - component: {fileID: 1748731284}
   - component: {fileID: 1748731283}
   - component: {fileID: 1748731281}
+  - component: {fileID: 1748731282}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -2342,6 +2356,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1748731282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748731280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1ced8df30114ceb90683104c122b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueScene: 
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0
