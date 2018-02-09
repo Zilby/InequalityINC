@@ -49,7 +49,35 @@ public class PlayerController : MonoBehaviour
 	/// </summary>
 	private Animator ani;
 
+	/// <summary>
+	/// Whether or not the player is currently moving. 
+	/// </summary>
 	private bool moving = false;
+
+	/// <summary>
+	/// Gets the direction vector based on the current direction 
+	/// the player is facing. 
+	/// </summary>
+	private Vector3 DirectionVector
+	{
+		get
+		{
+			switch (direction)
+			{
+				case Direction.up:
+					return Vector3.up;
+				case Direction.right:
+					return Vector3.right;
+				case Direction.down:
+					return Vector3.down;
+				case Direction.left:
+					return Vector3.left;
+				default:
+					return Vector3.zero;
+			}
+		}
+	}
+
 
 	void Awake()
 	{
@@ -59,6 +87,10 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(Facing());
 	}
 
+
+	/// <summary>
+	/// Gets input to determine which direction the player should be facing and whether or not the player is moving. 
+	/// </summary>
 	private IEnumerator Facing()
 	{
 		for (;;)
@@ -88,6 +120,9 @@ public class PlayerController : MonoBehaviour
 	}
 
 
+	/// <summary>
+	/// Sets the state of the animator to either animating or not.
+	/// </summary>
 	private void SetAnimationState()
 	{
 		if (destination == transform.position)
@@ -101,6 +136,10 @@ public class PlayerController : MonoBehaviour
 	}
 
 
+	/// <summary>
+	/// Causes the player to face the given direction d.
+	/// </summary>
+	/// <param name="d">The direction to face</param>
 	private IEnumerator Face(Direction d)
 	{
 		float turnDelay = 0.03f;
@@ -119,24 +158,8 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		SetAnimationState();
-		if (moving)
-		{
-			switch (direction)
-			{
-				case Direction.up:
-					Move(Vector3.up);
-					break;
-				case Direction.right:
-					Move(Vector3.right);
-					break;
-				case Direction.down:
-					Move(Vector3.down);
-					break;
-				case Direction.left:
-					Move(Vector3.left);
-					break;
-			}
-		}
+
+		Move(DirectionVector);
 
 		Vector3 dir = destination - transform.position;
 		// calculate movement at the desired speed:
@@ -147,14 +170,19 @@ public class PlayerController : MonoBehaviour
 		cc.Move(movement);
 	}
 
+
 	/// <summary>
 	/// Moves the player in the specified direction vector. 
 	/// </summary>
 	private void Move(Vector3 d)
 	{
-		lastPos = transform.position;
-		destination += (d) / 1;
+		if (moving)
+		{
+			lastPos = transform.position;
+			destination += (d) / 1;
+		}
 	}
+
 
 	/// <summary>
 	/// Causes player collisions to revert player to last position. 
