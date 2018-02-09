@@ -20,6 +20,9 @@ public class Character : MonoBehaviour {
 	[SerializeField]
 	private int secondTalk = -1;
 
+	/// <summary>
+	/// The dialogue scene when talking to this character.
+	/// </summary>
 	public int DialogueScene {
 		get
 		{
