@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// The direction of the player. 
 	/// </summary>
-	private enum Direction
+	public enum Direction
 	{
 		up = 0,
 		right = 1,
@@ -219,6 +219,8 @@ public class PlayerController : MonoBehaviour
 	private IEnumerator Talk() 
 	{
 		if(Input.GetKey(KeyCode.Space) && characterFacing != null) {
+			characterFacing.Face(direction);
+			yield return new WaitForSeconds(0.3f);
 			UIManager.StartText(characterFacing.DialogueScene);
 			// Delay after talking to avoid accidental second talk. 
 			yield return new WaitForSeconds(0.5f);

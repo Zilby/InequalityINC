@@ -6,7 +6,17 @@ using UnityEngine;
 /// An individual character within the game. 
 /// </summary>
 public class Character : MonoBehaviour {
-	
+
+	/// <summary>
+	/// List of sprites for this character. 
+	/// Should be ordered such that they correspond to facing the player character. 
+	/// down = 0,
+	/// left = 1,
+	///	up = 2,
+	///	right = 3,
+	/// </summary>
+	public List<Sprite> sprites = new List<Sprite>(4);
+
 	/// <summary>
 	/// The dialogue scene when talking to this character.
 	/// </summary>
@@ -21,6 +31,16 @@ public class Character : MonoBehaviour {
 	private int secondTalk = -1;
 
 	/// <summary>
+	/// The image component of this character. 
+	/// </summary>
+	private SpriteRenderer rend;
+
+	private void Awake()
+	{
+		rend = GetComponent<SpriteRenderer>();
+	}
+
+	/// <summary>
 	/// The dialogue scene when talking to this character.
 	/// </summary>
 	public int DialogueScene {
@@ -33,5 +53,12 @@ public class Character : MonoBehaviour {
 			}
 			return s;
 		}
+	}
+
+	/// <summary>
+	/// Causes the character to face the given direction. 
+	/// </summary>
+	public void Face(PlayerController.Direction d) {
+		rend.sprite = sprites[(int)d];
 	}
 }

@@ -2075,6 +2075,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1ced8df30114ceb90683104c122b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300002, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
+  - {fileID: 21300008, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
+  - {fileID: 21300020, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
+  - {fileID: 21300014, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   dialogueScene: 1
   secondTalk: -1
 --- !u!212 &1573069445
@@ -2368,6 +2373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1ced8df30114ceb90683104c122b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300002, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
+  - {fileID: 21300008, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
+  - {fileID: 21300020, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
+  - {fileID: 21300014, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   dialogueScene: 0
   secondTalk: -1
 --- !u!212 &1748731283
