@@ -294,7 +294,7 @@ public class UIManager : MonoBehaviour
 			{
 				if (!lastExpression.ContainsKey(d.character) || d.expression != lastExpression[d.character])
 				{
-					SetExpression(d.character, d.expression, d.position == "R");
+					SetExpression(d.character, d.expression, d.position.ToUpper() == "R");
 				}
 				if (!lastExpression.ContainsKey(d.character))
 				{
