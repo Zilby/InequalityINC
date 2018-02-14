@@ -221,7 +221,7 @@ public class PlayerController : MonoBehaviour
 		if(Input.GetKey(KeyCode.Space) && characterFacing != null) {
 			characterFacing.Face(direction);
 			yield return new WaitForSeconds(0.3f);
-			UIManager.StartText(characterFacing.DialogueScene);
+			DialogueManager.StartText(characterFacing.DialogueScene);
 			// Delay after talking to avoid accidental second talk. 
 			yield return new WaitForSeconds(0.5f);
 		}

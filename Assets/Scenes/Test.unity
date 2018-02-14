@@ -2485,7 +2485,7 @@ GameObject:
   - component: {fileID: 1965311810}
   - component: {fileID: 1965311809}
   m_Layer: 5
-  m_Name: '[UIManager] Canvas'
+  m_Name: '[DialogueManager] Canvas'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1965311808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b91cd900f3b0450c9b5f27a6c2d78b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 362e0a51135ca4e43be7ee50f8084023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueButtons:

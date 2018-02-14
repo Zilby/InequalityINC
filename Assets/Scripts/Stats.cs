@@ -25,13 +25,13 @@ public class Stats
 	/// <summary>
 	/// The relationship points for each character. 
 	/// </summary>
-	public static Dictionary<UIManager.Character, int> relationshipPoints = new Dictionary<UIManager.Character, int>();
+	public static Dictionary<DialogueManager.Character, int> relationshipPoints = new Dictionary<DialogueManager.Character, int>();
 
 	/// <summary>
 	/// Whether or not the player has gotten information from the given character on the given day
 	/// The list of bools is the various pieces of information the player potentially has on the character. 
 	/// </summary>
-	public static Dictionary<UIManager.Character, List<bool>> hasInfoOn = new Dictionary<UIManager.Character, List<bool>>();
+	public static Dictionary<DialogueManager.Character, List<bool>> hasInfoOn = new Dictionary<DialogueManager.Character, List<bool>>();
 
 
 	/// <summary>
@@ -40,11 +40,11 @@ public class Stats
 	public static void ResetAll()
 	{
 		ResetDay();
-		foreach (UIManager.Character c in Enum.GetValues(typeof(UIManager.Character)))
+		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
 		{
 			relationshipPoints[c] = 0;
 		}
-		foreach (UIManager.Character c in Enum.GetValues(typeof(UIManager.Character)))
+		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
 		{
 			hasInfoOn[c] = Enumerable.Repeat(false, 10).ToList();
 			for (int i = 0; i < hasInfoOn[c].Count; ++i)

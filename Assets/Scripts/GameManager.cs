@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.ImageEffects;
 
 /// <summary>
 /// Manages gameplay aspects of the main game. 
@@ -25,6 +26,6 @@ public class GameManager : MonoBehaviour
 	private void Pause()
 	{
 		Time.timeScale = Time.timeScale == 0.0f ? 1.0f : 0.0f;
-		UIManager.PauseEvent();
+		Camera.main.GetComponent<BlurOptimized>().enabled = Time.timeScale == 0.0f;
 	}
 }

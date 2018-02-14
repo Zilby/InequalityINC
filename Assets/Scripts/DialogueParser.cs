@@ -15,7 +15,7 @@ public class DialogueParser
 		/// <summary>
 		/// The character saying the dialogue. 
 		/// </summary>
-		public UIManager.Character character;
+		public DialogueManager.Character character;
 
 		/// <summary>
 		/// The dialogue being spoken. 
@@ -25,7 +25,7 @@ public class DialogueParser
 		/// <summary>
 		/// The expression of the character. 
 		/// </summary>
-		public UIManager.Expression expression;
+		public DialogueManager.Expression expression;
 
 		/// <summary>
 		/// The position of the character (left or right). 
@@ -37,7 +37,7 @@ public class DialogueParser
 		/// </summary>
 		public string[] options;
 
-		public DialogueLine(UIManager.Character ch, string ct, UIManager.Expression e, string p)
+		public DialogueLine(DialogueManager.Character ch, string ct, DialogueManager.Expression e, string p)
 		{
 			character = ch;
 			content = ct;
@@ -81,7 +81,7 @@ public class DialogueParser
 					if (lineData[0] == "options")
 					{
 						lineEntry = new DialogueLine(
-							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), "", 0, "");
+							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), "", 0, "");
 						lineEntry.options = new string[lineData.Length - 1];
 						for (int i = 1; i < lineData.Length; i++)
 						{
@@ -91,13 +91,13 @@ public class DialogueParser
 					else if (lineData[0] == "end") 
 					{
 						lineEntry = new DialogueLine(
-							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), "", 0, "");
+							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), "", 0, "");
 					}
 					else
 					{
 						lineEntry = new DialogueLine(
-							(UIManager.Character)Enum.Parse(typeof(UIManager.Character), lineData[0]), lineData[1],
-							(UIManager.Expression)Enum.Parse(typeof(UIManager.Expression), lineData[2]), lineData[3]);
+							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), lineData[1],
+							(DialogueManager.Expression)Enum.Parse(typeof(DialogueManager.Expression), lineData[2]), lineData[3]);
 					}
 					lines.Add(lineEntry);
 					line = r.ReadLine();
