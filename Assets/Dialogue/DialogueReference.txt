@@ -22,7 +22,8 @@ Example options:
 options;How are you?:4:L:elevatorLady,+;Why did he do that?:8:elevatorLady,3
 
 If you want to end a scene before the end of the lines, insert an end statement. 
-End formatting: end; 
+End formatting: end;_interaction_quality_;
+_interaction_quality_ indicates if it was a negative or positive interaction (ie: + or -). Does not need to be included if neither. 
 
 Note: do not add newlines in the dialogue texts, they will make it harder to determine line numbers. 
 
@@ -35,7 +36,7 @@ elevatorLady;Hm… Well, now that you mention it, I notice that Stan doesn’t r
 elevatorLady;In fact, I don’t think I can recall him ever actually rolling with any of their ideas. He usually just dismisses them. Is that helpful?;neutral;L
 options;Very helpful! Thanks, Dave.:8;Yes, very helpful… But is there anything else you can tell me?:10:L:elevatorLady,4:elevatorLady,+
 elevatorLady;Glad I could help.;happy;L
-end;
+end;+;
 elevatorLady;Yeah… I also remember that once Stan actually told Sharon that her idea was dumb and that he couldn’t believe she still had a position at this company;neutral;L
 elevatorLady;especially considering how, and I quote, “emotional she always is.”;neutral;L
 elevatorLady;I remember Sharon started tearing up and had to leave the meeting early. That was a rough day.;sad;L

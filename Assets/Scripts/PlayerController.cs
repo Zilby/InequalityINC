@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// The player's character controller. 
 	/// </summary>
-	private CharacterController cc;
+	private UnityEngine.CharacterController cc;
 
 	/// <summary>
 	/// The player's animator. 
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 	/// The current character the player is facing. 
 	/// Null if there isn't one. 
 	/// </summary>
-	private Character characterFacing;
+	private CharacterController characterFacing;
 
 	/// <summary>
 	/// Gets the direction vector based on the current direction 
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 	void Awake()
 	{
 		destination = transform.position;
-		cc = GetComponent<CharacterController>();
+		cc = GetComponent<UnityEngine.CharacterController>();
 		ani = GetComponent<Animator>();
 		StartCoroutine(Facing());
 	}
@@ -206,8 +206,10 @@ public class PlayerController : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, DirectionVector, out hit, 1))
 		{
-			characterFacing = hit.collider.GetComponent<Character>();
-		} else {
+			characterFacing = hit.collider.GetComponent<CharacterController>();
+		}
+		else
+		{
 			characterFacing = null;
 		}
 	}
@@ -216,14 +218,25 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Talks to whatever character the player is facing. 
 	/// </summary>
-	private IEnumerator Talk() 
+	private IEnumerator Talk()
 	{
-		if(Input.GetKey(KeyCode.Space) && characterFacing != null) {
+		if (Input.GetKey(KeyCode.Space) && characterFacing != null)
+		{
 			characterFacing.Face(direction);
 			yield return new WaitForSeconds(0.3f);
 			DialogueManager.StartText(characterFacing.DialogueScene);
+			yield return new WaitForSeconds(0.1f);
+			string s = DialogueManager.lastInteraction;
+			if (s == "+")
+			{
+				characterFacing.DialogueScene = characterFacing.secondTalkPositive;
+			}
+			else if (s == "+")
+			{
+				characterFacing.DialogueScene = characterFacing.secondTalkNegative;
+			}
 			// Delay after talking to avoid accidental second talk. 
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(0.4f);
 		}
 		yield return null;
 	}

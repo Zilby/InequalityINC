@@ -57,6 +57,14 @@ public class DialogueManager : MonoBehaviour
 	public static Action EndText;
 
 	/// <summary>
+	/// The last interaction with the player
+	/// "+" if positive
+	/// "-" if negative
+	/// "" if neither
+	/// </summary>
+	public static string lastInteraction;
+
+	/// <summary>
 	/// The overlay backdrop for the text
 	/// </summary>
 	public FadeableUI textOverlay;
@@ -109,6 +117,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private string lastQuestion;
 
+
 	// Use this for initialization
 	void Awake()
 	{
@@ -146,6 +155,7 @@ public class DialogueManager : MonoBehaviour
 	/// <param name="i">The scene index for dialogue.</param>
 	private void BeginText(int i)
 	{
+		lastInteraction = "";
 		GameManager.PauseEvent();
 		Pause();
 		dParser.LoadDialogue(i);
@@ -290,6 +300,7 @@ public class DialogueManager : MonoBehaviour
 			DialogueParser.DialogueLine d = dParser.Lines[i];
 			if (d.character == Character.end)
 			{
+				lastInteraction = d.content;
 				break;
 			}
 			if (d.character != Character.options)

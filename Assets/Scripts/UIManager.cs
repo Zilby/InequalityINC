@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour {
 	/// </summary>
 	public static Action PauseEvent;
 
+
 	// Use this for initialization
 	void Awake()
 	{

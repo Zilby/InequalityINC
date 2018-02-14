@@ -88,10 +88,14 @@ public class DialogueParser
 							lineEntry.options[i - 1] = lineData[i];
 						}
 					}
-					else if (lineData[0] == "end") 
+					else if (lineData[0] == "end")
 					{
 						lineEntry = new DialogueLine(
 							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), "", 0, "");
+						if (lineData.Length > 1)
+						{
+							lineEntry.content = lineData[1];
+						}
 					}
 					else
 					{
