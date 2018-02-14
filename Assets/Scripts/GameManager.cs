@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		PauseEvent = Pause;
+		Stats.ResetAll();
 	}
 
 

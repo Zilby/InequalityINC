@@ -282,11 +282,12 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	private IEnumerator RunDialogue()
 	{
+		Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
 		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
-		for (int i = 0; i < dParser.Lines.Count; ++i) 
+		for (int i = 0; i < dParser.Lines.Count; ++i)
 		{
 			DialogueParser.DialogueLine d = dParser.Lines[i];
-			if (d.character == Character.end) 
+			if (d.character == Character.end)
 			{
 				break;
 			}
@@ -311,19 +312,44 @@ public class UIManager : MonoBehaviour
 				ClearTexts();
 				presentingOptions = true;
 
-				for(int j = 0; j < d.options.Length; ++j)
+				for (int j = 0; j < d.options.Length; ++j)
 				{
 					dialogueButtons[j].gameObject.SetActive(true);
 					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = d.options[j].Split(':')[0];
 					// On click gets called after j is incremented, so we have to save it as a temp value. 
-					int temp = j;
-					dialogueButtons[temp].onClick.AddListener(() => UpdateLine(ref i, int.Parse(d.options[temp].Split(':')[1])));
+					string[] options = d.options[j].Split(':');
+					dialogueButtons[j].onClick.AddListener(() => UpdateLine(ref i, int.Parse(options[1])));
+					// Handle option stat modifications if present
+					for (int k = 2; k < options.Length; k++)
+					{
+						if (options[k].ToUpper() == "L")
+						{
+							dialogueButtons[j].onClick.AddListener(IncrementDialogueTime);
+						}
+						else
+						{
+							string[] statMods = options[k].Split(',');
+							Character c = (Character)Enum.Parse(typeof(Character), statMods[0]);
+							if (statMods[1] == "+")
+							{
+								dialogueButtons[j].onClick.AddListener(() => AddRelationshipPoints(c, 1));
+							}
+							else if (statMods[1] == "-")
+							{
+								dialogueButtons[j].onClick.AddListener(() => AddRelationshipPoints(c, -1));
+							}
+							else
+							{
+								dialogueButtons[j].onClick.AddListener(() => GotInfoOnCharacter(c, int.Parse(statMods[1])));
+							}
+						}
+					}
 				}
 
 				questionText.text = lastQuestion;
 				question.SelfFadeIn();
 
-				while(presentingOptions)
+				while (presentingOptions)
 				{
 					yield return null;
 				}
@@ -344,11 +370,38 @@ public class UIManager : MonoBehaviour
 		// incremented in the for loop again, so subtract 2. 
 		index = line - 2;
 		presentingOptions = false;
-		foreach(Button b in dialogueButtons)
+		foreach (Button b in dialogueButtons)
 		{
 			b.gameObject.SetActive(false);
 			b.onClick.RemoveAllListeners();
 		}
+	}
+
+
+	/// <summary>
+	/// Indicates that the given info id has been gathered on the given character.
+	/// </summary>
+	private void GotInfoOnCharacter(Character c, int info) 
+	{
+		Stats.hasInfoOn[c][info] = true;
+	}
+
+
+	/// <summary>
+	/// Increments the dialogue time for longer dialogue choices.
+	/// </summary>
+	private void IncrementDialogueTime()
+	{
+		Stats.currentTime += Stats.DIALOGUE_LONG_TIME_INCREMENT;
+	}
+
+
+	/// <summary>
+	/// Adds relationship points to the given character. 
+	/// </summary>
+	private void AddRelationshipPoints(Character c, int points)
+	{
+		Stats.relationshipPoints[c] += points;
 	}
 
 

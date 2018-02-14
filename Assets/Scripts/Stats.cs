@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// All of the stats for our game. 
 /// </summary>
 public class Stats
 {
+	/// <summary>
+	/// Used for incrementing the time when dialogue starts. 
+	/// </summary>
+	public const int DIALOGUE_START_TIME_INCREMENT = 30;
+
+	/// <summary>
+	/// Used for incrementing the time with longer dialogue. 
+	/// </summary>
+	public const int DIALOGUE_LONG_TIME_INCREMENT = 30;
 
 	/// <summary>
 	/// The current time in minutes. 
@@ -28,7 +37,7 @@ public class Stats
 	/// <summary>
 	/// Resets all in-game stats. 
 	/// </summary>
-	public void ResetAll()
+	public static void ResetAll()
 	{
 		ResetDay();
 		foreach (UIManager.Character c in Enum.GetValues(typeof(UIManager.Character)))
@@ -37,7 +46,7 @@ public class Stats
 		}
 		foreach (UIManager.Character c in Enum.GetValues(typeof(UIManager.Character)))
 		{
-			hasInfoOn[c] = new List<bool>(10);
+			hasInfoOn[c] = Enumerable.Repeat(false, 10).ToList();
 			for (int i = 0; i < hasInfoOn[c].Count; ++i)
 			{
 				hasInfoOn[c][i] = false;
@@ -49,8 +58,18 @@ public class Stats
 	/// <summary>
 	/// Resets all stats of the current day. 
 	/// </summary>
-	public void ResetDay()
+	public static void ResetDay()
 	{
 		currentTime = 9 * 60;
+	}
+
+
+	/// <summary>
+	/// Gets the time as a string.
+	/// </summary>
+	/// <returns>The time.</returns>
+	public static string GetTime()
+	{
+		return (currentTime / 60) + ":" + (currentTime % 60);
 	}
 }

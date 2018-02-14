@@ -4,7 +4,7 @@ player;I’ve received several complaints from female employees who feel sexuall
 player;Have you noticed any interactions that might support these claims?;neutral;R
 elevatorLady;Hm… Well, now that you mention it, I notice that Stan doesn’t really seem to listen when Sharon and Janet speak up in our weekly team meetings.;sad;L
 elevatorLady;In fact, I don’t think I can recall him ever actually rolling with any of their ideas. He usually just dismisses them. Is that helpful?;neutral;L
-options;Very helpful! Thanks, Dave.:8;Yes, very helpful… But is there anything else you can tell me?:10
+options;Very helpful! Thanks, Dave.:8;Yes, very helpful… But is there anything else you can tell me?:10:L:elevatorLady,4:elevatorLady,+
 elevatorLady;Glad I could help.;happy;L
 end;
 elevatorLady;Yeah… I also remember that once Stan actually told Sharon that her idea was dumb and that he couldn’t believe she still had a position at this company;neutral;L

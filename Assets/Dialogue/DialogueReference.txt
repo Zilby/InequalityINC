@@ -5,10 +5,21 @@ Available expressions: happy, neutral, sad, excited, anxious
 Available positions: L (left), R (right)
 
 Dialogue line formatting: _character_;_dialogue_;_expression_;_position_
-Example dialogue line: player;Hi, how are you?;happy;R
+Example dialogue line: 
+player;Hi, how are you?;happy;R
 
-Options formatting: options;_option_1_:_line_number_;_option_2_:_line_number_
-Example options: options;How are you?:4;Good bye.:8
+Options formatting: options;_option_1_:_line_number_:_long_option_:_character_,_relationship_points_:_character_,_info_gathered_;_option_2_... etc
+
+_option_ the actual text that the option contains (ie: what the player says)
+_line_number_ is the line number you want the option to take you to in the text file.
+
+Note: the below options can be ignored/removed and/or written out of order. 
+_long_option_ will either be ignored or will be L if this option will increment time. 
+_character_,_relationship_points_ gives (+) or takes away (-) a relationship point for the given character. 
+_character_,_info_gathered_ indicates that a certain numbered piece of info on that character has been acquired by choosing this option. 
+
+Example options: 
+options;How are you?:4:L:elevatorLady,+;Why did he do that?:8:elevatorLady,3
 
 If you want to end a scene before the end of the lines, insert an end statement. 
 End formatting: end; 
@@ -16,10 +27,17 @@ End formatting: end;
 Note: do not add newlines in the dialogue texts, they will make it harder to determine line numbers. 
 
 Example Dialogue File: 
-player;Hey what's up;happy;R
-elevatorLady;Nothing much man;neutral;L
-player;Oh that's cool;happy;R
-options;Restart:1;Continue:5
-elevatorLady;This is a test;2;L
-player;Test test test test;2;R
+player;Hi Dave. Could I ask you a few questions?;neutral;R
+elevatorLady;Um… Sure. What’s up, Player?;neutral;L
+player;I’ve received several complaints from female employees who feel sexually discriminated against by some male employees;neutral;R
+player;Have you noticed any interactions that might support these claims?;neutral;R
+elevatorLady;Hm… Well, now that you mention it, I notice that Stan doesn’t really seem to listen when Sharon and Janet speak up in our weekly team meetings.;sad;L
+elevatorLady;In fact, I don’t think I can recall him ever actually rolling with any of their ideas. He usually just dismisses them. Is that helpful?;neutral;L
+options;Very helpful! Thanks, Dave.:8;Yes, very helpful… But is there anything else you can tell me?:10:L:elevatorLady,4:elevatorLady,+
+elevatorLady;Glad I could help.;happy;L
+end;
+elevatorLady;Yeah… I also remember that once Stan actually told Sharon that her idea was dumb and that he couldn’t believe she still had a position at this company;neutral;L
+elevatorLady;especially considering how, and I quote, “emotional she always is.”;neutral;L
+elevatorLady;I remember Sharon started tearing up and had to leave the meeting early. That was a rough day.;sad;L
+player;Thanks, Dave. You’ve been a real help.;happy;R
 end;
