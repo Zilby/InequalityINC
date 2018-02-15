@@ -126,6 +126,17 @@ public class DialogueManager : MonoBehaviour
 		EndText = FinishText;
 		leftCharacterPortraits = GetChildren(leftCharacters);
 		rightCharacterPortraits = GetChildren(rightCharacters);
+		textOverlay.Hide();
+		overlay.Hide();
+		question.Hide();
+		foreach (FadeableUI f in leftCharacters)
+		{
+			f.Hide();
+		}
+		foreach (FadeableUI f in rightCharacters)
+		{
+			f.Hide();
+		}
 	}
 
 
@@ -393,7 +404,7 @@ public class DialogueManager : MonoBehaviour
 	/// <summary>
 	/// Indicates that the given info id has been gathered on the given character.
 	/// </summary>
-	private void GotInfoOnCharacter(Character c, int info) 
+	private void GotInfoOnCharacter(Character c, int info)
 	{
 		Stats.hasInfoOn[c][info] = true;
 	}
