@@ -247,6 +247,7 @@ public class PlayerController : MonoBehaviour
 	/// </summary>
 	void OnTriggerEnter()
 	{
+		SoundManager.BumpEvent();
 		destination = lastPos;
 	}
 }
