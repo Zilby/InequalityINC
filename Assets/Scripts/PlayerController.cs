@@ -25,6 +25,15 @@ public class PlayerController : MonoBehaviour
 	}
 
 	/// <summary>
+	/// A position get event.
+	/// </summary>
+	public delegate Vector3 PositionEvent();
+	/// <summary>
+	/// Returns the player's current position. 
+	/// </summary>
+	public static PositionEvent GetPosition;
+
+	/// <summary>
 	/// The current direction the player is facing
 	/// </summary>
 	private Direction direction = Direction.none;
@@ -88,6 +97,7 @@ public class PlayerController : MonoBehaviour
 
 	void Awake()
 	{
+		GetPosition = CurrentPosition;
 		destination = transform.position;
 		cc = GetComponent<UnityEngine.CharacterController>();
 		ani = GetComponent<Animator>();
@@ -172,7 +182,7 @@ public class PlayerController : MonoBehaviour
 	/// <param name="d">The direction to face</param>
 	private IEnumerator Face(Direction d)
 	{
-		float turnDelay = 0.03f;
+		float turnDelay = 0.04f;
 		if (direction == d)
 		{
 			moving = true;
@@ -239,6 +249,14 @@ public class PlayerController : MonoBehaviour
 			yield return new WaitForSeconds(0.4f);
 		}
 		yield return null;
+	}
+
+
+	/// <summary>
+	/// Returns the current position of the player. 
+	/// </summary>
+	private Vector3 CurrentPosition() {
+		return transform.position;
 	}
 
 
