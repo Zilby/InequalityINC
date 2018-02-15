@@ -14,19 +14,27 @@ public class SoundManager : MonoBehaviour {
 	public static Action BumpEvent;
 
 	/// <summary>
-	/// The list of audio clips. 
+	/// The list of sound clips. 
 	/// </summary>
-	public List<AudioClip> audioClips;
+	public List<AudioClip> sounds;
 
 	/// <summary>
-	/// The audio source.
+	/// The list of music clips. 
 	/// </summary>
-	private AudioSource aS;
+	public List<AudioClip> music;
+
+	/// <summary>
+	/// The audio sources.
+	/// aS[0] is used to play singleton audio clips.
+	/// aS[1] is used to play music. 
+	/// </summary>
+	private AudioSource[] aS;
 
 
 	private void Awake() {
-		aS = GetComponent<AudioSource>();
+		aS = GetComponents<AudioSource>();
 		BumpEvent = Bump;
+		PlaySong(0);
 	}
 
 
@@ -34,6 +42,15 @@ public class SoundManager : MonoBehaviour {
 	/// Creates a bump sound effect. 
 	/// </summary>
 	private void Bump() {
-		aS.PlayOneShot(audioClips[0]);
+		aS[0].PlayOneShot(sounds[0]);
+	}
+
+
+	/// <summary>
+	/// Plays a given song of index i in music.
+	/// </summary>
+	private void PlaySong(int i) {
+		aS[1].clip = music[i];
+		aS[1].Play();
 	}
 }
