@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 225735144306568556}
   - component: {fileID: 114753371425447116}
   m_Layer: 5
-  m_Name: ElevatorLady
+  m_Name: '[FadeableUI] ElevatorLady'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 225309463655526140}
   - component: {fileID: 114368755929291798}
   m_Layer: 5
-  m_Name: Player
+  m_Name: '[FadeableUI] Player'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
