@@ -9,6 +9,11 @@ using UnityEngine;
 public class SpriteOrderer : MonoBehaviour {
 
 	/// <summary>
+	/// Offset for sprite sort order if it needs to be on top or below only sometimes. 
+	/// </summary>
+	public int offset = 0;
+
+	/// <summary>
 	/// The sprite renderer for this gameobject
 	/// </summary>
 	private SpriteRenderer s;
@@ -18,6 +23,6 @@ public class SpriteOrderer : MonoBehaviour {
 	}
 
 	void Update() {
-		s.sortingOrder = Mathf.RoundToInt(transform.position.y * -10);
+		s.sortingOrder = Mathf.RoundToInt(transform.position.y * -10) + offset;
 	}
 }

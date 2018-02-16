@@ -70,6 +70,11 @@ public class PlayerController : MonoBehaviour
 	private CharacterController characterFacing;
 
 	/// <summary>
+	/// Whether the player just bumped into something. 
+	/// </summary>
+	private bool bumped = false;
+
+	/// <summary>
 	/// Gets the direction vector based on the current direction 
 	/// the player is facing. 
 	/// </summary>
@@ -133,6 +138,11 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Time.timeScale != 0.0f)
 			{
+				if(bumped) {
+					moving = false;
+					yield return new WaitForSeconds(0.3f);
+					bumped = false;
+				}
 				if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
 				{
 					yield return Face(Direction.up);
@@ -151,7 +161,6 @@ public class PlayerController : MonoBehaviour
 				}
 				else
 				{
-					moving = false;
 					yield return Talk();
 				}
 			}
@@ -202,8 +211,9 @@ public class PlayerController : MonoBehaviour
 	{
 		if (moving)
 		{
-			lastPos = transform.position;
+			lastPos = destination;
 			destination += (d) / 1;
+			moving = false;
 		}
 	}
 
@@ -265,7 +275,10 @@ public class PlayerController : MonoBehaviour
 	/// </summary>
 	void OnTriggerEnter()
 	{
+		bumped = true;
 		SoundManager.BumpEvent();
-		destination = lastPos;
+		destination = new Vector3(Mathf.Round(lastPos.x * 2),
+								  Mathf.Round(lastPos.y * 2),
+								  Mathf.Round(lastPos.z * 2)) / 2.0f;
 	}
 }
