@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
 		{
 			yield return new WaitForSeconds(60);
 			Stats.currentTime += 10;
-			print(Stats.currentTime);
 		}
 		yield return null;
 	}
