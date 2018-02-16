@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
 		sad = 2,
 		anxious = 3,
 		excited = 4,
+		angry = 5,
 	}
 
 
