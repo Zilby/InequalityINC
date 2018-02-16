@@ -138,7 +138,8 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Time.timeScale != 0.0f)
 			{
-				if(bumped) {
+				if (bumped)
+				{
 					moving = false;
 					yield return new WaitForSeconds(0.3f);
 					bumped = false;
@@ -244,7 +245,8 @@ public class PlayerController : MonoBehaviour
 		{
 			characterFacing.Face(direction);
 			yield return new WaitForSeconds(0.3f);
-			DialogueManager.StartText(characterFacing.DialogueScene, characterFacing.conversationsRemaining);
+			int convos = characterFacing.conversationsRemaining;
+			DialogueManager.StartText(characterFacing.DialogueScene, convos);
 			// Delay after talking to avoid accidental second talk. 
 			yield return new WaitForSeconds(0.5f);
 		}
@@ -255,7 +257,8 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Returns the current position of the player. 
 	/// </summary>
-	private Vector3 CurrentPosition() {
+	private Vector3 CurrentPosition()
+	{
 		return transform.position;
 	}
 

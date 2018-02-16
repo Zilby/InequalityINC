@@ -162,14 +162,18 @@ public class DialogueManager : MonoBehaviour
 	{
 		GameManager.PauseEvent();
 		Pause();
-		dParser.LoadDialogue(i);
+		if (c > 0)
+		{
+			dParser.LoadDialogue("Assets/Dialogue/Dialogue" + i);
+			Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+		}
+		else
+		{
+			dParser.LoadDialogue("Assets/Dialogue/Snippet" + i);
+		}
 		ClearTexts();
 		ClearPortraits();
 		textOverlay.SelfFadeIn();
-		if (c > 0)
-		{
-			Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
-		}
 		StartCoroutine(RunDialogue());
 	}
 

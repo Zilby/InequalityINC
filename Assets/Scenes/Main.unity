@@ -7635,8 +7635,8 @@ MonoBehaviour:
   - {fileID: 21300014, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   positiveDialogues: 0100000000000000
   negativeDialogues: 0100000000000000
-  positiveSnippets: 020000000200000002000000
-  negativeSnippets: 020000000200000002000000
+  positiveSnippets: 000000000000000000000000
+  negativeSnippets: 000000000000000000000000
   conversationsRemaining: 2
 --- !u!212 &1573069445
 SpriteRenderer:
@@ -8239,8 +8239,8 @@ MonoBehaviour:
   - {fileID: 21300014, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   positiveDialogues: 00000000
   negativeDialogues: 00000000
-  positiveSnippets: 020000000200000002000000
-  negativeSnippets: 020000000200000002000000
+  positiveSnippets: 000000000000000000000000
+  negativeSnippets: 000000000000000000000000
   conversationsRemaining: 1
 --- !u!212 &1748731283
 SpriteRenderer:

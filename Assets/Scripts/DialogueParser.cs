@@ -64,10 +64,10 @@ public class DialogueParser
 	/// Loads a dialogue scene file into dialogue line structs. 
 	/// </summary>
 	/// <param name="scene">The scene file to be loaded</param>
-	public void LoadDialogue(int scene)
+	public void LoadDialogue(string scene)
 	{
 		lines = new List<DialogueLine>();
-		string file = "Assets/Dialogue/Dialogue" + scene + ".txt";
+		string file = scene + ".txt";
 		string line;
 
 		using (StreamReader r = new StreamReader(file))
