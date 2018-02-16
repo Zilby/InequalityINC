@@ -28,6 +28,11 @@ public class Stats
 	public static Dictionary<DialogueManager.Character, int> relationshipPoints = new Dictionary<DialogueManager.Character, int>();
 
 	/// <summary>
+	/// The current dialogue index for each character. 
+	/// </summary>
+	public static Dictionary<DialogueManager.Character, int> dialogueIndex = new Dictionary<DialogueManager.Character, int>();
+
+	/// <summary>
 	/// Whether or not the player has gotten information from the given character on the given day
 	/// The list of bools is the various pieces of information the player potentially has on the character. 
 	/// </summary>
@@ -43,9 +48,7 @@ public class Stats
 		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
 		{
 			relationshipPoints[c] = 0;
-		}
-		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
-		{
+			dialogueIndex[c] = 0;
 			hasInfoOn[c] = Enumerable.Repeat(false, 10).ToList();
 			for (int i = 0; i < hasInfoOn[c].Count; ++i)
 			{

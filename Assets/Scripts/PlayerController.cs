@@ -244,19 +244,9 @@ public class PlayerController : MonoBehaviour
 		{
 			characterFacing.Face(direction);
 			yield return new WaitForSeconds(0.3f);
-			DialogueManager.StartText(characterFacing.DialogueScene);
-			yield return new WaitForSeconds(0.1f);
-			string s = DialogueManager.lastInteraction;
-			if (s == "+")
-			{
-				characterFacing.DialogueScene = characterFacing.secondTalkPositive;
-			}
-			else if (s == "+")
-			{
-				characterFacing.DialogueScene = characterFacing.secondTalkNegative;
-			}
+			DialogueManager.StartText(characterFacing.DialogueScene, characterFacing.conversationsRemaining);
 			// Delay after talking to avoid accidental second talk. 
-			yield return new WaitForSeconds(0.4f);
+			yield return new WaitForSeconds(0.5f);
 		}
 		yield return null;
 	}

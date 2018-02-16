@@ -7627,16 +7627,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 0
+  character: -2
   sprites:
   - {fileID: 21300002, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300008, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300020, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300014, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
-  dialogueScene: 1
-  secondTalkPositive: 0
-  secondTalkNegative: -1
-  secondTalkSnippet: 1
+  positiveDialogues: 0100000000000000
+  negativeDialogues: 0100000000000000
+  positiveSnippets: 020000000200000002000000
+  negativeSnippets: 020000000200000002000000
+  conversationsRemaining: 2
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8236,10 +8237,11 @@ MonoBehaviour:
   - {fileID: 21300008, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   - {fileID: 21300020, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   - {fileID: 21300014, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
-  dialogueScene: 0
-  secondTalkPositive: -1
-  secondTalkNegative: -1
-  secondTalkSnippet: -1
+  positiveDialogues: 00000000
+  negativeDialogues: 00000000
+  positiveSnippets: 020000000200000002000000
+  negativeSnippets: 020000000200000002000000
+  conversationsRemaining: 1
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0

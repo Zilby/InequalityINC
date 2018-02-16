@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public static Action PauseEvent;
 
-	public delegate void textEvent(int i);
+	public delegate void textEvent(int i, int c);
 	/// <summary>
 	/// Starts a given dialogue event (eg: scene 0). 
 	/// </summary>
@@ -56,14 +56,6 @@ public class DialogueManager : MonoBehaviour
 	/// Ends a dialogue event
 	/// </summary>
 	public static Action EndText;
-
-	/// <summary>
-	/// The last interaction with the player
-	/// "+" if positive
-	/// "-" if negative
-	/// "" if neither
-	/// </summary>
-	public static string lastInteraction;
 
 	/// <summary>
 	/// The overlay backdrop for the text
@@ -165,15 +157,19 @@ public class DialogueManager : MonoBehaviour
 	/// Begins a dialogue stream. 
 	/// </summary>
 	/// <param name="i">The scene index for dialogue.</param>
-	private void BeginText(int i)
+	/// <param name="c">The number of conversations left for this character.</param>
+	private void BeginText(int i, int c)
 	{
-		lastInteraction = "";
 		GameManager.PauseEvent();
 		Pause();
 		dParser.LoadDialogue(i);
 		ClearTexts();
 		ClearPortraits();
 		textOverlay.SelfFadeIn();
+		if (c > 0)
+		{
+			Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+		}
 		StartCoroutine(RunDialogue());
 	}
 
@@ -305,14 +301,12 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private IEnumerator RunDialogue()
 	{
-		Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
 		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
 		for (int i = 0; i < dParser.Lines.Count; ++i)
 		{
 			DialogueParser.DialogueLine d = dParser.Lines[i];
 			if (d.character == Character.end)
 			{
-				lastInteraction = d.content;
 				break;
 			}
 			if (d.character != Character.options)

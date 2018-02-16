@@ -21,31 +21,26 @@ public class CharacterController : MonoBehaviour
 	public List<Sprite> sprites = new List<Sprite>(4);
 
 	/// <summary>
-	/// The dialogue scene when talking to this character.
+	/// The positive dialogues for this character.
 	/// </summary>
-	[SerializeField]
-	private int dialogueScene;
+	public List<int> positiveDialogues;
 
 	/// <summary>
-	/// The dialogue scene for talking to this character a second time
-	/// after a positive interaction.  
-	/// Default value is -1 for if it's the same dialogue.
+	/// The negative dialogues for this character.
 	/// </summary>
-	public int secondTalkPositive = -1;
+	public List<int> negativeDialogues;
 
 	/// <summary>
-	/// The dialogue scene for talking to this character a second time
-	/// after a negative interaction.  
-	/// Default value is -1 for if it's the same dialogue.
+	/// The positive dialogue snippets for this character.
 	/// </summary>
-	public int secondTalkNegative = -1;
+	public List<int> positiveSnippets;
 
 	/// <summary>
-	/// The dialogue scene for talking to this character a second time. 
-	/// Default value is -1 for if it's the same dialogue.
+	/// The negative dialogue snippets for this character.
 	/// </summary>
-	[SerializeField]
-	private int secondTalkSnippet = -1;
+	public List<int> negativeSnippets;
+
+	public int conversationsRemaining = 1;
 
 	/// <summary>
 	/// The image component of this character. 
@@ -64,16 +59,18 @@ public class CharacterController : MonoBehaviour
 	{
 		get
 		{
-			int s = dialogueScene;
-			if (secondTalkSnippet > 0)
+			int index = Stats.dialogueIndex[character];
+			bool goodTerms = Stats.relationshipPoints[character] >= 0;
+			if (conversationsRemaining > 0)
 			{
-				dialogueScene = secondTalkSnippet;
+				conversationsRemaining--;
+				Stats.dialogueIndex[character]++;
+				return goodTerms ? positiveDialogues[index] : negativeDialogues[index];
 			}
-			return s;
-		}
-		set
-		{
-			dialogueScene = value;
+			else
+			{
+				return goodTerms ? positiveSnippets[index] : negativeSnippets[index];
+			}
 		}
 	}
 
