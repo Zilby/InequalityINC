@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public static Action PauseEvent;
 
-	public delegate void textEvent(int i, int c);
+	public delegate void textEvent(int i, int c, bool b);
 	/// <summary>
 	/// Starts a given dialogue event (eg: scene 0). 
 	/// </summary>
@@ -158,11 +158,12 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	/// <param name="i">The scene index for dialogue.</param>
 	/// <param name="c">The number of conversations left for this character.</param>
-	private void BeginText(int i, int c)
+	/// <param name="c">Whether or not there is available dialogue.</param>
+	private void BeginText(int i, int c, bool b)
 	{
 		GameManager.PauseEvent();
 		Pause();
-		if (c > 0)
+		if (c > 0 && !b)
 		{
 			dParser.LoadDialogue("Assets/Dialogue/Dialogue" + i);
 			Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;

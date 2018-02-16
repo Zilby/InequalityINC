@@ -42,6 +42,15 @@ public class CharacterController : MonoBehaviour
 
 	public int conversationsRemaining = 1;
 
+	public bool NoAvailableDialogue
+	{
+		get
+		{
+			int index = Stats.dialogueIndex[character];
+			return positiveDialogues.Count <= index && negativeDialogues.Count <= index;
+		}
+	}
+
 	/// <summary>
 	/// The image component of this character. 
 	/// </summary>
@@ -61,7 +70,7 @@ public class CharacterController : MonoBehaviour
 		{
 			int index = Stats.dialogueIndex[character];
 			bool goodTerms = Stats.relationshipPoints[character] >= 0;
-			if (conversationsRemaining > 0)
+			if (conversationsRemaining > 0 && !NoAvailableDialogue)
 			{
 				conversationsRemaining--;
 				Stats.dialogueIndex[character]++;
