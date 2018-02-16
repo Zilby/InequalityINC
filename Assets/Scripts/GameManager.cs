@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 	{
 		PauseEvent = Pause;
 		Stats.ResetAll();
+		StartCoroutine(IncrementTime());
 	}
 
 
@@ -27,5 +28,19 @@ public class GameManager : MonoBehaviour
 	{
 		Time.timeScale = Time.timeScale == 0.0f ? 1.0f : 0.0f;
 		Camera.main.GetComponent<BlurOptimized>().enabled = Time.timeScale == 0.0f;
+	}
+
+
+	/// <summary>
+	/// Increments the time per minute of in-game time.
+	/// </summary>
+	private IEnumerator IncrementTime() {
+		while (Stats.currentTime < 17 * 60) 
+		{
+			yield return new WaitForSeconds(60);
+			Stats.currentTime += 10;
+			print(Stats.currentTime);
+		}
+		yield return null;
 	}
 }
