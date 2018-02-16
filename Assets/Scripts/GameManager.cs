@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		PauseEvent = Pause;
+	}
+
+
+	void Start()
+	{
 		Stats.ResetAll();
 		StartCoroutine(IncrementTime());
 	}
@@ -34,11 +39,15 @@ public class GameManager : MonoBehaviour
 	/// <summary>
 	/// Increments the time per minute of in-game time.
 	/// </summary>
-	private IEnumerator IncrementTime() {
-		while (Stats.currentTime < 17 * 60) 
+	private IEnumerator IncrementTime()
+	{
+		while (Stats.CurrentTime < 17 * 60)
 		{
 			yield return new WaitForSeconds(60);
-			Stats.currentTime += 10;
+			if (Stats.CurrentTime < 17 * 60)
+			{
+				Stats.CurrentTime += 10;
+			}
 		}
 		yield return null;
 	}

@@ -18,11 +18,6 @@ public class Stats
 	public const int DIALOGUE_LONG_TIME_INCREMENT = 30;
 
 	/// <summary>
-	/// The current time in minutes. 
-	/// </summary>
-	public static int currentTime;
-
-	/// <summary>
 	/// The relationship points for each character. 
 	/// </summary>
 	public static Dictionary<DialogueManager.Character, int> relationshipPoints = new Dictionary<DialogueManager.Character, int>();
@@ -37,6 +32,28 @@ public class Stats
 	/// The list of bools is the various pieces of information the player potentially has on the character. 
 	/// </summary>
 	public static Dictionary<DialogueManager.Character, List<bool>> hasInfoOn = new Dictionary<DialogueManager.Character, List<bool>>();
+
+	/// <summary>
+	/// The current time in minutes. 
+	/// </summary>
+	private static int currentTime;
+
+	/// <summary>
+	/// The current time in minutes. 
+	/// Also updates the clock when set. 
+	/// </summary>
+	public static int CurrentTime
+	{
+		get
+		{
+			return currentTime;
+		}
+		set
+		{
+			currentTime = value;
+			UIManager.ClockEvent();
+		}
+	}
 
 
 	/// <summary>
@@ -63,7 +80,7 @@ public class Stats
 	/// </summary>
 	public static void ResetDay()
 	{
-		currentTime = 9 * 60;
+		CurrentTime = 9 * 60;
 	}
 
 
@@ -73,6 +90,8 @@ public class Stats
 	/// <returns>The time.</returns>
 	public static string GetTime()
 	{
-		return (currentTime / 60) + ":" + (currentTime % 60);
+		return ((currentTime / 60) < 13 ? (currentTime / 60) : ((currentTime / 60) % 13) + 1) + ":" +
+			((currentTime % 60) == 0 ? "00" : (currentTime % 60).ToString()) +
+			(currentTime < 12 * 60 ? " AM" : " PM");
 	}
 }

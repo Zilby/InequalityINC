@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour
 		if (c > 0 && !b)
 		{
 			dParser.LoadDialogue("Assets/Dialogue/Dialogue" + i);
-			Stats.currentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
 		}
 		else
 		{
@@ -415,7 +415,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private void IncrementDialogueTime()
 	{
-		Stats.currentTime += Stats.DIALOGUE_LONG_TIME_INCREMENT;
+		Stats.CurrentTime += Stats.DIALOGUE_LONG_TIME_INCREMENT;
 	}
 
 
