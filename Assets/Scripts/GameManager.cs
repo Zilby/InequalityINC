@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
 	}
 
 
+	private void Update()
+	{
+		CharacterController.ArriveLeave();
+	}
+
+
 	private void Pause()
 	{
 		Time.timeScale = Time.timeScale == 0.0f ? 1.0f : 0.0f;

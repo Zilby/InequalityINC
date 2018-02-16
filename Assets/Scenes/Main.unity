@@ -7727,6 +7727,7 @@ GameObject:
   - component: {fileID: 1573069443}
   - component: {fileID: 1573069444}
   - component: {fileID: 1573069447}
+  - component: {fileID: 1573069448}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -7768,6 +7769,8 @@ MonoBehaviour:
   positiveSnippets: 0000000000000000
   negativeSnippets: 0000000000000000
   conversationsRemaining: 2
+  arrive: 540
+  leave: 1020
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7837,6 +7840,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
+--- !u!114 &1573069448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573069442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2325f168842024e36afc58b91bcc9080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604803892
 GameObject:
   m_ObjectHideFlags: 0
@@ -8484,6 +8498,7 @@ GameObject:
   - component: {fileID: 1748731281}
   - component: {fileID: 1748731282}
   - component: {fileID: 1748731285}
+  - component: {fileID: 1748731287}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -8525,6 +8540,8 @@ MonoBehaviour:
   positiveSnippets: 0000000000000000
   negativeSnippets: 0000000000000000
   conversationsRemaining: 1
+  arrive: 570
+  leave: 630
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8594,6 +8611,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
+--- !u!114 &1748731287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748731280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2325f168842024e36afc58b91bcc9080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755853123
 GameObject:
   m_ObjectHideFlags: 0

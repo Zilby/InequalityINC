@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,10 @@ using UnityEngine;
 /// </summary>
 public class CharacterController : MonoBehaviour
 {
+	/// <summary>
+	/// Causes characters to arrive and leave. 
+	/// </summary>
+	public static Action ArriveLeave;
 
 	public DialogueManager.Character character;
 
@@ -42,6 +47,10 @@ public class CharacterController : MonoBehaviour
 
 	public int conversationsRemaining = 1;
 
+	public int arrive = 9 * 60;
+
+	public int leave = 17 * 60;
+
 	public bool NoAvailableDialogue
 	{
 		get
@@ -56,10 +65,34 @@ public class CharacterController : MonoBehaviour
 	/// </summary>
 	private SpriteRenderer rend;
 
+	/// <summary>
+	/// The fadeable sprite component of this character. 
+	/// </summary>
+	private FadeableSprite fs;
+
 	private void Awake()
 	{
 		rend = GetComponent<SpriteRenderer>();
+		fs = GetComponent<FadeableSprite>();
+		if (arrive > 9 * 60)
+		{
+			fs.Hide();
+		}
+		ArriveLeave += FadeInOut;
 	}
+
+
+	private void FadeInOut() {
+		if (Stats.CurrentTime < arrive || Stats.CurrentTime > leave && fs.IsVisible)
+		{
+			fs.SelfFadeOut();
+		}
+		if (Stats.CurrentTime >= arrive && Stats.CurrentTime < leave && !fs.IsVisible)
+		{
+			fs.SelfFadeIn();
+		}
+	}
+
 
 	/// <summary>
 	/// The dialogue scene when talking to this character.
