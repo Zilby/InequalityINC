@@ -78,11 +78,16 @@ public class CharacterController : MonoBehaviour
 		{
 			fs.Hide();
 		}
+		else
+		{
+			fs.Show();
+		}
 		ArriveLeave += FadeInOut;
 	}
 
 
-	private void FadeInOut() {
+	private void FadeInOut()
+	{
 		if (Stats.CurrentTime < arrive || Stats.CurrentTime > leave && fs.IsVisible)
 		{
 			fs.SelfFadeOut();

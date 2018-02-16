@@ -9,6 +9,7 @@ using UnityStandardAssets.ImageEffects;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
+	private const int TIME_INCREMENT_DELAY = 30;
 
 	/// <summary>
 	/// Causes the gameplay to pause. 
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
 	{
 		while (Stats.CurrentTime < 17 * 60)
 		{
-			yield return new WaitForSeconds(60);
+			yield return new WaitForSeconds(TIME_INCREMENT_DELAY);
 			if (Stats.CurrentTime < 17 * 60)
 			{
 				Stats.CurrentTime += 10;
