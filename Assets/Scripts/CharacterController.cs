@@ -69,7 +69,7 @@ public class CharacterController : MonoBehaviour
 			}
 			else
 			{
-				return goodTerms ? positiveSnippets[index] : negativeSnippets[index];
+				return goodTerms ? positiveSnippets[index - 1] : negativeSnippets[index - 1];
 			}
 		}
 	}
