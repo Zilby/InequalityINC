@@ -165,12 +165,12 @@ public class DialogueManager : MonoBehaviour
 		Pause();
 		if (c > 0 && !b)
 		{
-			dParser.LoadDialogue("Assets/Dialogue/Dialogue" + i);
+			dParser.LoadDialogue("Assets/Text/Dialogue/Dialogue" + i);
 			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
 		}
 		else
 		{
-			dParser.LoadDialogue("Assets/Dialogue/Snippet" + i);
+			dParser.LoadDialogue("Assets/Text/Snippets/Snippet" + i);
 		}
 		ClearTexts();
 		ClearPortraits();
@@ -194,7 +194,7 @@ public class DialogueManager : MonoBehaviour
 	/// Waits for the given key to be pressed.
 	/// </summary>
 	/// <param name="k">The key to be pressed.</param>
-	private IEnumerator WaitForKeypress(KeyCode k)
+	public static IEnumerator WaitForKeypress(KeyCode k)
 	{
 		while (!Input.GetKeyDown(k))
 		{

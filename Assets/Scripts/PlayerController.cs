@@ -70,9 +70,20 @@ public class PlayerController : MonoBehaviour
 	private CharacterController characterFacing;
 
 	/// <summary>
+	/// The current object the player is facing. 
+	/// Null if there isn't one. 
+	/// </summary>
+	private ObjectText objectFacing;
+
+	/// <summary>
 	/// Whether the player just bumped into something. 
 	/// </summary>
 	private bool bumped = false;
+
+	/// <summary>
+	/// Whether or not the player is currently reading a description. 
+	/// </summary>
+	private bool readingDescrip = false;
 
 	/// <summary>
 	/// Gets the direction vector based on the current direction 
@@ -136,7 +147,7 @@ public class PlayerController : MonoBehaviour
 	{
 		for (;;)
 		{
-			if (Time.timeScale != 0.0f)
+			if (Time.timeScale != 0.0f && !readingDescrip)
 			{
 				if (bumped)
 				{
@@ -228,10 +239,12 @@ public class PlayerController : MonoBehaviour
 		if (Physics.Raycast(transform.position, DirectionVector, out hit, 1))
 		{
 			characterFacing = hit.collider.GetComponent<CharacterController>();
+			objectFacing = hit.collider.GetComponent<ObjectText>();
 		}
 		else
 		{
 			characterFacing = null;
+			objectFacing = null;
 		}
 	}
 
@@ -241,15 +254,32 @@ public class PlayerController : MonoBehaviour
 	/// </summary>
 	private IEnumerator Talk()
 	{
-		if (Input.GetKey(KeyCode.Space) && characterFacing != null)
+		if (Input.GetKey(KeyCode.Space))
 		{
-			characterFacing.Face(direction);
-			yield return new WaitForSeconds(0.3f);
-			int convos = characterFacing.conversationsRemaining;
-			bool noDialogue = characterFacing.NoAvailableDialogue;
-			DialogueManager.StartText(characterFacing.DialogueScene, convos, noDialogue);
-			// Delay after talking to avoid accidental second talk. 
-			yield return new WaitForSeconds(0.5f);
+			if (characterFacing != null)
+			{
+				characterFacing.Face(direction);
+				yield return new WaitForSeconds(0.3f);
+				int convos = characterFacing.conversationsRemaining;
+				bool noDialogue = characterFacing.NoAvailableDialogue;
+				DialogueManager.StartText(characterFacing.DialogueScene, convos, noDialogue);
+				// Delay after talking to avoid accidental second talk. 
+				yield return new WaitForSeconds(0.5f);
+			}
+			else if (objectFacing != null) 
+			{
+				readingDescrip = true;
+				UIManager.DescripEvent();
+				StringListWrapper s = objectFacing.DescriptionTexts;
+				for (int i = 0; i < s.Count; ++i) 
+				{
+					yield return UIManager.UpdateText(s[i]);
+				}
+				UIManager.DescripEvent();
+				readingDescrip = false;
+				// Delay after talking to avoid accidental second talk. 
+				yield return new WaitForSeconds(0.5f);
+			}
 		}
 		yield return null;
 	}
@@ -267,12 +297,15 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Causes player collisions to revert player to last position. 
 	/// </summary>
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		bumped = true;
-		SoundManager.BumpEvent();
-		destination = new Vector3(Mathf.Round(lastPos.x * 2),
-								  Mathf.Round(lastPos.y * 2),
-								  Mathf.Round(lastPos.z * 2)) / 2.0f;
+		if (other.tag != "NoCollide")
+		{
+			bumped = true;
+			SoundManager.BumpEvent();
+			destination = new Vector3(Mathf.Round(lastPos.x * 2),
+									  Mathf.Round(lastPos.y * 2),
+									  Mathf.Round(lastPos.z * 2)) / 2.0f;
+		}
 	}
 }

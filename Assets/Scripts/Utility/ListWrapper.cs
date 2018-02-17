@@ -32,3 +32,6 @@ public class ListWrapper<T>
 
 [System.Serializable]
 public class GameObjectListWrapper : ListWrapper<GameObject> { }
+
+[System.Serializable]
+public class StringListWrapper : ListWrapper<string> { }
