@@ -52,6 +52,7 @@ public class Stats
 		{
 			currentTime = value;
 			UIManager.ClockEvent();
+			WindowTint.TintEvent();
 		}
 	}
 

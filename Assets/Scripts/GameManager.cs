@@ -9,7 +9,7 @@ using UnityStandardAssets.ImageEffects;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-	private const int TIME_INCREMENT_DELAY = 30;
+	private const int TIME_INCREMENT_DELAY = 1; //30;
 
 	/// <summary>
 	/// Causes the gameplay to pause. 
