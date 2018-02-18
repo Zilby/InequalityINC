@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 	/// The current character the player is facing. 
 	/// Null if there isn't one. 
 	/// </summary>
-	private CharacterController characterFacing;
+	private NPCController characterFacing;
 
 	/// <summary>
 	/// The current object the player is facing. 
@@ -238,7 +238,7 @@ public class PlayerController : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, DirectionVector, out hit, 1))
 		{
-			characterFacing = hit.collider.GetComponent<CharacterController>();
+			characterFacing = hit.collider.GetComponent<NPCController>();
 			objectFacing = hit.collider.GetComponent<ObjectText>();
 		}
 		else

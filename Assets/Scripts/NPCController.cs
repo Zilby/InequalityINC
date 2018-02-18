@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// An individual character within the game. 
 /// </summary>
-public class CharacterController : MonoBehaviour
+public class NPCController : MonoBehaviour
 {
 	/// <summary>
 	/// Causes characters to arrive and leave. 
