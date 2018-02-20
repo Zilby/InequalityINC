@@ -61,6 +61,11 @@ public class UIManager : MonoBehaviour
 		ClockEvent = UpdateClock;
 		DescripEvent = UpdateDescrip;
 		UpdateText = SetText;
+	}
+
+
+	void Start() 
+	{
 		description.Hide();
 	}
 
