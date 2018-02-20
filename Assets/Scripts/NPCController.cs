@@ -74,6 +74,12 @@ public class NPCController : MonoBehaviour
 	{
 		rend = GetComponent<SpriteRenderer>();
 		fs = GetComponent<FadeableSprite>();
+		ArriveLeave += FadeInOut;
+	}
+
+
+	private void Start() 
+	{
 		if (arrive > 9 * 60)
 		{
 			fs.Hide();
@@ -82,7 +88,6 @@ public class NPCController : MonoBehaviour
 		{
 			fs.Show();
 		}
-		ArriveLeave += FadeInOut;
 	}
 
 
