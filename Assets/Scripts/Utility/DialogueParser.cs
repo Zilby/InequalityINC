@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 /// <summary>
 /// Parses dialogue from data files. 
@@ -67,10 +68,10 @@ public class DialogueParser
 	public void LoadDialogue(string scene)
 	{
 		lines = new List<DialogueLine>();
-		string file = scene + ".txt";
+		TextAsset textFile = (TextAsset)Resources.Load(scene);
 		string line;
 
-		using (StreamReader r = new StreamReader(file))
+		using (StringReader r = new StringReader(textFile.text))
 		{
 			line = r.ReadLine();
 			while (line != null)

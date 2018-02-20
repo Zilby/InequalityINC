@@ -165,12 +165,12 @@ public class DialogueManager : MonoBehaviour
 		Pause();
 		if (c > 0 && !b)
 		{
-			dParser.LoadDialogue("Assets/Text/Dialogue/Dialogue" + i);
+			dParser.LoadDialogue("Dialogue/Dialogue" + i);
 			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
 		}
 		else
 		{
-			dParser.LoadDialogue("Assets/Text/Snippets/Snippet" + i);
+			dParser.LoadDialogue("Snippets/Snippet" + i);
 		}
 		ClearTexts();
 		ClearPortraits();
