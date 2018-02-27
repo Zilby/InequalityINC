@@ -4214,7 +4214,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 1026
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4684,6 +4684,10 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136710327233528, guid: 8ebb8c37c077e4557b481b86e4d12db7, type: 2}
+      propertyPath: m_Name
+      value: '[FadeableUI] Dave'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ebb8c37c077e4557b481b86e4d12db7, type: 2}
@@ -8913,14 +8917,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: -2
+  character: 1
   sprites:
   - {fileID: 21300002, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300008, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300020, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300014, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
-  positiveDialogues: 0100000000000000
-  negativeDialogues: 0100000000000000
+  positiveDialogues: 0200000000000000
+  negativeDialogues: 0200000000000000
   positiveSnippets: 0000000000000000
   negativeSnippets: 0000000000000000
   conversationsRemaining: 2
@@ -9996,7 +10000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 0
+  character: -2
   sprites:
   - {fileID: 21300002, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   - {fileID: 21300008, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}

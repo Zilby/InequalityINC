@@ -44,7 +44,7 @@ public class DialogueParser
 			content = ct;
 			expression = e;
 			position = p;
-			options = new string[0];
+			options = new string[1];
 		}
 	}
 
@@ -103,6 +103,9 @@ public class DialogueParser
 						lineEntry = new DialogueLine(
 							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), lineData[1],
 							(DialogueManager.Expression)Enum.Parse(typeof(DialogueManager.Expression), lineData[2]), lineData[3]);
+						if (lineData.Length > 4) {
+							lineEntry.options[0] = lineData[4];
+						}
 					}
 					lines.Add(lineEntry);
 					line = r.ReadLine();

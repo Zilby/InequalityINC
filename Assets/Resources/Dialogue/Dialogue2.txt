@@ -1,0 +1,21 @@
+player;Hey Dave;happy;R
+dave;Hey, Player!;excited;L
+options;How was your weekend?:4:L:dave,+;Could I ask you a few questions about something?:9:L;*Leave*:8
+dave;Not bad, had a date night with the wife. How was yours?;happy;L
+options;Good, good. Relaxing:6;Decent, but could've been better. I was working on some stuff:21
+dave;Good to hear! Well, unlesss you need anything from me I should probably be getting back to work;happy;L
+options;Alright, talk to you later Dave.:8;You know, I'm actually looking into some reports of sexual discrimination. Have you noticed anything like that recently?:11
+end;
+dave;Sure, what's up?;happy;L
+player;Well, I've been looking into some reports of sexual discrimination. Do you happen to have any information about that?;neutral;R
+dave;You know, now that you mention it... I have noticed some things;neutral;L
+dave;Like, in meetings I noticed that Stan tends to kind of... steamroll some of the female employees. He never really seems to listen to them.;neutral;L
+dave;And there was this one time when.. Uh... Never mind;anxious;L
+options;You can tell me Dave. This is just between us:15;Thanks Dave. This has been very helpful:19
+dave;Well... Alright. The other day Stan totally blew up at Sharon;neutral;L
+dave;He told her that she needs to stop letting her "hormones interfere with her work";sad;L
+dave;She was so embarrassed... She left early that day;sad;L
+player;Thanks Dave. This has been very helpful;happy;R
+dave;Anytime. Let me know if there's anything else I can do to help;happy;L
+end;
+dave;Sorry to hear that. Were you working on anything specific?;neutral;L;10

@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
 		end = -2,
 		options = -1,
 		player = 0,
-		elevatorLady = 1,
+		dave = 1,
 	}
 
 
@@ -329,6 +329,10 @@ public class DialogueManager : MonoBehaviour
 					lastExpression[d.character] = d.expression;
 				}
 				yield return CharacterDialogue(d.character, d.content);
+				if (d.options[0] != null)
+				{
+					UpdateLine(ref i, int.Parse(d.options[0]));
+				}
 			}
 			else
 			{
