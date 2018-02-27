@@ -19,6 +19,11 @@ public class DialogueParser
 		public DialogueManager.Character character;
 
 		/// <summary>
+		/// The character receiving the dialogue. 
+		/// </summary>
+		public DialogueManager.Character receiving;
+
+		/// <summary>
 		/// The dialogue being spoken. 
 		/// </summary>
 		public string content;
@@ -27,6 +32,11 @@ public class DialogueParser
 		/// The expression of the character. 
 		/// </summary>
 		public DialogueManager.Expression expression;
+
+		/// <summary>
+		/// The expression of the character receiving the dialogue. 
+		/// </summary>
+		public DialogueManager.Expression rExpression;
 
 		/// <summary>
 		/// The position of the character (left or right). 
@@ -38,13 +48,17 @@ public class DialogueParser
 		/// </summary>
 		public string[] options;
 
-		public DialogueLine(DialogueManager.Character ch, string ct, DialogueManager.Expression e, string p)
+		public DialogueLine(DialogueManager.Character ch, string ct, DialogueManager.Expression e, string p,
+							DialogueManager.Character cr = DialogueManager.Character.end,
+							DialogueManager.Expression re = DialogueManager.Expression.neutral)
 		{
 			character = ch;
 			content = ct;
 			expression = e;
 			position = p;
 			options = new string[1];
+			receiving = cr;
+			rExpression = re;
 		}
 	}
 
@@ -103,7 +117,17 @@ public class DialogueParser
 						lineEntry = new DialogueLine(
 							(DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[0]), lineData[1],
 							(DialogueManager.Expression)Enum.Parse(typeof(DialogueManager.Expression), lineData[2]), lineData[3]);
-						if (lineData.Length > 4) {
+						if (lineData.Length > 5)
+						{
+							lineEntry.receiving = (DialogueManager.Character)Enum.Parse(typeof(DialogueManager.Character), lineData[4]);
+							lineEntry.rExpression = (DialogueManager.Expression)Enum.Parse(typeof(DialogueManager.Expression), lineData[5]);
+							if (lineData.Length > 6)
+							{
+								lineEntry.options[0] = lineData[6];
+							}
+						}
+						else if (lineData.Length > 4)
+						{
 							lineEntry.options[0] = lineData[4];
 						}
 					}

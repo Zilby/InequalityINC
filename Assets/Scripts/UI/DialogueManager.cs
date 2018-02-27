@@ -301,6 +301,23 @@ public class DialogueManager : MonoBehaviour
 	}
 
 
+	private void AssignExpression(ref Dictionary<Character, Expression> lastExpression, Character c, Expression e, string position)
+	{
+		if (!lastExpression.ContainsKey(c) || e != lastExpression[c])
+		{
+			SetExpression(c, e, position.ToUpper() == "R");
+		}
+		if (!lastExpression.ContainsKey(c))
+		{
+			lastExpression.Add(c, e);
+		}
+		else
+		{
+			lastExpression[c] = e;
+		}
+	}
+
+
 	/// <summary>
 	/// Runs the dialogue for the scene loaded in the dialogue parser. 
 	/// </summary>
@@ -316,22 +333,18 @@ public class DialogueManager : MonoBehaviour
 			}
 			if (d.character != Character.options)
 			{
-				if (!lastExpression.ContainsKey(d.character) || d.expression != lastExpression[d.character])
+				AssignExpression(ref lastExpression, d.character, d.expression, d.position);
+				if (d.receiving != Character.end)
 				{
-					SetExpression(d.character, d.expression, d.position.ToUpper() == "R");
-				}
-				if (!lastExpression.ContainsKey(d.character))
-				{
-					lastExpression.Add(d.character, d.expression);
-				}
-				else
-				{
-					lastExpression[d.character] = d.expression;
+					AssignExpression(ref lastExpression, d.receiving, d.rExpression, d.position == "R" ? "L" : "R");
 				}
 				yield return CharacterDialogue(d.character, d.content);
 				if (d.options[0] != null)
 				{
-					UpdateLine(ref i, int.Parse(d.options[0]));
+					if (d.options.Length == 1)
+					{
+						UpdateLine(ref i, int.Parse(d.options[0]));
+					}
 				}
 			}
 			else

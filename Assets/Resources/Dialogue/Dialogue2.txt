@@ -18,4 +18,4 @@ dave;She was so embarrassed... She left early that day;sad;L
 player;Thanks Dave. This has been very helpful;happy;R
 dave;Anytime. Let me know if there's anything else I can do to help;happy;L
 end;
-dave;Sorry to hear that. Were you working on anything specific?;neutral;L;10
+dave;Sorry to hear that. Were you working on anything specific?;neutral;L;player;neutral;10
