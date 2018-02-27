@@ -4,9 +4,10 @@ Available characters: player, dave
 Available expressions: happy, neutral, sad, excited, anxious, angry
 Available positions: L (left), R (right)
 
-Dialogue line formatting: _character_;_dialogue_;_expression_;_position_;_other_character_;_other_expression_
+Dialogue line formatting: _character_;_dialogue_;_expression_;_position_;_other_character_;_other_expression_;_line_redirect_
 Note: the below options can be ignored/removed
 _other_character_/_other_expression_, this can be ignored unless you want to change the expression of the other character
+_line_redirect_ redirects the dialogue to the given line
 Example dialogue line: 
 player;Hi, how are you?;happy;R
 
