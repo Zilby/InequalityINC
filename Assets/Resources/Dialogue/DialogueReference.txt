@@ -6,12 +6,12 @@ Available positions: L (left), R (right)
 
 Dialogue line formatting: _character_;_dialogue_;_expression_;_position_;_other_character_;_other_expression_;_line_redirect_
 Note: the below options can be ignored/removed
-_other_character_/_other_expression_, this can be ignored unless you want to change the expression of the other character
+_other_character_/_other_expression_, this can be ignored unless you want to change the expression of the other character *DO NOT INCLUDE ONE WITHOUT THE OTHERr*
 _line_redirect_ redirects the dialogue to the given line
 Example dialogue line: 
 player;Hi, how are you?;happy;R
 
-Options formatting: options;_option_1_:_line_number_:_long_option_:_character_,_relationship_points_:_character_,_info_gathered_;_option_2_... etc
+Options formatting: options;_option_1_:_line_number_:_long_option_:_character_,_relationship_points_:_character_,_info_gathered_:_character_,_fired_;_option_2_... etc
 
 _option_ the actual text that the option contains (ie: what the player says)
 _line_number_ is the line number you want the option to take you to in the text file.
@@ -20,9 +20,10 @@ Note: the below options can be ignored/removed and/or written out of order.
 _long_option_ will either be ignored or will be L if this option will increment time. 
 _character_,_relationship_points_ gives (+) or takes away (-) a relationship point for the given character. 
 _character_,_info_gathered_ indicates that a certain numbered piece of info on that character has been acquired by choosing this option. 
+_character_,_fired_ indicates that the given character was fired by choosing this option. 
 
 Example options: 
-options;How are you?:4:L:dave,+;Why did he do that?:8:dave,3
+options;How are you?:4:L:dave,+;Why did he do that?:8:dave,3;You're fired:12:dave,fired
 
 If you want to end a scene before the end of the lines, insert an end statement. 
 End formatting: end;_interaction_quality_;

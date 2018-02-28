@@ -84,7 +84,7 @@ public class NPCController : MonoBehaviour
 		{
 			fs.Hide();
 		}
-		else
+		else if (!Stats.fired[character])
 		{
 			fs.Show();
 		}
@@ -97,7 +97,7 @@ public class NPCController : MonoBehaviour
 		{
 			fs.SelfFadeOut();
 		}
-		if (Stats.CurrentTime >= arrive && Stats.CurrentTime < leave && !fs.IsVisible)
+		if (!Stats.fired[character] && Stats.CurrentTime >= arrive && Stats.CurrentTime < leave && !fs.IsVisible)
 		{
 			fs.SelfFadeIn();
 		}

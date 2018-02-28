@@ -1,6 +1,6 @@
 player;Hey Dave;happy;R
 dave;Hey, Player!;excited;L
-options;How was your weekend?:4:L:dave,+;Could I ask you a few questions about something?:9:L;*Leave*:8
+options;How was your weekend?:4:L:dave,+;Could I ask you a few questions about something?:9:L;*Leave*:8:dave,fired
 dave;Not bad, had a date night with the wife. How was yours?;happy;L
 options;Good, good. Relaxing:6;Decent, but could've been better. I was working on some stuff:21
 dave;Good to hear! Well, unlesss you need anything from me I should probably be getting back to work;happy;L

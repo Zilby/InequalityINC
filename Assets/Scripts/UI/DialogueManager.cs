@@ -378,6 +378,10 @@ public class DialogueManager : MonoBehaviour
 							{
 								dialogueButtons[j].onClick.AddListener(() => AddRelationshipPoints(c, -1));
 							}
+							else if (statMods[1].ToLower() == "fired" || statMods[1].ToLower() == "f")
+							{
+								dialogueButtons[j].onClick.AddListener(() => FiredCharacter(c));
+							}
 							else
 							{
 								dialogueButtons[j].onClick.AddListener(() => GotInfoOnCharacter(c, int.Parse(statMods[1])));
@@ -424,6 +428,15 @@ public class DialogueManager : MonoBehaviour
 	private void GotInfoOnCharacter(Character c, int info)
 	{
 		Stats.hasInfoOn[c][info] = true;
+	}
+
+
+	/// <summary>
+	/// Indicates that the given character was fired. 
+	/// </summary>
+	private void FiredCharacter(Character c)
+	{
+		Stats.fired[c] = true;
 	}
 
 
