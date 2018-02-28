@@ -7,6 +7,63 @@ using System.Linq;
 /// </summary>
 public class Stats
 {
+    /// <summary>
+    /// Will the game track the players' actions in game? 
+    /// </summary>
+    private static bool logActive = false;
+
+    /// <summary>
+    /// Will the game track the players' actions in game? 
+    /// </summary>
+    public static bool LogActive {
+        get
+        {
+            return logActive;
+        }
+        set
+        {
+            logActive = value;
+        }
+    }
+
+    /// <summary>
+    /// The filepath for the log file - Debug/Playtest purposes only. 
+    /// </summary>
+    private static string logFile = "log.txt";
+
+    /// <summary>
+    /// The filepath for the log file - Debug/Playtest purposes only.
+    /// </summary>
+    public static string LogFile {
+        get 
+        {
+            return logFile;
+        }
+        set 
+        {
+            logFile = value;
+        }
+    }
+
+    /// <summary>
+    /// The player's default character name. 
+    /// </summary>
+    private static string playerName = "Alex";
+
+    /// <summary>
+    /// The player's current character name. 
+    /// </summary>
+    public static string PlayerName {
+        get 
+        {
+            return playerName;
+        }
+        set 
+        {
+            playerName = value;
+        }
+    }
+
 	/// <summary>
 	/// Used for incrementing the time when dialogue starts. 
 	/// </summary>
