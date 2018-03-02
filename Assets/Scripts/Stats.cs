@@ -7,6 +7,33 @@ using System.Linq;
 /// </summary>
 public class Stats
 {
+    /// <summary>
+    /// The current name of the player. Initial value is the default. 
+    /// </summary>
+    private static string playerName = "Alex";
+    public static string PlayerName {
+        get{return playerName;}
+        set{playerName = value;}
+    }
+
+    /// <summary>
+    /// The current filepath for logging. Initial value is the default. 
+    /// </summary>
+    private static string logFile = "log.txt";
+    public static string LogFile {
+        get{return logFile;}
+        set{logFile = value;}
+    }
+
+    /// <summary>
+    /// Is the logging feature currently active? Initial value is the default. 
+    /// </summary>
+    private static bool logActive = false;
+    public static bool LogActive {
+        get{return logActive;}
+        set{logActive = value;}
+    }
+
 	/// <summary>
 	/// Used for incrementing the time when dialogue starts. 
 	/// </summary>
