@@ -7,63 +7,6 @@ using System.Linq;
 /// </summary>
 public class Stats
 {
-    /// <summary>
-    /// Will the game track the players' actions in game? 
-    /// </summary>
-    private static bool logActive = false;
-
-    /// <summary>
-    /// Will the game track the players' actions in game? 
-    /// </summary>
-    public static bool LogActive {
-        get
-        {
-            return logActive;
-        }
-        set
-        {
-            logActive = value;
-        }
-    }
-
-    /// <summary>
-    /// The filepath for the log file - Debug/Playtest purposes only. 
-    /// </summary>
-    private static string logFile = "log.txt";
-
-    /// <summary>
-    /// The filepath for the log file - Debug/Playtest purposes only.
-    /// </summary>
-    public static string LogFile {
-        get 
-        {
-            return logFile;
-        }
-        set 
-        {
-            logFile = value;
-        }
-    }
-
-    /// <summary>
-    /// The player's default character name. 
-    /// </summary>
-    private static string playerName = "Alex";
-
-    /// <summary>
-    /// The player's current character name. 
-    /// </summary>
-    public static string PlayerName {
-        get 
-        {
-            return playerName;
-        }
-        set 
-        {
-            playerName = value;
-        }
-    }
-
 	/// <summary>
 	/// Used for incrementing the time when dialogue starts. 
 	/// </summary>
@@ -85,15 +28,25 @@ public class Stats
 	public static Dictionary<DialogueManager.Character, int> dialogueIndex = new Dictionary<DialogueManager.Character, int>();
 
 	/// <summary>
-	/// Whether or not the player has gotten information from the given character on the given day
+	/// Whether or not the player has gotten information on the given character (10 total)
 	/// The list of bools is the various pieces of information the player potentially has on the character. 
 	/// </summary>
 	public static Dictionary<DialogueManager.Character, List<bool>> hasInfoOn = new Dictionary<DialogueManager.Character, List<bool>>();
 
 	/// <summary>
+	/// Whether or not the player has fired the given character.
+	/// </summary>
+	public static Dictionary<DialogueManager.Character, bool> fired = new Dictionary<DialogueManager.Character, bool>();
+
+	/// <summary>
 	/// The current time in minutes. 
 	/// </summary>
 	private static int currentTime;
+
+	/// <summary>
+	/// The current day. 
+	/// </summary>
+	private static int day;
 
 	/// <summary>
 	/// The current time in minutes. 
@@ -113,22 +66,36 @@ public class Stats
 		}
 	}
 
+	/// <summary>
+	/// The current day.
+	/// </summary>
+	public static int Day
+	{
+		get
+		{
+			return day;
+		}
+		set
+		{
+			day = value;
+			ResetDay();
+		}
+	}
+
 
 	/// <summary>
 	/// Resets all in-game stats. 
 	/// </summary>
 	public static void ResetAll()
 	{
+		day = 1;
 		ResetDay();
 		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
 		{
 			relationshipPoints[c] = 0;
 			dialogueIndex[c] = 0;
 			hasInfoOn[c] = Enumerable.Repeat(false, 10).ToList();
-			for (int i = 0; i < hasInfoOn[c].Count; ++i)
-			{
-				hasInfoOn[c][i] = false;
-			}
+			fired[c] = false;
 		}
 	}
 
