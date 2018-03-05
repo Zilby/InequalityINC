@@ -40,7 +40,6 @@ public class DialogueManager : MonoBehaviour
 		dave = 1,
 	}
 
-
 	/// <summary>
 	/// Causes the UI to show the dialogue text display. 
 	/// </summary>
@@ -184,6 +183,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private void FinishText()
 	{
+        Logger.Log("Ended dialogue.\n");
 		GameManager.PauseEvent();
 		Pause();
 		textOverlay.SelfFadeOut();
@@ -221,6 +221,7 @@ public class DialogueManager : MonoBehaviour
 	/// <param name="s">The dialogue string. </param>
 	private IEnumerator CharacterDialogue(int c, string s)
 	{
+        Logger.Log (((Character)c).ToString () + " says : " + s);
 		ClearTexts();
 		lastQuestion = s;
 		yield return characterTexts[c].TypeText(s);
@@ -329,6 +330,7 @@ public class DialogueManager : MonoBehaviour
 			DialogueParser.DialogueLine d = dParser.Lines[i];
 			if (d.character == Character.end)
 			{
+                
 				break;
 			}
 			if (d.character != Character.options)
@@ -359,6 +361,9 @@ public class DialogueManager : MonoBehaviour
 					// On click gets called after j is incremented, so we have to save it as a temp value. 
 					string[] options = d.options[j].Split(':');
 					dialogueButtons[j].onClick.AddListener(() => UpdateLine(ref i, int.Parse(options[1])));
+                    if (Logger.LogActive) {
+                        dialogueButtons [j].onClick.AddListener (() => Logger.Log ("Selected '" + options[0] + "'"));
+                    }
 					// Handle option stat modifications if present
 					for (int k = 2; k < options.Length; k++)
 					{
@@ -428,6 +433,7 @@ public class DialogueManager : MonoBehaviour
 	private void GotInfoOnCharacter(Character c, int info)
 	{
 		Stats.hasInfoOn[c][info] = true;
+        Logger.Log (c.ToString() + " info #" + info.ToString() + "obtained.");
 	}
 
 
@@ -437,6 +443,7 @@ public class DialogueManager : MonoBehaviour
 	private void FiredCharacter(Character c)
 	{
 		Stats.fired[c] = true;
+        Logger.Log (c.ToString() + " fired.");
 	}
 
 
@@ -455,6 +462,7 @@ public class DialogueManager : MonoBehaviour
 	private void AddRelationshipPoints(Character c, int points)
 	{
 		Stats.relationshipPoints[c] += points;
+        Logger.Log (c.ToString() + " bond set to " + Stats.relationshipPoints[c].ToString() + ".");
 	}
 
 

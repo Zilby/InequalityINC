@@ -118,6 +118,7 @@ public class UIManager : MonoBehaviour
 	private IEnumerator SetText(string s)
 	{
 		descripText.ClearText();
+        Logger.Log ("Description: " + s);
 		yield return descripText.TypeText(s);
 		yield return new WaitForSecondsRealtime(0.1f);
 		yield return DialogueManager.WaitForKeypress(KeyCode.Space);

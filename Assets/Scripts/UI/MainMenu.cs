@@ -72,7 +72,7 @@ public class MainMenu : MonoBehaviour
             Logger.CreateLog ((logField.text == "") ? Logger.DEFAULT_FILENAME : logField.text);
         } 
 
-        Logger.Log ("Game started. Player name: " + characterName);
+        Logger.Log ("Game started. Player name: " + characterName + "\n");
 		UnityEngine.SceneManagement.SceneManager.LoadScene(1); // Loads main game scene
 	}
 

@@ -57,7 +57,6 @@ public static class Logger {
             if (logStream == null)
                 CreateLog (DEFAULT_FILENAME);
             logStream.WriteLine ("[" + DateTime.Now.ToString () + "] " + msg);
-        } else
-            Debug.Log ("Log is inactive. Message: "+ msg);
+        }
     }
 }

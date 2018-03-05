@@ -58,4 +58,8 @@ public class GameManager : MonoBehaviour
 		}
 		yield return null;
 	}
+
+    public void OnApplicationQuit() {
+        Logger.Log("Application Quit");
+    }
 }

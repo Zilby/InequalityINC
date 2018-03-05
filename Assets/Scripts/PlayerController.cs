@@ -258,6 +258,7 @@ public class PlayerController : MonoBehaviour
 		{
 			if (characterFacing != null)
 			{
+                Logger.Log ("Began dialogue with " + characterFacing.character.ToString() + ".");
 				characterFacing.Face(direction);
 				yield return new WaitForSeconds(0.3f);
 				int convos = characterFacing.conversationsRemaining;
@@ -268,6 +269,7 @@ public class PlayerController : MonoBehaviour
 			}
 			else if (objectFacing != null) 
 			{
+                Logger.Log("Began description.");
 				readingDescrip = true;
 				UIManager.DescripEvent();
 				StringListWrapper s = objectFacing.DescriptionTexts;
@@ -277,6 +279,7 @@ public class PlayerController : MonoBehaviour
 				}
 				UIManager.DescripEvent();
 				readingDescrip = false;
+                Logger.Log("Ended description.\n");
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
 			}
