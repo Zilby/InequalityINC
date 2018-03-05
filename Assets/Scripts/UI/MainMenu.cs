@@ -20,15 +20,14 @@ public class MainMenu : MonoBehaviour
 	/// The controls page. 
 	/// </summary>
 	public FadeableUI controls;
+	private Text logField;
+    private Toggle logToggle;
 
-	private bool logActive = false; // Fields for the output log file.
-	private string logOutput;
-	private Text logPlaceholder;
 
 	private string characterName; // Fields for the player name.
 
 	// Initialization boilerplate stuff
-	void Awake()
+	void Start()
 	{
 		nameField.onEndEdit.AddListener((string arg) => NameUpdated(arg));
 		namePlaceholder.text = Stats.PlayerName;
@@ -43,14 +42,14 @@ public class MainMenu : MonoBehaviour
 		controls.Hide();
 
 		// Set default filepath for log file
-		Text logField = GameObject.Find("LogText").GetComponent<Text>();
-		logPlaceholder = logField.transform.parent.Find("Placeholder").GetComponent<Text>();
-		logPlaceholder.text = Stats.LogFile;
+		logField = GameObject.Find("LogText").GetComponent<Text>();
+		Text logPlaceholder = logField.transform.parent.Find("Placeholder").GetComponent<Text>();
+        logPlaceholder.text = Logger.DEFAULT_FILENAME;
+        GameObject.Find("OutputField").SetActive(false);
 
-		// Set Logging checkmark to false
-		GameObject logToggle = GameObject.Find("OutputField");
-		logToggle.SetActive(false);
-		GameObject.Find("LoggingToggle").GetComponent<Toggle>().isOn = false;
+		
+        logToggle = GameObject.Find ("LoggingToggle").GetComponent<Toggle> ();
+        logToggle.isOn = false;
 	}
 
 	// Called when the player name is updated from the default.
@@ -62,17 +61,18 @@ public class MainMenu : MonoBehaviour
 			characterName = newName;
 	}
 
-
 	/// <summary>
 	/// Changes the scene when the 'Play' button is pressed.
 	/// </summary>
 	public void ChangeScene()
 	{
 		Stats.PlayerName = characterName;
-		Stats.LogFile = logOutput;
-		Stats.LogActive = logActive;
+        if (logToggle.isOn) {
+            Logger.LogActive = true;
+            Logger.CreateLog ((logField.text == "") ? Logger.DEFAULT_FILENAME : logField.text);
+        } 
 
-		Debug.Log("Scene 'changed'"); //TODO
+        Logger.Log ("Game started. Player name: " + characterName);
 		UnityEngine.SceneManagement.SceneManager.LoadScene(1); // Loads main game scene
 	}
 
