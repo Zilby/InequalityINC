@@ -15,6 +15,7 @@ public class DialogueNode
 	public bool longOption = false;
 	public bool positive = false;
 	public bool negative = false;
+	public int infoGathered = -1;
 	public DialogueManager.Character fired = DialogueManager.Character.none;
 	public bool isDragged;
 	public bool isSelected;
@@ -92,6 +93,9 @@ public class DialogueNode
 				positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive, toggleStyle);
 				content = new GUIContent("<color=white>Negative Interaction</color>");
 				negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative, toggleStyle);
+				content = new GUIContent("<color=white>Info Gathered</color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 60, 80, 15), content);
+				infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + rect.height - 60, rect.width - 170, 15), infoGathered);
 				content = new GUIContent("<color=white>Fired</color>");
 				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 40, 30, 15), content);
 				fired = (DialogueManager.Character)EditorGUI.EnumPopup(
