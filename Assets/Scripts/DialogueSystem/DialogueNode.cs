@@ -67,11 +67,7 @@ public class DialogueNode
 		textfieldStyle.wordWrap = true;
 		textfieldStyle.stretchHeight = true;
 		textfieldStyle.stretchWidth = false;
-		toggleStyle = EditorStyles.toggle;
-		toggleStyle.normal.textColor = Color.white;
-		popupStyle = EditorStyles.popup;
-		foldoutStyle = EditorStyles.foldout;
-		foldoutStyle.richText = true;
+		EditorStyles.label.richText = true;
 		OnRemoveNode = DialogueNodeEditor.RemoveNodeEvent;
 		initialized = true;
 	}
@@ -114,18 +110,18 @@ public class DialogueNode
 				if (advancedOptions)
 				{
 					content = new GUIContent("<color=white>Long Option</color>");
-					longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 120, rect.width - 20, 15), content, longOption, toggleStyle);
+					longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 120, rect.width - 20, 15), content, longOption);
 					content = new GUIContent("<color=white>Positive Interaction</color>");
-					positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive, toggleStyle);
+					positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive);
 					content = new GUIContent("<color=white>Negative Interaction</color>");
-					negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative, toggleStyle);
+					negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative);
 					content = new GUIContent("<color=white>Info Gathered</color>");
 					EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 60, 80, 15), content);
 					infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + rect.height - 60, rect.width - 170, 15), infoGathered);
 					content = new GUIContent("<color=white>Fired</color>");
 					EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 40, 30, 15), content);
 					fired = (DialogueManager.Character)EditorGUI.EnumPopup(
-						new Rect(rect.x + 60, rect.y + rect.height - 40, rect.width - 80, 15), fired, popupStyle);
+						new Rect(rect.x + 60, rect.y + rect.height - 40, rect.width - 80, 15), fired);
 				}
 			}
 			inPoint.nodeRect = rect;

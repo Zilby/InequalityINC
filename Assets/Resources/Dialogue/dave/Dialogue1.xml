@@ -1022,7 +1022,7 @@
         </position>
         <center>
           <x>686</x>
-          <y>683</y>
+          <y>709</y>
         </center>
         <min>
           <x>586</x>
@@ -1030,18 +1030,18 @@
         </min>
         <max>
           <x>786</x>
-          <y>741</y>
+          <y>793</y>
         </max>
         <width>200</width>
-        <height>116</height>
+        <height>168</height>
         <size>
           <x>200</x>
-          <y>116</y>
+          <y>168</y>
         </size>
         <xMin>586</xMin>
         <yMin>625</yMin>
         <xMax>786</xMax>
-        <yMax>741</yMax>
+        <yMax>793</yMax>
       </rect>
       <defaultRect>
         <x>536</x>
@@ -1073,7 +1073,7 @@
         <xMax>736</xMax>
         <yMax>748</yMax>
       </defaultRect>
-      <dialogue />
+      <dialogue>This is a test of a longer series of text that is too long I mean just too long for one text box. I don't really know why this is so long. </dialogue>
       <character>end</character>
       <expression>neutral</expression>
       <advancedOptions>false</advancedOptions>
@@ -1126,7 +1126,7 @@
           </position>
           <center>
             <x>686</x>
-            <y>683</y>
+            <y>709</y>
           </center>
           <min>
             <x>586</x>
@@ -1134,18 +1134,18 @@
           </min>
           <max>
             <x>786</x>
-            <y>741</y>
+            <y>793</y>
           </max>
           <width>200</width>
-          <height>116</height>
+          <height>168</height>
           <size>
             <x>200</x>
-            <y>116</y>
+            <y>168</y>
           </size>
           <xMin>586</xMin>
           <yMin>625</yMin>
           <xMax>786</xMax>
-          <yMax>741</yMax>
+          <yMax>793</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
@@ -1153,22 +1153,22 @@
         <readyToInit>true</readyToInit>
         <rect>
           <x>676</x>
-          <y>734</y>
+          <y>786</y>
           <position>
             <x>676</x>
-            <y>734</y>
+            <y>786</y>
           </position>
           <center>
             <x>686</x>
-            <y>739</y>
+            <y>791</y>
           </center>
           <min>
             <x>676</x>
-            <y>734</y>
+            <y>786</y>
           </min>
           <max>
             <x>696</x>
-            <y>744</y>
+            <y>796</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1177,9 +1177,9 @@
             <y>10</y>
           </size>
           <xMin>676</xMin>
-          <yMin>734</yMin>
+          <yMin>786</yMin>
           <xMax>696</xMax>
-          <yMax>744</yMax>
+          <yMax>796</yMax>
         </rect>
         <nodeRect>
           <x>586</x>
@@ -1190,7 +1190,7 @@
           </position>
           <center>
             <x>686</x>
-            <y>683</y>
+            <y>709</y>
           </center>
           <min>
             <x>586</x>
@@ -1198,18 +1198,18 @@
           </min>
           <max>
             <x>786</x>
-            <y>741</y>
+            <y>793</y>
           </max>
           <width>200</width>
-          <height>116</height>
+          <height>168</height>
           <size>
             <x>200</x>
-            <y>116</y>
+            <y>168</y>
           </size>
           <xMin>586</xMin>
           <yMin>625</yMin>
           <xMax>786</xMax>
-          <yMax>741</yMax>
+          <yMax>793</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -1985,7 +1985,7 @@
           </position>
           <center>
             <x>686</x>
-            <y>683</y>
+            <y>709</y>
           </center>
           <min>
             <x>586</x>
@@ -1993,18 +1993,18 @@
           </min>
           <max>
             <x>786</x>
-            <y>741</y>
+            <y>793</y>
           </max>
           <width>200</width>
-          <height>116</height>
+          <height>168</height>
           <size>
             <x>200</x>
-            <y>116</y>
+            <y>168</y>
           </size>
           <xMin>586</xMin>
           <yMin>625</yMin>
           <xMax>786</xMax>
-          <yMax>741</yMax>
+          <yMax>793</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
