@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Xml.Serialization;
+using System;
+using System.IO;
 
 public class DialogueNodeEditor : EditorWindow
 {
-	private List<DialogueNode> nodes;
-	private List<Connection> connections;
+	public DialogueTree tree;
 
-	private GUIStyle nodeStyle;
-	private GUIStyle selectedNodeStyle;
-	private GUIStyle inPointStyle;
-	private GUIStyle outPointStyle;
+	public static Action<ConnectionPoint> ClickInPointEvent;
+
+	public static Action<ConnectionPoint> ClickOutPointEvent;
+
+	public static Action<DialogueNode> RemoveNodeEvent;
+
+	public static Action<Connection> RemoveConnectionEvent;
 
 	private ConnectionPoint selectedInPoint;
 	private ConnectionPoint selectedOutPoint;
 
 	private Vector2 offset;
 	private Vector2 drag;
+
+	private bool needsConnectionFuse = false;
 
 	[MenuItem("Window/Dialogue Editor")]
 	private static void OpenWindow()
@@ -28,29 +35,19 @@ public class DialogueNodeEditor : EditorWindow
 
 	private void OnEnable()
 	{
-		nodeStyle = new GUIStyle();
-		nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
-		nodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-		selectedNodeStyle = new GUIStyle();
-		selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
-		selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-		inPointStyle = new GUIStyle();
-		inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn.png") as Texture2D;
-		inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn on.png") as Texture2D;
-		inPointStyle.border = new RectOffset(4, 4, 12, 12);
-
-		outPointStyle = new GUIStyle();
-		outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn.png") as Texture2D;
-		outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn on.png") as Texture2D;
-		outPointStyle.border = new RectOffset(4, 4, 12, 12);
+		tree = new DialogueTree();
+		ClickInPointEvent = OnClickInPoint;
+		ClickOutPointEvent = OnClickOutPoint;
+		RemoveNodeEvent = OnClickRemoveNode;
+		RemoveConnectionEvent = OnClickRemoveConnection;
 	}
 
 	private void OnGUI()
 	{
 		DrawGrid(20, 0.2f, Color.gray);
 		DrawGrid(100, 0.4f, Color.gray);
+
+		DrawControls();
 
 		DrawNodes();
 		DrawConnections();
@@ -88,24 +85,90 @@ public class DialogueNodeEditor : EditorWindow
 		Handles.EndGUI();
 	}
 
+
+	private void DrawControls() {
+		GUIContent content = new GUIContent("Character");
+		EditorGUI.LabelField(new Rect(5, 5, 60, 15), content);
+		tree.characterFile = (DialogueManager.Character)EditorGUI.EnumPopup(
+			new Rect(70, 5, 90, 15), tree.characterFile, EditorStyles.popup);
+		content = new GUIContent("Dialogue Scene");
+		EditorGUI.LabelField(new Rect(5, 25, 100, 20), content);
+		tree.scene = EditorGUI.IntField(new Rect(100, 25, 60, 15), tree.scene);
+		content = new GUIContent("Load Dialogue");
+		if(GUI.Button(new Rect(5, 45, 150, 20), content)) {
+			DialogueTree d = DialogueWriter.LoadEditor(Path.Combine(tree.GetDirectory(), tree.GetFileName()));
+			if (d != null)
+			{
+				tree.Nodes = d.Nodes;
+				tree.Connections = d.Connections;
+				needsConnectionFuse = true;
+			}
+		}
+		content = new GUIContent("Save Dialogue");
+		if (GUI.Button(new Rect(5, 70, 150, 20), content))
+		{
+			DialogueWriter.WriteEditor(tree, tree.GetFileName(), tree.GetDirectory());
+		}
+		if (needsConnectionFuse) 
+		{
+			FuseConnections();
+		}
+	}
+
+
+	private void FuseConnections() {
+		foreach (DialogueNode n in tree.Nodes)
+		{
+			if (!n.initialized || !n.inPoint.initialized || !n.outPoint.initialized)
+			{
+				return;
+			}
+		}
+		foreach (Connection c in tree.Connections)
+		{
+			if (!c.initialized || !c.inPoint.initialized || !c.outPoint.initialized)
+			{
+				return;
+			}
+		}
+		foreach (DialogueNode n in tree.Nodes)
+		{
+			foreach (Connection c in tree.Connections)
+			{
+				if (n.inPoint.id == c.inPoint.id)
+				{
+					c.inPoint = n.inPoint;
+				}
+			}
+			foreach (Connection c in tree.Connections)
+			{
+				if (n.outPoint.id == c.outPoint.id)
+				{
+					c.outPoint = n.outPoint;
+				}
+			}
+		}
+		needsConnectionFuse = false;
+	}
+
 	private void DrawNodes()
 	{
-		if (nodes != null)
+		if (tree.Nodes != null)
 		{
-			for (int i = 0; i < nodes.Count; i++)
+			for (int i = 0; i < tree.Nodes.Count; i++)
 			{
-				nodes[i].Draw();
+				tree.Nodes[i].Draw();
 			}
 		}
 	}
 
 	private void DrawConnections()
 	{
-		if (connections != null)
+		if (tree.Connections != null)
 		{
-			for (int i = 0; i < connections.Count; i++)
+			for (int i = 0; i < tree.Connections.Count; i++)
 			{
-				connections[i].Draw();
+				tree.Connections[i].Draw();
 			}
 		}
 	}
@@ -166,11 +229,11 @@ public class DialogueNodeEditor : EditorWindow
 
 	private void ProcessNodeEvents(Event e)
 	{
-		if (nodes != null)
+		if (tree.Nodes != null)
 		{
-			for (int i = nodes.Count - 1; i >= 0; i--)
+			for (int i = tree.Nodes.Count - 1; i >= 0; i--)
 			{
-				bool guiChanged = nodes[i].ProcessEvents(e);
+				bool guiChanged = tree.Nodes[i].ProcessEvents(e);
 
 				if (guiChanged)
 				{
@@ -184,11 +247,11 @@ public class DialogueNodeEditor : EditorWindow
 	{
 		drag = delta;
 
-		if (nodes != null)
+		if (tree.Nodes != null)
 		{
-			for (int i = 0; i < nodes.Count; i++)
+			for (int i = 0; i < tree.Nodes.Count; i++)
 			{
-				nodes[i].Drag(delta);
+				tree.Nodes[i].Drag(delta);
 			}
 		}
 
@@ -204,12 +267,12 @@ public class DialogueNodeEditor : EditorWindow
 
 	private void OnClickAddNode(Vector2 mousePosition)
 	{
-		if (nodes == null)
+		if (tree.Nodes == null)
 		{
-			nodes = new List<DialogueNode>();
+			tree.Nodes = new List<DialogueNode>();
 		}
 
-		nodes.Add(new DialogueNode(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+		tree.Nodes.Add(new DialogueNode(mousePosition, 200, 100));
 	}
 
 	private void OnClickInPoint(ConnectionPoint inPoint)
@@ -218,7 +281,7 @@ public class DialogueNodeEditor : EditorWindow
 
 		if (selectedOutPoint != null)
 		{
-			if (selectedOutPoint.node != selectedInPoint.node)
+			if (selectedOutPoint.nodeRect != selectedInPoint.nodeRect)
 			{
 				CreateConnection();
 
@@ -233,7 +296,7 @@ public class DialogueNodeEditor : EditorWindow
 
 		if (selectedInPoint != null)
 		{
-			if (selectedOutPoint.node != selectedInPoint.node)
+			if (selectedOutPoint.nodeRect != selectedInPoint.nodeRect)
 			{
 				CreateConnection();
 			}
@@ -243,17 +306,17 @@ public class DialogueNodeEditor : EditorWindow
 
 	private void OnClickRemoveConnection(Connection connection)
 	{
-		connections.Remove(connection);
+		tree.Connections.Remove(connection);
 	}
 
 	private void CreateConnection()
 	{
-		if (connections == null)
+		if (tree.Connections == null)
 		{
-			connections = new List<Connection>();
+			tree.Connections = new List<Connection>();
 		}
 
-		connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
+		tree.Connections.Add(new Connection(selectedInPoint, selectedOutPoint));
 	}
 
 	private void ClearConnectionSelection()
@@ -264,26 +327,26 @@ public class DialogueNodeEditor : EditorWindow
 
 	private void OnClickRemoveNode(DialogueNode node)
 	{
-		if (connections != null)
+		if (tree.Connections != null)
 		{
 			List<Connection> connectionsToRemove = new List<Connection>();
 
-			for (int i = 0; i < connections.Count; i++)
+			for (int i = 0; i < tree.Connections.Count; i++)
 			{
-				if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
+				if (tree.Connections[i].inPoint == node.inPoint || tree.Connections[i].outPoint == node.outPoint)
 				{
-					connectionsToRemove.Add(connections[i]);
+					connectionsToRemove.Add(tree.Connections[i]);
 				}
 			}
 
 			for (int i = 0; i < connectionsToRemove.Count; i++)
 			{
-				connections.Remove(connectionsToRemove[i]);
+				tree.Connections.Remove(connectionsToRemove[i]);
 			}
 
 			connectionsToRemove = null;
 		}
 
-		nodes.Remove(node);
+		tree.Nodes.Remove(node);
 	}
 }

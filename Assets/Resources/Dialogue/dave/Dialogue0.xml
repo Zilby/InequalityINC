@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DialogueNodeEditor>
+  <name />
+  <hideFlags>DontSave</hideFlags>
+  <wantsMouseMove>false</wantsMouseMove>
+  <wantsMouseEnterLeaveWindow>false</wantsMouseEnterLeaveWindow>
+  <autoRepaintOnSceneChange>false</autoRepaintOnSceneChange>
+  <maximized>false</maximized>
+  <minSize>
+    <x>100</x>
+    <y>100</y>
+  </minSize>
+  <maxSize>
+    <x>4000</x>
+    <y>4000</y>
+  </maxSize>
+  <title>Dialogue Editor</title>
+  <titleContent>
+    <text>Dialogue Editor</text>
+    <image
