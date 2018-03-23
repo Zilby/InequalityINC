@@ -35,11 +35,11 @@ public class ConnectionPoint
 		switch (type)
 		{
 			case ConnectionPointType.In:
-				rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f - 22;
+				rect.y = node.rect.y - 5;
 				break;
 
 			case ConnectionPointType.Out:
-				rect.y = node.rect.y + (node.rect.height * 0.5f) - (rect.height * 0.5f) + 20;
+				rect.y = node.rect.y + node.rect.height - 7;
 				break;
 		}
 

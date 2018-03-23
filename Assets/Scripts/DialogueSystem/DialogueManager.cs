@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public enum Character
 	{
+		none = -3,
 		end = -2,
 		options = -1,
 		player = 0,
