@@ -23,13 +23,6 @@ public interface IReadable
 {
 }
 
-/// <summary>
-/// Identifies that this object has mutable fields.
-/// </summary>
-public interface IMutable
-{
-}
-
 
 public static class XMLUtility
 {
