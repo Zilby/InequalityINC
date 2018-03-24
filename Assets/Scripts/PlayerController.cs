@@ -120,11 +120,12 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(Facing());
 	}
 
+	void Update() {
+		SetAnimationState();
+	}
 
 	void FixedUpdate()
 	{
-		SetAnimationState();
-
 		Move(DirectionVector);
 
 		CheckTalk();
@@ -213,6 +214,7 @@ public class PlayerController : MonoBehaviour
 			yield return new WaitForSecondsRealtime(turnDelay);
 		}
 		direction = d;
+		SetAnimationState();
 	}
 
 
