@@ -326,7 +326,6 @@ public class DialogueManager : MonoBehaviour
 			e.color = Color.white;
 			AssignExpression(ref lastExpression, l.node.character, l.node.expression, position);
 			yield return CharacterDialogue(l.node.character, l.node.dialogue);
-			Debug.Log(e.gameObject.activeSelf);
 			e.color = new Color(135 / 255.0f, 135 / 255.0f, 135 / 255.0f, 165 / 255.0f);
 			if (l.node.longOption)
 			{
