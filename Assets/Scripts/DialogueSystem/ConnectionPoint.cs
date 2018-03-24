@@ -6,8 +6,6 @@ using UnityEditor;
 [XmlInclude(typeof(ConnectionPoint))]
 public class ConnectionPoint
 {
-	private static int idCounter = 0;
-
 	public int id = 0;
 
 	public enum Type
@@ -37,9 +35,9 @@ public class ConnectionPoint
 	public ConnectionPoint(DialogueNode node, Type type)
 	{
 		this.nodeRect = node.rect;
+		id = node.id;
 		this.type = type;
 		readyToInit = true;
-		id = ++idCounter;
 	}
 
 	/// <summary>
@@ -63,7 +61,6 @@ public class ConnectionPoint
 				break;
 		}
 		rect = new Rect(0, 0, 20f, 10f);
-		idCounter = Mathf.Max(id, idCounter);
 		initialized = true;
 	}
 

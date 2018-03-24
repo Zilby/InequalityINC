@@ -7,11 +7,20 @@ using UnityEngine;
 public class DialogueTree : IWriteable, IReadable
 {
 
+	public enum Type 
+	{
+		Dialogue, 
+		Snippet
+	}
+
+	[XmlIgnore]
+	public Type type = Type.Dialogue;
+
 	[XmlIgnore]
 	public int scene = -1;
 
 	[XmlIgnore]
-	public DialogueManager.Character characterFile = DialogueManager.Character.none;
+	public DialogueManager.Character characterFile = DialogueManager.Character.player;
 
 	[XmlArray]
 	public List<DialogueNode> Nodes
@@ -33,11 +42,11 @@ public class DialogueTree : IWriteable, IReadable
 
 	public string GetDirectory()
 	{
-		return Path.Combine("Dialogue", characterFile.ToString());
+		return Path.Combine(type.ToString(), characterFile.ToString());
 	}
 
 	public string GetFileName()
 	{
-		return "Dialogue" + scene;
+		return type.ToString() + scene;
 	}
 }

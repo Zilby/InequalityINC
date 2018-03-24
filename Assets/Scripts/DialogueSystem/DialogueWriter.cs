@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Serialization;
 using System.IO;
+using UnityEditor;
 
 public class DialogueWriter
 {
-	public static DialogueTree LoadEditor(string path)
+	public static DialogueTree LoadTree(string path)
 	{
+		AssetDatabase.Refresh();
 		TextAsset file = Resources.Load<TextAsset>(path);
 		if (file == null)
 		{
@@ -26,7 +28,7 @@ public class DialogueWriter
 	}
 
 
-	public static void WriteEditor(DialogueTree d, string fileName, string path)
+	public static void WriteTree(DialogueTree d, string fileName, string path)
 	{
 		Debug.LogFormat("Writing out {0}", fileName);
 		XMLUtility.WriteXML<DialogueTree>(d, fileName, "Assets/Resources/" + path);

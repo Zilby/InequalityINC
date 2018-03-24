@@ -7,6 +7,8 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(DialogueNode))]
 public class DialogueNode
 {
+	private static int idCounter = 0;
+	public int id = 0;
 	public bool readyToInit = false;
 	[XmlIgnore]
 	public bool initialized = false;
@@ -17,11 +19,13 @@ public class DialogueNode
 	public DialogueManager.Character character = DialogueManager.Character.player;
 	public DialogueManager.Expression expression = DialogueManager.Expression.neutral;
 	public bool advancedOptions = false;
+	public DialogueManager.Character characterAffected = DialogueManager.Character.player;
+	public bool forceLeft = false;
 	public bool longOption = false;
 	public bool positive = false;
 	public bool negative = false;
 	public int infoGathered = -1;
-	public DialogueManager.Character fired = DialogueManager.Character.none;
+	public bool fired = false;
 	public bool isDragged;
 	public bool isSelected;
 
@@ -46,6 +50,7 @@ public class DialogueNode
 	public DialogueNode(Vector2 position, float width, float height)
 	{
 		defaultRect = rect = new Rect(position.x, position.y, width, height);
+		id = ++idCounter;
 		inPoint = new ConnectionPoint(this, ConnectionPoint.Type.In);
 		outPoint = new ConnectionPoint(this, ConnectionPoint.Type.Out);
 		readyToInit = true;
@@ -67,8 +72,10 @@ public class DialogueNode
 		textfieldStyle.wordWrap = true;
 		textfieldStyle.stretchHeight = true;
 		textfieldStyle.stretchWidth = false;
+		EditorStyles.label.normal.textColor = Color.black;
 		EditorStyles.label.richText = true;
 		OnRemoveNode = DialogueNodeEditor.RemoveNodeEvent;
+		idCounter = Mathf.Max(id, idCounter);
 		initialized = true;
 	}
 
@@ -88,9 +95,9 @@ public class DialogueNode
 			GUIContent content = new GUIContent(dialogue);
 			float height = textfieldStyle.CalcHeight(content, rect.width - 20);
 			rect.height = defaultRect.height + height;
-			if (character == DialogueManager.Character.options && advancedOptions)
+			if (advancedOptions)
 			{
-				rect.height += 100;
+				rect.height += 140;
 			}
 			inPoint.Draw();
 			outPoint.Draw();
@@ -98,31 +105,29 @@ public class DialogueNode
 			dialogue = EditorGUI.TextField(new Rect(rect.x + 10, rect.y + 70, rect.width - 20, height), dialogue, textfieldStyle);
 			character = (DialogueManager.Character)EditorGUI.EnumPopup(
 				new Rect(rect.x + 10, rect.y + 25, rect.width - 20, 15), character);
-			if (character != DialogueManager.Character.options)
+			expression = (DialogueManager.Expression)EditorGUI.EnumPopup(
+				new Rect(rect.x + 10, rect.y + 45, rect.width - 20, 15), expression);
+			content = new GUIContent("<color=white>Advanced Options</color>");
+			advancedOptions = EditorGUI.Foldout(new Rect(rect.x + 10, rect.y + 80 + height, rect.width - 20, 15), advancedOptions, content);
+			if (advancedOptions)
 			{
-				expression = (DialogueManager.Expression)EditorGUI.EnumPopup(
-					new Rect(rect.x + 10, rect.y + 45, rect.width - 20, 15), expression);
-			}
-			else
-			{
-				content = new GUIContent("<color=white>Advanced Options</color>");
-				advancedOptions = EditorGUI.Foldout(new Rect(rect.x + 10, rect.y + 45, rect.width - 20, 15), advancedOptions, content);
-				if (advancedOptions)
-				{
-					content = new GUIContent("<color=white>Long Option</color>");
-					longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 120, rect.width - 20, 15), content, longOption);
-					content = new GUIContent("<color=white>Positive Interaction</color>");
-					positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive);
-					content = new GUIContent("<color=white>Negative Interaction</color>");
-					negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative);
-					content = new GUIContent("<color=white>Info Gathered</color>");
-					EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 60, 80, 15), content);
-					infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + rect.height - 60, rect.width - 170, 15), infoGathered);
-					content = new GUIContent("<color=white>Fired</color>");
-					EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 40, 30, 15), content);
-					fired = (DialogueManager.Character)EditorGUI.EnumPopup(
-						new Rect(rect.x + 60, rect.y + rect.height - 40, rect.width - 80, 15), fired);
-				}
+				content = new GUIContent("<color=white>NPC Affected</color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 160, 80, 15), content);
+				characterAffected = (DialogueManager.Character)EditorGUI.EnumPopup(
+					new Rect(rect.x + 110, rect.y + rect.height - 160, rect.width - 130, 15), characterAffected);
+				content = new GUIContent("<color=white>Force Left</color>");
+				forceLeft = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 140, rect.width - 20, 15), content, forceLeft);
+				content = new GUIContent("<color=white>Long Option</color>");
+				longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 120, rect.width - 20, 15), content, longOption);
+				content = new GUIContent("<color=white>Positive Interaction</color>");
+				positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive);
+				content = new GUIContent("<color=white>Negative Interaction</color>");
+				negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative);
+				content = new GUIContent("<color=white>Info Gathered</color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 60, 80, 15), content);
+				infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + rect.height - 60, rect.width - 170, 15), infoGathered);
+				content = new GUIContent("<color=white>Fired</color>");
+				fired = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 40, rect.width - 20, 15), content, fired);
 			}
 			inPoint.nodeRect = rect;
 			outPoint.nodeRect = rect;

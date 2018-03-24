@@ -263,7 +263,7 @@ public class PlayerController : MonoBehaviour
 				yield return new WaitForSeconds(0.3f);
 				int convos = characterFacing.conversationsRemaining;
 				bool noDialogue = characterFacing.NoAvailableDialogue;
-				DialogueManager.StartText(characterFacing.DialogueScene, convos, noDialogue);
+				DialogueManager.StartText(characterFacing.DialogueScene, convos, noDialogue, characterFacing.character);
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
 			}

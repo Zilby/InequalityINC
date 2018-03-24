@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using System.IO;
 
 /// <summary>
 /// Manages the main game dialogue. 
@@ -34,9 +35,6 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public enum Character
 	{
-		none = -3,
-		end = -2,
-		options = -1,
 		player = 0,
 		dave = 1,
 	}
@@ -46,7 +44,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public static Action PauseEvent;
 
-	public delegate void textEvent(int i, int c, bool b);
+	public delegate void textEvent(int i, int c, bool b, DialogueManager.Character ch);
 	/// <summary>
 	/// Starts a given dialogue event (eg: scene 0). 
 	/// </summary>
@@ -105,11 +103,6 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private bool presentingOptions = false;
 
-	/// <summary>
-	/// The last question asked to the player. 
-	/// </summary>
-	private string lastQuestion;
-
 
 	// Use this for initialization
 	void Awake()
@@ -158,24 +151,15 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	/// <param name="i">The scene index for dialogue.</param>
 	/// <param name="c">The number of conversations left for this character.</param>
-	/// <param name="c">Whether or not there is available dialogue.</param>
-	private void BeginText(int i, int c, bool b)
+	/// <param name="b">Whether or not there is available dialogue.</param>
+	private void BeginText(int i, int c, bool b, DialogueManager.Character ch)
 	{
 		GameManager.PauseEvent();
 		Pause();
-		if (c > 0 && !b)
-		{
-			dParser.LoadDialogue("Dialogue/Dialogue" + i);
-			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
-		}
-		else
-		{
-			dParser.LoadDialogue("Snippets/Snippet" + i);
-		}
 		ClearTexts();
 		ClearPortraits();
 		textOverlay.SelfFadeIn();
-		StartCoroutine(RunDialogue());
+		StartCoroutine(RunDialogue(i, c > 0 && !b, ch));
 	}
 
 
@@ -184,7 +168,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private void FinishText()
 	{
-        Logger.Log("Ended dialogue.\n");
+		Logger.Log("Ended dialogue.\n");
 		GameManager.PauseEvent();
 		Pause();
 		textOverlay.SelfFadeOut();
@@ -222,9 +206,8 @@ public class DialogueManager : MonoBehaviour
 	/// <param name="s">The dialogue string. </param>
 	private IEnumerator CharacterDialogue(int c, string s)
 	{
-        Logger.Log (((Character)c).ToString () + " says : " + s);
+		Logger.Log(((Character)c).ToString() + " says : " + s);
 		ClearTexts();
-		lastQuestion = s;
 		yield return characterTexts[c].TypeText(s);
 		yield return new WaitForSecondsRealtime(0.1f);
 		yield return WaitForKeypress(KeyCode.Space);
@@ -323,31 +306,57 @@ public class DialogueManager : MonoBehaviour
 	/// <summary>
 	/// Runs the dialogue for the scene loaded in the dialogue parser. 
 	/// </summary>
-	private IEnumerator RunDialogue()
+	private IEnumerator RunDialogue(int scene, bool dialogue, Character c)
 	{
 		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
-		for (int i = 0; i < dParser.Lines.Count; ++i)
+		if (dialogue)
 		{
-			DialogueParser.DialogueLine d = dParser.Lines[i];
-			if (d.character == Character.end)
+			yield return dParser.LoadDialogue(Path.Combine(Path.Combine("Dialogue", c.ToString()), "Dialogue" + scene));
+			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+		}
+		else
+		{
+			yield return dParser.LoadDialogue(Path.Combine(Path.Combine("Snippet", c.ToString()), "Snippet" + scene));
+		}
+		DialogueParser.DialogueLine l = dParser.Head;
+		while (true)
+		{
+			string position = l.node.character == Character.player || l.node.forceLeft ? "L" : "R";
+			Image e = (position == "R" ? rightCharacterPortraits : leftCharacterPortraits)[(int)l.node.character][(int)l.node.expression].GetComponent<Image>();
+			e.color = Color.white;
+			AssignExpression(ref lastExpression, l.node.character, l.node.expression, position);
+			yield return CharacterDialogue(l.node.character, l.node.dialogue);
+			Debug.Log(e.gameObject.activeSelf);
+			e.color = new Color(135 / 255.0f, 135 / 255.0f, 135 / 255.0f, 165 / 255.0f);
+			if (l.node.longOption)
 			{
-                
-				break;
+				IncrementDialogueTime();
 			}
-			if (d.character != Character.options)
+			if (l.node.positive)
 			{
-				AssignExpression(ref lastExpression, d.character, d.expression, d.position);
-				if (d.receiving != Character.end)
+				AddRelationshipPoints(l.node.characterAffected, 1);
+			}
+			if (l.node.negative)
+			{
+				AddRelationshipPoints(l.node.characterAffected, -1);
+			}
+			if (l.node.fired)
+			{
+				FiredCharacter(l.node.characterAffected);
+			}
+			if (-1 < l.node.infoGathered && l.node.infoGathered < 11)
+			{
+				GotInfoOnCharacter(l.node.characterAffected, l.node.infoGathered);
+			}
+			if (l.connections.Count < 2)
+			{
+				if (l.connections.Count == 1)
 				{
-					AssignExpression(ref lastExpression, d.receiving, d.rExpression, d.position == "R" ? "L" : "R");
+					l = l.connections[0];
 				}
-				yield return CharacterDialogue(d.character, d.content);
-				if (d.options[0] != null)
+				else
 				{
-					if (d.options.Length == 1)
-					{
-						UpdateLine(ref i, int.Parse(d.options[0]));
-					}
+					break;
 				}
 			}
 			else
@@ -355,48 +364,16 @@ public class DialogueManager : MonoBehaviour
 				ClearTexts();
 				presentingOptions = true;
 
-				for (int j = 0; j < d.options.Length; ++j)
+				for (int j = 0; j < l.connections.Count; ++j)
 				{
 					dialogueButtons[j].gameObject.SetActive(true);
-					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = d.options[j].Split(':')[0];
+					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = l.connections[j].node.dialogue;
 					// On click gets called after j is incremented, so we have to save it as a temp value. 
-					string[] options = d.options[j].Split(':');
-					dialogueButtons[j].onClick.AddListener(() => UpdateLine(ref i, int.Parse(options[1])));
-                    if (Logger.LogActive) {
-                        dialogueButtons [j].onClick.AddListener (() => Logger.Log ("Selected '" + options[0] + "'"));
-                    }
-					// Handle option stat modifications if present
-					for (int k = 2; k < options.Length; k++)
-					{
-						if (options[k].ToUpper() == "L")
-						{
-							dialogueButtons[j].onClick.AddListener(IncrementDialogueTime);
-						}
-						else
-						{
-							string[] statMods = options[k].Split(',');
-							Character c = (Character)Enum.Parse(typeof(Character), statMods[0]);
-							if (statMods[1] == "+")
-							{
-								dialogueButtons[j].onClick.AddListener(() => AddRelationshipPoints(c, 1));
-							}
-							else if (statMods[1] == "-")
-							{
-								dialogueButtons[j].onClick.AddListener(() => AddRelationshipPoints(c, -1));
-							}
-							else if (statMods[1].ToLower() == "fired" || statMods[1].ToLower() == "f")
-							{
-								dialogueButtons[j].onClick.AddListener(() => FiredCharacter(c));
-							}
-							else
-							{
-								dialogueButtons[j].onClick.AddListener(() => GotInfoOnCharacter(c, int.Parse(statMods[1])));
-							}
-						}
-					}
+					int temp = j;
+					dialogueButtons[j].onClick.AddListener(() => UpdateLine(ref l, l.connections[temp]));
 				}
 
-				questionText.text = lastQuestion;
+				questionText.text = l.node.dialogue;
 				question.SelfFadeIn();
 
 				while (presentingOptions)
@@ -414,11 +391,9 @@ public class DialogueManager : MonoBehaviour
 	/// <summary>
 	/// Updates the current dialogue line number once the player has clicked on a dialogue option. 
 	/// </summary>
-	private void UpdateLine(ref int index, int line)
+	private void UpdateLine(ref DialogueParser.DialogueLine current, DialogueParser.DialogueLine newLine)
 	{
-		// The line in the file starts at 1 not 0, and i gets 
-		// incremented in the for loop again, so subtract 2. 
-		index = line - 2;
+		current = newLine;
 		presentingOptions = false;
 		foreach (Button b in dialogueButtons)
 		{
@@ -434,7 +409,7 @@ public class DialogueManager : MonoBehaviour
 	private void GotInfoOnCharacter(Character c, int info)
 	{
 		Stats.hasInfoOn[c][info] = true;
-        Logger.Log (c.ToString() + " info #" + info.ToString() + "obtained.");
+		Logger.Log(c.ToString() + " info #" + info.ToString() + "obtained.");
 	}
 
 
@@ -444,7 +419,7 @@ public class DialogueManager : MonoBehaviour
 	private void FiredCharacter(Character c)
 	{
 		Stats.fired[c] = true;
-        Logger.Log (c.ToString() + " fired.");
+		Logger.Log(c.ToString() + " fired.");
 	}
 
 
@@ -463,7 +438,7 @@ public class DialogueManager : MonoBehaviour
 	private void AddRelationshipPoints(Character c, int points)
 	{
 		Stats.relationshipPoints[c] += points;
-        Logger.Log (c.ToString() + " bond set to " + Stats.relationshipPoints[c].ToString() + ".");
+		Logger.Log(c.ToString() + " bond set to " + Stats.relationshipPoints[c].ToString() + ".");
 	}
 
 

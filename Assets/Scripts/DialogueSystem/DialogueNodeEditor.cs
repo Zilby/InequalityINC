@@ -47,12 +47,12 @@ public class DialogueNodeEditor : EditorWindow
 		DrawGrid(20, 0.2f, Color.gray);
 		DrawGrid(100, 0.4f, Color.gray);
 
-		DrawControls();
-
 		DrawNodes();
 		DrawConnections();
 
 		DrawConnectionLine(Event.current);
+
+		DrawControls();
 
 		ProcessNodeEvents(Event.current);
 		ProcessEvents(Event.current);
@@ -91,12 +91,16 @@ public class DialogueNodeEditor : EditorWindow
 		EditorGUI.LabelField(new Rect(5, 5, 60, 15), content);
 		tree.characterFile = (DialogueManager.Character)EditorGUI.EnumPopup(
 			new Rect(70, 5, 90, 15), tree.characterFile, EditorStyles.popup);
+		content = new GUIContent("Type");
+		EditorGUI.LabelField(new Rect(5, 25, 60, 15), content);
+		tree.type = (DialogueTree.Type)EditorGUI.EnumPopup(
+			new Rect(70, 25, 90, 15), tree.type, EditorStyles.popup);
 		content = new GUIContent("Dialogue Scene");
-		EditorGUI.LabelField(new Rect(5, 25, 100, 20), content);
-		tree.scene = EditorGUI.IntField(new Rect(100, 25, 60, 15), tree.scene);
+		EditorGUI.LabelField(new Rect(5, 45, 100, 20), content);
+		tree.scene = EditorGUI.IntField(new Rect(100, 45, 60, 15), tree.scene);
 		content = new GUIContent("Load Dialogue");
-		if(GUI.Button(new Rect(5, 45, 150, 20), content)) {
-			DialogueTree d = DialogueWriter.LoadEditor(Path.Combine(tree.GetDirectory(), tree.GetFileName()));
+		if(GUI.Button(new Rect(5, 65, 150, 20), content)) {
+			DialogueTree d = DialogueWriter.LoadTree(Path.Combine(tree.GetDirectory(), tree.GetFileName()));
 			if (d != null)
 			{
 				tree.Nodes = d.Nodes;
@@ -105,9 +109,9 @@ public class DialogueNodeEditor : EditorWindow
 			}
 		}
 		content = new GUIContent("Save Dialogue");
-		if (GUI.Button(new Rect(5, 70, 150, 20), content))
+		if (GUI.Button(new Rect(5, 90, 150, 20), content))
 		{
-			DialogueWriter.WriteEditor(tree, tree.GetFileName(), tree.GetDirectory());
+			DialogueWriter.WriteTree(tree, tree.GetFileName(), tree.GetDirectory());
 		}
 		if (needsConnectionFuse) 
 		{
@@ -272,7 +276,7 @@ public class DialogueNodeEditor : EditorWindow
 			tree.Nodes = new List<DialogueNode>();
 		}
 
-		tree.Nodes.Add(new DialogueNode(mousePosition, 200, 100));
+		tree.Nodes.Add(new DialogueNode(mousePosition, 200, 120));
 	}
 
 	private void OnClickInPoint(ConnectionPoint inPoint)

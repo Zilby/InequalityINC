@@ -338,8 +338,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -4207,8 +4207,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4218,7 +4218,7 @@ MonoBehaviour:
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -6070,8 +6070,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6081,7 +6081,7 @@ MonoBehaviour:
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -8923,8 +8923,8 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300020, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
   - {fileID: 21300014, guid: ffe8e175792fe40e1b926af9b884b6b5, type: 3}
-  positiveDialogues: 0200000000000000
-  negativeDialogues: 0200000000000000
+  positiveDialogues: 0000000000000000
+  negativeDialogues: 0000000000000000
   positiveSnippets: 0000000000000000
   negativeSnippets: 0000000000000000
   conversationsRemaining: 2
@@ -10000,7 +10000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: -2
+  character: 0
   sprites:
   - {fileID: 21300002, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
   - {fileID: 21300008, guid: d972db8e7f9824256b55fbcf303a402d, type: 3}
