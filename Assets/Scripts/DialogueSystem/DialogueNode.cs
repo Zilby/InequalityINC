@@ -68,7 +68,9 @@ public class DialogueNode
 		selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
 		selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
 
-		textfieldStyle = EditorStyles.textField;
+		EditorStyles.textField.wordWrap = false;
+		EditorStyles.textField.stretchHeight = false;
+		textfieldStyle = new GUIStyle(EditorStyles.textField); 
 		textfieldStyle.wordWrap = true;
 		textfieldStyle.stretchHeight = true;
 		textfieldStyle.stretchWidth = false;
