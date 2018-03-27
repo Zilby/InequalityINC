@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: f1d8e546446984feba8e127f2a39cc6d
+timeCreated: 1522126461
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Alex_Dave_Sharon_0
+    21300002: Alex_Dave_Sharon_1
+    21300004: Alex_Dave_Sharon_2
+    21300006: Alex_Dave_Sharon_3
+    21300008: Alex_Dave_Sharon_4
+    21300010: Alex_Dave_Sharon_5
+    21300012: Alex_Dave_Sharon_6
+    21300014: Alex_Dave_Sharon_7
+    21300016: Alex_Dave_Sharon_8
+    21300018: Alex_Dave_Sharon_9
+    21300020: Alex_Dave_Sharon_10
+    21300022: Alex_Dave_Sharon_11
+    21300024: Alex_Dave_Sharon_12
+    21300026: Alex_Dave_Sharon_13
+    21300028: Alex_Dave_Sharon_14
+    21300030: Alex_Dave_Sharon_15
+    21300032: Alex_Dave_Sharon_16
+    21300034: Alex_Dave_Sharon_17
+    21300036: Alex_Dave_Sharon_18
+    21300038: Alex_Dave_Sharon_19
+    21300040: Alex_Dave_Sharon_20
+    21300042: Alex_Dave_Sharon_21
+    21300044: Alex_Dave_Sharon_22
+    21300046: Alex_Dave_Sharon_23
+    21300048: Alex_Dave_Sharon_24
+    21300050: Alex_Dave_Sharon_25
+    21300052: Alex_Dave_Sharon_26
+    21300054: Alex_Dave_Sharon_27
+    21300056: Alex_Dave_Sharon_28
+    21300058: Alex_Dave_Sharon_29
+    21300060: Alex_Dave_Sharon_30
+    21300062: Alex_Dave_Sharon_31
+    21300064: Alex_Dave_Sharon_32
+    21300066: Alex_Dave_Sharon_33
+    21300068: Alex_Dave_Sharon_34
+    21300070: Alex_Dave_Sharon_35
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1222
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1222
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1222
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_3
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1222
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1222
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_5
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1222
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_6
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1222
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_7
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1222
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_8
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1222
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_9
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1222
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_10
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1222
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_11
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 1222
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 922
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 922
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_14
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 922
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_15
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 922
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_16
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 922
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_17
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 922
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_18
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_19
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_20
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_21
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_22
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_23
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 922
+        width: 113
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 622
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_25
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 622
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_26
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 622
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_27
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 622
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_28
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 622
+        width: 106
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_29
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 622
+        width: 105
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_30
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 622
+        width: 97
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_31
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 622
+        width: 97
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_32
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 622
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_33
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 622
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_34
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 622
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alex_Dave_Sharon_35
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 622
+        width: 98
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

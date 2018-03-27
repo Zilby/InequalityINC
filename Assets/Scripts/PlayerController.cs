@@ -238,7 +238,7 @@ public class PlayerController : MonoBehaviour
 	private void CheckTalk()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, DirectionVector, out hit, 1))
+		if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + cc.center.y, transform.position.z), DirectionVector, out hit, 1))
 		{
 			characterFacing = hit.collider.GetComponent<NPCController>();
 			objectFacing = hit.collider.GetComponent<ObjectText>();
