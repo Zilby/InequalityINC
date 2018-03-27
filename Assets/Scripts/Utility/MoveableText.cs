@@ -57,6 +57,15 @@ public class MoveableText : MonoBehaviour
 		}
 	}
 
+	private string ReplacePlayerName(string message) 
+	{
+		message = message.Replace("Player", Stats.PlayerName);
+		message = message.Replace("player", Stats.PlayerName);
+		message = message.Replace("Alex", Stats.PlayerName);
+		message = message.Replace("alex", Stats.PlayerName);
+		return message;
+	}
+
 
 	/// <summary>
 	/// Types text across the screen. 
@@ -64,6 +73,7 @@ public class MoveableText : MonoBehaviour
 	/// <param name="message">The message to be displayed</param>
 	public IEnumerator TypeText(string message)
 	{
+		message = ReplacePlayerName(message);
 		skip = false;
 		ClearText();
 		string current = "";
