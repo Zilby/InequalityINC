@@ -1795,6 +1795,36 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489192695152868, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489192695152868, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114436070029483306, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114436070029483306, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1195883701407922, guid: f359532086cef47988faeaa2b0edfe2b, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -3130,7 +3160,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &473464516 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114010691456565492, guid: f359532086cef47988faeaa2b0edfe2b,
+  m_PrefabParentObject: {fileID: 114014935941470276, guid: f359532086cef47988faeaa2b0edfe2b,
     type: 2}
   m_PrefabInternal: {fileID: 241438419}
   m_Script: {fileID: 11500000, guid: 38635df9a429b4942974455a75e742cd, type: 3}
@@ -4700,6 +4730,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &906172160 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114010691456565492, guid: f359532086cef47988faeaa2b0edfe2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 241438419}
+  m_Script: {fileID: 11500000, guid: 38635df9a429b4942974455a75e742cd, type: 3}
 --- !u!1001 &914649723
 Prefab:
   m_ObjectHideFlags: 0
@@ -4908,11 +4944,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1136710327233528, guid: 8ebb8c37c077e4557b481b86e4d12db7, type: 2}
       propertyPath: m_Name
-      value: '[FadeableUI] Dave'
+      value: '[FadeableUI] Sharon'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ebb8c37c077e4557b481b86e4d12db7, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &914649724 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114523994793165458, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 914649723}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &927199610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,7 +6760,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
 --- !u!114 &1228093848 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114753371425447116, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+  m_PrefabParentObject: {fileID: 114523994793165458, guid: 8ebb8c37c077e4557b481b86e4d12db7,
     type: 2}
   m_PrefabInternal: {fileID: 1281059659}
   m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
@@ -7048,6 +7090,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224091743244315286, guid: 8ebb8c37c077e4557b481b86e4d12db7,
     type: 2}
   m_PrefabInternal: {fileID: 1281059659}
+--- !u!114 &1281059661 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114753371425447116, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1281059659}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &1286094624
 GameObject:
   m_ObjectHideFlags: 0
@@ -10364,7 +10412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 0
+  character: 2
   sprites:
   - {fileID: 21300050, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
   - {fileID: 21300066, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
@@ -11118,14 +11166,17 @@ MonoBehaviour:
   characterTexts:
   - {fileID: 399407925}
   - {fileID: 473464516}
+  - {fileID: 906172160}
   questionText: {fileID: 1621947986}
   question: {fileID: 1195909426}
   leftCharacters:
   - {fileID: 1644807518}
+  - {fileID: 914649724}
   - {fileID: 841393417}
   rightCharacters:
   - {fileID: 1246491506}
   - {fileID: 1228093848}
+  - {fileID: 1281059661}
 --- !u!114 &1965311810
 MonoBehaviour:
   m_ObjectHideFlags: 0

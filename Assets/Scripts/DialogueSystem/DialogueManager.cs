@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
 	{
 		player = 0,
 		dave = 1,
+		sharon = 2,
 	}
 
 	/// <summary>
