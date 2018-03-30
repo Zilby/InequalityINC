@@ -348,6 +348,7 @@ public class DialogueManager : MonoBehaviour
 			{
 				GotInfoOnCharacter(l.node.characterAffected, l.node.infoGathered);
 			}
+			l.RestrictConnections();
 			if (l.connections.Count < 2)
 			{
 				if (l.connections.Count == 1)

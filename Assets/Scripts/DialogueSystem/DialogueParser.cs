@@ -14,14 +14,28 @@ public class DialogueParser
 	/// </summary>
 	public struct DialogueLine
 	{
-		public DialogueNode node; 
+		public DialogueNode node;
 		public List<DialogueLine> connections;
 		public List<DialogueLine> parents;
 
-		public DialogueLine(DialogueNode n) {
+		public DialogueLine(DialogueNode n)
+		{
 			node = n;
 			connections = new List<DialogueLine>();
 			parents = new List<DialogueLine>();
+		}
+
+		public void RestrictConnections()
+		{
+			List<DialogueLine> newConnections = new List<DialogueLine>();
+			foreach (DialogueLine l in connections)
+			{
+				if (NotRestricted(l.node))
+				{
+					newConnections.Add(l);
+				}
+			}
+			connections = newConnections;
 		}
 	}
 
@@ -60,16 +74,32 @@ public class DialogueParser
 		lines = new DialogueLine[1000];
 		DialogueTree tree = DialogueWriter.LoadTree(path);
 		yield return new WaitForSecondsRealtime(0.2f);
-		foreach(DialogueNode n in tree.Nodes) {
+		foreach (DialogueNode n in tree.Nodes)
+		{
 			lines[n.id] = new DialogueLine(n);
 		}
-		foreach(Connection c in tree.Connections) {
-			lines[c.outPoint.id].connections.Add(lines[c.inPoint.id]);
-			lines[c.inPoint.id].parents.Add(lines[c.outPoint.id]);
+		foreach (Connection c in tree.Connections)
+		{
+			DialogueLine inD = lines[c.inPoint.id];
+			DialogueLine outD = lines[c.outPoint.id];
+			lines[c.outPoint.id].connections.Add(inD);
+			lines[c.inPoint.id].parents.Add(outD);
 		}
 		head = lines[tree.Nodes[0].id];
-		while (head.parents.Count > 0) {
+		while (head.parents.Count > 0)
+		{
 			head = head.parents[0];
 		}
+	}
+
+	/// <summary>
+	/// Whether or not this dialogue node is restricted. 
+	/// </summary>
+	private static bool NotRestricted(DialogueNode d)
+	{
+		return d.characterRestriction != DialogueManager.Character.player &&
+				((d.negativeRestriction < Stats.relationshipPoints[d.characterRestriction] && 
+			      d.positiveRestriction > Stats.relationshipPoints[d.characterRestriction]) &&
+			     (d.infoRestriction == -1 || Stats.hasInfoOn[d.characterRestriction][d.infoRestriction]));
 	}
 }

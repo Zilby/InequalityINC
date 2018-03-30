@@ -2,56 +2,56 @@
 <DialogueTree>
   <Nodes>
     <DialogueNode>
-      <id>3</id>
+      <id>4</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>180</x>
-        <y>129</y>
+        <x>162</x>
+        <y>163</y>
         <position>
-          <x>180</x>
-          <y>129</y>
+          <x>162</x>
+          <y>163</y>
         </position>
         <center>
-          <x>280</x>
-          <y>207</y>
+          <x>262</x>
+          <y>281</y>
         </center>
         <min>
-          <x>180</x>
-          <y>129</y>
+          <x>162</x>
+          <y>163</y>
         </min>
         <max>
-          <x>380</x>
-          <y>285</y>
+          <x>362</x>
+          <y>399</y>
         </max>
         <width>200</width>
-        <height>156</height>
+        <height>236</height>
         <size>
           <x>200</x>
-          <y>156</y>
+          <y>236</y>
         </size>
-        <xMin>180</xMin>
-        <yMin>129</yMin>
-        <xMax>380</xMax>
-        <yMax>285</yMax>
+        <xMin>162</xMin>
+        <yMin>163</yMin>
+        <xMax>362</xMax>
+        <yMax>399</yMax>
       </rect>
       <defaultRect>
-        <x>180</x>
-        <y>129</y>
+        <x>62</x>
+        <y>172</y>
         <position>
-          <x>180</x>
-          <y>129</y>
+          <x>62</x>
+          <y>172</y>
         </position>
         <center>
-          <x>280</x>
-          <y>199</y>
+          <x>162</x>
+          <y>242</y>
         </center>
         <min>
-          <x>180</x>
-          <y>129</y>
+          <x>62</x>
+          <y>172</y>
         </min>
         <max>
-          <x>380</x>
-          <y>269</y>
+          <x>262</x>
+          <y>312</y>
         </max>
         <width>200</width>
         <height>140</height>
@@ -59,10 +59,10 @@
           <x>200</x>
           <y>140</y>
         </size>
-        <xMin>180</xMin>
-        <yMin>129</yMin>
-        <xMax>380</xMax>
-        <yMax>269</yMax>
+        <xMin>62</xMin>
+        <yMin>172</yMin>
+        <xMax>262</xMax>
+        <yMax>312</yMax>
       </defaultRect>
       <dialogue />
       <character>player</character>
@@ -75,34 +75,34 @@
       <negative>false</negative>
       <infoGathered>-1</infoGathered>
       <fired>false</fired>
-      <restrictions>false</restrictions>
+      <restrictions>true</restrictions>
       <characterRestriction>player</characterRestriction>
-      <positiveRestriction>-1</positiveRestriction>
-      <negativeRestriction>-1</negativeRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
       <infoRestriction>-1</infoRestriction>
       <isDragged>false</isDragged>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <inPoint type="In">
-        <id>3</id>
+        <id>4</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>270</x>
-          <y>124</y>
+          <x>252</x>
+          <y>158</y>
           <position>
-            <x>270</x>
-            <y>124</y>
+            <x>252</x>
+            <y>158</y>
           </position>
           <center>
-            <x>280</x>
-            <y>129</y>
+            <x>262</x>
+            <y>163</y>
           </center>
           <min>
-            <x>270</x>
-            <y>124</y>
+            <x>252</x>
+            <y>158</y>
           </min>
           <max>
-            <x>290</x>
-            <y>134</y>
+            <x>272</x>
+            <y>168</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -110,63 +110,63 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>270</xMin>
-          <yMin>124</yMin>
-          <xMax>290</xMax>
-          <yMax>134</yMax>
+          <xMin>252</xMin>
+          <yMin>158</yMin>
+          <xMax>272</xMax>
+          <yMax>168</yMax>
         </rect>
         <nodeRect>
-          <x>180</x>
-          <y>129</y>
+          <x>162</x>
+          <y>163</y>
           <position>
-            <x>180</x>
-            <y>129</y>
+            <x>162</x>
+            <y>163</y>
           </position>
           <center>
-            <x>280</x>
-            <y>207</y>
+            <x>262</x>
+            <y>281</y>
           </center>
           <min>
-            <x>180</x>
-            <y>129</y>
+            <x>162</x>
+            <y>163</y>
           </min>
           <max>
-            <x>380</x>
-            <y>285</y>
+            <x>362</x>
+            <y>399</y>
           </max>
           <width>200</width>
-          <height>156</height>
+          <height>236</height>
           <size>
             <x>200</x>
-            <y>156</y>
+            <y>236</y>
           </size>
-          <xMin>180</xMin>
-          <yMin>129</yMin>
-          <xMax>380</xMax>
-          <yMax>285</yMax>
+          <xMin>162</xMin>
+          <yMin>163</yMin>
+          <xMax>362</xMax>
+          <yMax>399</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
-        <id>3</id>
+        <id>4</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>270</x>
-          <y>278</y>
+          <x>252</x>
+          <y>392</y>
           <position>
-            <x>270</x>
-            <y>278</y>
+            <x>252</x>
+            <y>392</y>
           </position>
           <center>
-            <x>280</x>
-            <y>283</y>
+            <x>262</x>
+            <y>397</y>
           </center>
           <min>
-            <x>270</x>
-            <y>278</y>
+            <x>252</x>
+            <y>392</y>
           </min>
           <max>
-            <x>290</x>
-            <y>288</y>
+            <x>272</x>
+            <y>402</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -174,40 +174,40 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>270</xMin>
-          <yMin>278</yMin>
-          <xMax>290</xMax>
-          <yMax>288</yMax>
+          <xMin>252</xMin>
+          <yMin>392</yMin>
+          <xMax>272</xMax>
+          <yMax>402</yMax>
         </rect>
         <nodeRect>
-          <x>180</x>
-          <y>129</y>
+          <x>162</x>
+          <y>163</y>
           <position>
-            <x>180</x>
-            <y>129</y>
+            <x>162</x>
+            <y>163</y>
           </position>
           <center>
-            <x>280</x>
-            <y>207</y>
+            <x>262</x>
+            <y>281</y>
           </center>
           <min>
-            <x>180</x>
-            <y>129</y>
+            <x>162</x>
+            <y>163</y>
           </min>
           <max>
-            <x>380</x>
-            <y>285</y>
+            <x>362</x>
+            <y>399</y>
           </max>
           <width>200</width>
-          <height>156</height>
+          <height>236</height>
           <size>
             <x>200</x>
-            <y>156</y>
+            <y>236</y>
           </size>
-          <xMin>180</xMin>
-          <yMin>129</yMin>
-          <xMax>380</xMax>
-          <yMax>285</yMax>
+          <xMin>162</xMin>
+          <yMin>163</yMin>
+          <xMax>362</xMax>
+          <yMax>399</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>

@@ -156,19 +156,19 @@ public class PlayerController : MonoBehaviour
 					yield return new WaitForSeconds(0.3f);
 					bumped = false;
 				}
-				if (Input.GetKey(KeyCode.UpArrow) && transform.position == destination)
+				if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && transform.position == destination)
 				{
 					yield return Face(Direction.up);
 				}
-				else if (Input.GetKey(KeyCode.RightArrow) && transform.position == destination)
+				else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && transform.position == destination)
 				{
 					yield return Face(Direction.right);
 				}
-				else if (Input.GetKey(KeyCode.DownArrow) && transform.position == destination)
+				else if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && transform.position == destination)
 				{
 					yield return Face(Direction.down);
 				}
-				else if (Input.GetKey(KeyCode.LeftArrow) && transform.position == destination)
+				else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && transform.position == destination)
 				{
 					yield return Face(Direction.left);
 				}

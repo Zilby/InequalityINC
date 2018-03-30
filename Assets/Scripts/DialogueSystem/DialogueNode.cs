@@ -28,8 +28,8 @@ public class DialogueNode
 	public bool fired = false;
 	public bool restrictions = false;
 	public DialogueManager.Character characterRestriction = DialogueManager.Character.player;
-	public int positiveRestriction = -1;
-	public int negativeRestriction = -1;
+	public int positiveRestriction = 99;
+	public int negativeRestriction = -99;
 	public int infoRestriction = -1;
 	public bool isDragged;
 	public bool isSelected;
@@ -139,6 +139,22 @@ public class DialogueNode
 				infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + 200 + height, rect.width - 170, 15), infoGathered);
 				content = new GUIContent("<color=white>Fired</color>");
 				fired = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 220 + height, rect.width - 20, 15), content, fired);
+			}
+			if (restrictions)
+			{
+				content = new GUIContent("<color=white>NPC Required</color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + 120 + height + advancedHeight, 150, 15), content);
+				characterRestriction = (DialogueManager.Character)EditorGUI.EnumPopup(
+					new Rect(rect.x + 110, rect.y + 120 + height + advancedHeight, rect.width - 130, 15), characterRestriction);
+				content = new GUIContent("<color=white>Relationship Point Range: </color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + 140 + height + advancedHeight, 150, 20), content);
+				negativeRestriction = EditorGUI.IntField(new Rect(rect.x + 25, rect.y + 160 + height + advancedHeight, rect.width - 170, 15), negativeRestriction);
+				content = new GUIContent("<color=white> <   Points   < </color>");
+				EditorGUI.LabelField(new Rect(rect.x + 55, rect.y + 160 + height + advancedHeight, rect.width - 40, 20), content);
+				positiveRestriction = EditorGUI.IntField(new Rect(rect.x + 140, rect.y + 160 + height + advancedHeight, rect.width - 170, 15), positiveRestriction);
+				content = new GUIContent("<color=white>Info Restriction</color>");
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + 180 + height + advancedHeight, 120, 15), content);
+				infoRestriction = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + 180 + height + advancedHeight, rect.width - 170, 15), infoRestriction);
 			}
 			inPoint.nodeRect = rect;
 			outPoint.nodeRect = rect;

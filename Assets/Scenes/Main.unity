@@ -10432,9 +10432,9 @@ MonoBehaviour:
   negativeDialogues: 00000000
   positiveSnippets: 0000000000000000
   negativeSnippets: 0000000000000000
-  conversationsRemaining: 1
+  conversationsRemaining: 10
   arrive: 570
-  leave: 630
+  leave: 670
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0
