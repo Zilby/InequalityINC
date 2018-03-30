@@ -76,7 +76,7 @@
       <infoGathered>-1</infoGathered>
       <fired>false</fired>
       <isDragged>false</isDragged>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <inPoint type="In">
         <id>10</id>
         <readyToInit>true</readyToInit>

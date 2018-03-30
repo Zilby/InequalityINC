@@ -26,6 +26,11 @@ public class DialogueNode
 	public bool negative = false;
 	public int infoGathered = -1;
 	public bool fired = false;
+	public bool restrictions = false;
+	public DialogueManager.Character characterRestriction = DialogueManager.Character.player;
+	public int positiveRestriction = -1;
+	public int negativeRestriction = -1;
+	public int infoRestriction = -1;
 	public bool isDragged;
 	public bool isSelected;
 
@@ -76,6 +81,8 @@ public class DialogueNode
 		textfieldStyle.stretchWidth = false;
 		EditorStyles.label.normal.textColor = Color.black;
 		EditorStyles.label.richText = true;
+		foldoutStyle = new GUIStyle(EditorStyles.foldout);
+		foldoutStyle.richText = true;
 		OnRemoveNode = DialogueNodeEditor.RemoveNodeEvent;
 		idCounter = Mathf.Max(id, idCounter);
 		initialized = true;
@@ -97,10 +104,10 @@ public class DialogueNode
 			GUIContent content = new GUIContent(dialogue);
 			float height = textfieldStyle.CalcHeight(content, rect.width - 20);
 			rect.height = defaultRect.height + height;
-			if (advancedOptions)
-			{
-				rect.height += 140;
-			}
+			float advancedHeight = advancedOptions ? 140 : 0;
+			float restrictionsHeight = restrictions ? 80 : 0;
+			rect.height += advancedHeight;
+			rect.height += restrictionsHeight;
 			inPoint.Draw();
 			outPoint.Draw();
 			GUI.Box(rect, title, style);
@@ -110,26 +117,28 @@ public class DialogueNode
 			expression = (DialogueManager.Expression)EditorGUI.EnumPopup(
 				new Rect(rect.x + 10, rect.y + 45, rect.width - 20, 15), expression);
 			content = new GUIContent("<color=white>Advanced Options</color>");
-			advancedOptions = EditorGUI.Foldout(new Rect(rect.x + 10, rect.y + 80 + height, rect.width - 20, 15), advancedOptions, content);
+			advancedOptions = EditorGUI.Foldout(new Rect(rect.x + 10, rect.y + 80 + height, rect.width - 20, 15), advancedOptions, content, foldoutStyle);
+			content = new GUIContent("<color=white>Restrictions</color>");
+			restrictions = EditorGUI.Foldout(new Rect(rect.x + 10, rect.y + 100 + height + advancedHeight, rect.width - 20, 15), restrictions, content, foldoutStyle);
 			if (advancedOptions)
 			{
 				content = new GUIContent("<color=white>NPC Affected</color>");
-				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 160, 80, 15), content);
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + 100 + height, 80, 15), content);
 				characterAffected = (DialogueManager.Character)EditorGUI.EnumPopup(
-					new Rect(rect.x + 110, rect.y + rect.height - 160, rect.width - 130, 15), characterAffected);
+					new Rect(rect.x + 110, rect.y + 100 + height, rect.width - 130, 15), characterAffected);
 				content = new GUIContent("<color=white>Force Left</color>");
-				forceLeft = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 140, rect.width - 20, 15), content, forceLeft);
+				forceLeft = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 120 + height, rect.width - 20, 15), content, forceLeft);
 				content = new GUIContent("<color=white>Long Option</color>");
-				longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 120, rect.width - 20, 15), content, longOption);
+				longOption = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 140 + height, rect.width - 20, 15), content, longOption);
 				content = new GUIContent("<color=white>Positive Interaction</color>");
-				positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 100, rect.width - 20, 15), content, positive);
+				positive = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 160 + height, rect.width - 20, 15), content, positive);
 				content = new GUIContent("<color=white>Negative Interaction</color>");
-				negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 80, rect.width - 20, 15), content, negative);
+				negative = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 180 + height, rect.width - 20, 15), content, negative);
 				content = new GUIContent("<color=white>Info Gathered</color>");
-				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + rect.height - 60, 80, 15), content);
-				infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + rect.height - 60, rect.width - 170, 15), infoGathered);
+				EditorGUI.LabelField(new Rect(rect.x + 15, rect.y + 200 + height, 80, 15), content);
+				infoGathered = EditorGUI.IntField(new Rect(rect.x + 150, rect.y + 200 + height, rect.width - 170, 15), infoGathered);
 				content = new GUIContent("<color=white>Fired</color>");
-				fired = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + rect.height - 40, rect.width - 20, 15), content, fired);
+				fired = EditorGUI.Toggle(new Rect(rect.x + 15, rect.y + 220 + height, rect.width - 20, 15), content, fired);
 			}
 			inPoint.nodeRect = rect;
 			outPoint.nodeRect = rect;

@@ -153,6 +153,8 @@ public class DialogueNodeEditor : EditorWindow
 			}
 		}
 		needsConnectionFuse = false;
+		GUI.UnfocusWindow();
+		Repaint();
 	}
 
 	private void DrawNodes()
@@ -276,7 +278,7 @@ public class DialogueNodeEditor : EditorWindow
 			tree.Nodes = new List<DialogueNode>();
 		}
 
-		tree.Nodes.Add(new DialogueNode(mousePosition, 200, 120));
+		tree.Nodes.Add(new DialogueNode(mousePosition, 200, 140));
 	}
 
 	private void OnClickInPoint(ConnectionPoint inPoint)
