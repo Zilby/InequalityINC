@@ -33,6 +33,9 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public static Action DescripEvent;
 
+	public delegate IEnumerator DayEvent();
+	public static DayEvent FadeDayEvent;
+
 	/// <summary>
 	/// The background for all UI elements
 	/// </summary>
@@ -53,6 +56,10 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public TextMeshProUGUI clockText;
 
+	public FadeableUI dayTransition;
+	public TextMeshProUGUI dayTransitionText;
+	//private List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+
 
 	// Use this for initialization
 	void Awake()
@@ -61,6 +68,7 @@ public class UIManager : MonoBehaviour
 		ClockEvent = UpdateClock;
 		DescripEvent = UpdateDescrip;
 		UpdateText = SetText;
+		FadeDayEvent = FadeDay;
 	}
 
 
@@ -122,5 +130,18 @@ public class UIManager : MonoBehaviour
 		yield return descripText.TypeText(s);
 		yield return new WaitForSecondsRealtime(0.1f);
 		yield return DialogueManager.WaitForKeypress(KeyCode.Space);
+	}
+
+	private IEnumerator FadeDay()
+	{
+		//dayTransitionText.text = days[Stats.Day - 1];
+		if (Stats.Day == 1)
+		{
+			dayTransition.Show();
+		} else {
+			yield return dayTransition.FadeIn();
+		}
+		yield return new WaitForSecondsRealtime(1.0f);
+		yield return dayTransition.FadeOut();
 	}
 }

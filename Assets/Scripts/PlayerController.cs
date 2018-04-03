@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +24,10 @@ public class PlayerController : MonoBehaviour
 		left = 3,
 		none = 4,
 	}
+
+	public static Action ResetEvent;
+
+	public PlayerController resetPlayer;
 
 	/// <summary>
 	/// A position get event.
@@ -113,6 +118,9 @@ public class PlayerController : MonoBehaviour
 
 	void Awake()
 	{
+		ResetEvent = Reset;
+		resetPlayer = Instantiate(this);
+		resetPlayer.gameObject.SetActive(false);
 		GetPosition = CurrentPosition;
 		destination = transform.position;
 		cc = GetComponent<UnityEngine.CharacterController>();
@@ -312,5 +320,14 @@ public class PlayerController : MonoBehaviour
 									  Mathf.Round(lastPos.y * 2),
 									  Mathf.Round(lastPos.z * 2)) / 2.0f;
 		}
+	}
+
+
+	private void Reset()
+	{
+		transform.position = resetPlayer.transform.position;
+		destination = transform.position;
+		lastPos = destination;
+		moving = false;
 	}
 }

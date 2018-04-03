@@ -97,7 +97,7 @@ public class Stats
 	/// </summary>
 	public static void ResetAll()
 	{
-		day = 1;
+		day = 0;
 		ResetDay();
 		foreach (DialogueManager.Character c in Enum.GetValues(typeof(DialogueManager.Character)))
 		{

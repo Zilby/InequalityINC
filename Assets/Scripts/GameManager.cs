@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityStandardAssets.ImageEffects;
 
@@ -9,6 +10,9 @@ using UnityStandardAssets.ImageEffects;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
+	public GameObject characterHolder;
+	private NPCController[] characters;
+
 	private const int TIME_INCREMENT_DELAY = 30;
 
 	/// <summary>
@@ -20,13 +24,14 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		PauseEvent = Pause;
+		//characters = characterHolder.GetComponentsInChildren<NPCController>();
 	}
 
 
 	void Start()
 	{
 		Stats.ResetAll();
-		StartCoroutine(IncrementTime());
+		//StartCoroutine(NewDay());
 	}
 
 
@@ -57,9 +62,46 @@ public class GameManager : MonoBehaviour
 			}
 		}
 		yield return null;
+		StartCoroutine(NewDay());
 	}
 
-    public void OnApplicationQuit() {
-        Logger.Log("Application Quit");
-    }
+	public void OnApplicationQuit()
+	{
+		Logger.Log("Application Quit");
+	}
+
+	/// <summary>
+	/// Sets up a new day
+	/// </summary>
+	private IEnumerator NewDay()
+	{
+		//Pause();
+		//Stats.ResetDay();
+		//Stats.Day++;
+		//PlayerController.ResetEvent();
+		//yield return UIManager.FadeDayEvent();
+		yield return null;
+		if (Stats.Day == 1)
+		{
+			// Day 1 exclusive content
+		}
+		if (Stats.Day == 2)
+		{
+			// Day 2 exclusive content
+		}
+		if (Stats.Day == 3)
+		{
+			// Day 3 exclusive content
+		}
+		if (Stats.Day == 4)
+		{
+			// Day 4 exclusive content
+		}
+		if (Stats.Day == 5)
+		{
+			// Day 5 exclusive content
+		}
+		//Pause();
+		//StartCoroutine(IncrementTime());
+	}
 }
