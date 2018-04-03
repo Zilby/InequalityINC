@@ -10,11 +10,36 @@ public class ObjectText : MonoBehaviour
 	[SerializeField]
 	private List<StringListWrapper> descriptionTexts;
 
+	/// <summary>
+	/// The character whose info is gathered. 
+	/// </summary>
+	[SerializeField]
+	private DialogueManager.Character characterAffected = DialogueManager.Character.player;
+
+	/// <summary>
+	/// The info gathered on the character. 
+	/// </summary>
+	[SerializeField]
+	private int infoGathered = -1;
+
 	public StringListWrapper DescriptionTexts
 	{
 		get
 		{
+			GainInfo();
 			return descriptionTexts[Random.Range(0, descriptionTexts.Count)];
+		}
+	}
+
+	/// <summary>
+	/// Gains the info associated with this object's text.
+	/// </summary>
+	public void GainInfo()
+	{
+		if (characterAffected != DialogueManager.Character.player && infoGathered != -1)
+		{
+			Stats.hasInfoOn[characterAffected][infoGathered] = true;
+			infoGathered = -1;
 		}
 	}
 	/* 

@@ -4728,8 +4728,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0126488, y: 1, z: 1}
+  m_Center: {x: -0.4936756, y: 0, z: 0}
 --- !u!114 &906172160 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114010691456565492, guid: f359532086cef47988faeaa2b0edfe2b,
