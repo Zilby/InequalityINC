@@ -97,7 +97,7 @@ public class DialogueParser
 	/// </summary>
 	private static bool NotRestricted(DialogueNode d)
 	{
-		return d.characterRestriction != DialogueManager.Character.player &&
+		return d.characterRestriction == DialogueManager.Character.player ||
 				((d.negativeRestriction < Stats.relationshipPoints[d.characterRestriction] && 
 			      d.positiveRestriction > Stats.relationshipPoints[d.characterRestriction]) &&
 			     (d.infoRestriction == -1 || Stats.hasInfoOn[d.characterRestriction][d.infoRestriction]));
