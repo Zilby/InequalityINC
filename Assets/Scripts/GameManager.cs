@@ -24,14 +24,14 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		PauseEvent = Pause;
-		//characters = characterHolder.GetComponentsInChildren<NPCController>();
+		characters = characterHolder.GetComponentsInChildren<NPCController>();
 	}
 
 
 	void Start()
 	{
 		Stats.ResetAll();
-		//StartCoroutine(NewDay());
+		StartCoroutine(NewDay());
 	}
 
 
@@ -75,12 +75,11 @@ public class GameManager : MonoBehaviour
 	/// </summary>
 	private IEnumerator NewDay()
 	{
-		//Pause();
-		//Stats.ResetDay();
-		//Stats.Day++;
-		//PlayerController.ResetEvent();
-		//yield return UIManager.FadeDayEvent();
-		yield return null;
+		Pause();
+		Stats.ResetDay();
+		Stats.Day++;
+		PlayerController.ResetEvent();
+		yield return UIManager.FadeDayEvent();
 		if (Stats.Day == 1)
 		{
 			// Day 1 exclusive content
@@ -101,7 +100,7 @@ public class GameManager : MonoBehaviour
 		{
 			// Day 5 exclusive content
 		}
-		//Pause();
-		//StartCoroutine(IncrementTime());
+		Pause();
+		StartCoroutine(IncrementTime());
 	}
 }

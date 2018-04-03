@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
 
 	public FadeableUI dayTransition;
 	public TextMeshProUGUI dayTransitionText;
-	//private List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+	private List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 
 
 	// Use this for initialization
@@ -134,14 +134,14 @@ public class UIManager : MonoBehaviour
 
 	private IEnumerator FadeDay()
 	{
-		//dayTransitionText.text = days[Stats.Day - 1];
+		dayTransitionText.text = days[Stats.Day - 1];
 		if (Stats.Day == 1)
 		{
 			dayTransition.Show();
 		} else {
-			yield return dayTransition.FadeIn();
+			yield return dayTransition.FadeIn(dur: 0.7f);
 		}
-		yield return new WaitForSecondsRealtime(1.0f);
-		yield return dayTransition.FadeOut();
+		yield return new WaitForSecondsRealtime(2.0f);
+		yield return dayTransition.FadeOut(dur: 0.7f);
 	}
 }

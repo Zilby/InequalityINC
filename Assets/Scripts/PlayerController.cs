@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
 	public static Action ResetEvent;
 
-	public PlayerController resetPlayer;
+	private static Vector3 defaultPos;
 
 	/// <summary>
 	/// A position get event.
@@ -118,9 +118,8 @@ public class PlayerController : MonoBehaviour
 
 	void Awake()
 	{
+		defaultPos = transform.position;
 		ResetEvent = Reset;
-		resetPlayer = Instantiate(this);
-		resetPlayer.gameObject.SetActive(false);
 		GetPosition = CurrentPosition;
 		destination = transform.position;
 		cc = GetComponent<UnityEngine.CharacterController>();
@@ -128,7 +127,8 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(Facing());
 	}
 
-	void Update() {
+	void Update()
+	{
 		SetAnimationState();
 	}
 
@@ -268,7 +268,7 @@ public class PlayerController : MonoBehaviour
 		{
 			if (characterFacing != null)
 			{
-                Logger.Log ("Began dialogue with " + characterFacing.character.ToString() + ".");
+				Logger.Log("Began dialogue with " + characterFacing.character.ToString() + ".");
 				characterFacing.Face(direction);
 				yield return new WaitForSeconds(0.3f);
 				int convos = characterFacing.conversationsRemaining;
@@ -277,19 +277,19 @@ public class PlayerController : MonoBehaviour
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
 			}
-			else if (objectFacing != null) 
+			else if (objectFacing != null)
 			{
-                Logger.Log("Began description.");
+				Logger.Log("Began description.");
 				readingDescrip = true;
 				UIManager.DescripEvent();
 				StringListWrapper s = objectFacing.DescriptionTexts;
-				for (int i = 0; i < s.Count; ++i) 
+				for (int i = 0; i < s.Count; ++i)
 				{
 					yield return UIManager.UpdateText(s[i]);
 				}
 				UIManager.DescripEvent();
 				readingDescrip = false;
-                Logger.Log("Ended description.\n");
+				Logger.Log("Ended description.\n");
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
 			}
@@ -325,9 +325,11 @@ public class PlayerController : MonoBehaviour
 
 	private void Reset()
 	{
-		transform.position = resetPlayer.transform.position;
+		transform.position = defaultPos;
 		destination = transform.position;
 		lastPos = destination;
 		moving = false;
+		direction = Direction.down;
+		ani.SetInteger("Direction", (int)direction);
 	}
 }
