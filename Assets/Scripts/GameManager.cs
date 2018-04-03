@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 	public GameObject characterHolder;
 	private NPCController[] characters;
 
-	private const int TIME_INCREMENT_DELAY = 30;
+	[SerializeField]
+	private float timeIncrementDelay = 30;
 
 	/// <summary>
 	/// Causes the gameplay to pause. 
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
 	{
 		while (Stats.CurrentTime < 17 * 60)
 		{
-			yield return new WaitForSeconds(TIME_INCREMENT_DELAY);
+			yield return new WaitForSeconds(timeIncrementDelay);
 			if (Stats.CurrentTime < 17 * 60)
 			{
 				Stats.CurrentTime += 10;
@@ -76,10 +77,11 @@ public class GameManager : MonoBehaviour
 	private IEnumerator NewDay()
 	{
 		Pause();
+		yield return UIManager.FadeDayInEvent();
 		Stats.ResetDay();
 		Stats.Day++;
 		PlayerController.ResetEvent();
-		yield return UIManager.FadeDayEvent();
+		yield return UIManager.FadeDayOutEvent();
 		if (Stats.Day == 1)
 		{
 			// Day 1 exclusive content

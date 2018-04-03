@@ -13,6 +13,9 @@ public class SoundManager : MonoBehaviour {
 	/// </summary>
 	public static Action BumpEvent;
 
+	public delegate void SongPlay(int i);
+	public static SongPlay SongEvent;
+
 	/// <summary>
 	/// The list of sound clips. 
 	/// </summary>
@@ -34,6 +37,7 @@ public class SoundManager : MonoBehaviour {
 	private void Awake() {
 		aS = GetComponents<AudioSource>();
 		BumpEvent = Bump;
+		SongEvent = PlaySong;
 		PlaySong(0);
 	}
 

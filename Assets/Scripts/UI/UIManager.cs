@@ -34,7 +34,8 @@ public class UIManager : MonoBehaviour
 	public static Action DescripEvent;
 
 	public delegate IEnumerator DayEvent();
-	public static DayEvent FadeDayEvent;
+	public static DayEvent FadeDayInEvent;
+	public static DayEvent FadeDayOutEvent;
 
 	/// <summary>
 	/// The background for all UI elements
@@ -58,17 +59,19 @@ public class UIManager : MonoBehaviour
 
 	public FadeableUI dayTransition;
 	public TextMeshProUGUI dayTransitionText;
-	private List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+	private List<string> days;
 
 
 	// Use this for initialization
 	void Awake()
 	{
+		days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 		PauseEvent = Pause;
 		ClockEvent = UpdateClock;
 		DescripEvent = UpdateDescrip;
 		UpdateText = SetText;
-		FadeDayEvent = FadeDay;
+		FadeDayInEvent = FadeDayIn;
+		FadeDayOutEvent = FadeDayOut;
 	}
 
 
@@ -132,16 +135,21 @@ public class UIManager : MonoBehaviour
 		yield return DialogueManager.WaitForKeypress(KeyCode.Space);
 	}
 
-	private IEnumerator FadeDay()
+	private IEnumerator FadeDayIn()
 	{
-		dayTransitionText.text = days[Stats.Day - 1];
-		if (Stats.Day == 1)
+		dayTransitionText.text = days[Stats.Day];
+		if (Stats.Day == 0)
 		{
 			dayTransition.Show();
 		} else {
 			yield return dayTransition.FadeIn(dur: 0.7f);
 		}
-		yield return new WaitForSecondsRealtime(2.0f);
+		yield return new WaitForSecondsRealtime(1.0f);
+	}
+
+	private IEnumerator FadeDayOut()
+	{
+		yield return new WaitForSecondsRealtime(1.0f);
 		yield return dayTransition.FadeOut(dur: 0.7f);
 	}
 }
