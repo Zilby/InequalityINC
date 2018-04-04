@@ -78,6 +78,7 @@ public class MoveableText : MonoBehaviour
 		ClearText();
 		string current = "";
 		char[] m = message.ToCharArray();
+		SoundManager.TextEvent();
 		for (int i = 0; i < message.Length; i++)
 		{
 			if (skip)
@@ -96,5 +97,6 @@ public class MoveableText : MonoBehaviour
 			text.text += "</color>";
 			yield return new WaitForSecondsRealtime(letterDelay);
 		}
+		SoundManager.StopTextEvent();
 	}
 }

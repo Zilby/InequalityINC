@@ -13,6 +13,10 @@ public class SoundManager : MonoBehaviour {
 	/// </summary>
 	public static Action BumpEvent;
 
+	public static Action TextEvent;
+
+	public static Action StopTextEvent;
+
 	public delegate void SongPlay(int i);
 	public static SongPlay SongEvent;
 
@@ -37,6 +41,8 @@ public class SoundManager : MonoBehaviour {
 	private void Awake() {
 		aS = GetComponents<AudioSource>();
 		BumpEvent = Bump;
+		TextEvent = Text;
+		StopTextEvent = StopText;
 		SongEvent = PlaySong;
 		PlaySong(0);
 	}
@@ -47,6 +53,18 @@ public class SoundManager : MonoBehaviour {
 	/// </summary>
 	private void Bump() {
 		aS[0].PlayOneShot(sounds[0]);
+	}
+
+
+	private void Text() 
+	{
+		aS[2].clip = sounds[1];
+		aS[2].Play();
+	}
+
+	private void StopText()
+	{
+		aS[2].Stop();
 	}
 
 
