@@ -7188,11 +7188,6 @@ Prefab:
       propertyPath: m_Name
       value: Right
       objectReference: {fileID: 0}
-    - target: {fileID: 224408008071182464, guid: 8ebb8c37c077e4557b481b86e4d12db7,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ebb8c37c077e4557b481b86e4d12db7, type: 2}
   m_IsPrefabParent: 0
@@ -7203,7 +7198,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 1281059659}
 --- !u!114 &1281059661 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114753371425447116, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+  m_PrefabParentObject: {fileID: 114532830871346998, guid: 8ebb8c37c077e4557b481b86e4d12db7,
     type: 2}
   m_PrefabInternal: {fileID: 1281059659}
   m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}

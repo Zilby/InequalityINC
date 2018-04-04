@@ -38,6 +38,9 @@ public class DialogueManager : MonoBehaviour
 		player = 0,
 		dave = 1,
 		sharon = 2,
+		stan = 3, 
+		janet = 4, 
+		richard = 5
 	}
 
 	/// <summary>
