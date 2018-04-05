@@ -6203,7 +6203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8971,6 +8971,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 53f6d8ed5fe3d4046ae4bff6fbe622e3, type: 3}
   - {fileID: 8300000, guid: 4aa7c74942bdd4a069f8c74952941a93, type: 3}
+  - {fileID: 8300000, guid: efcbc2355dd8f4a3f8142fbfc0767772, type: 3}
   music:
   - {fileID: 8300000, guid: 673222a75966a410e9f21f7fcff6b81c, type: 3}
   - {fileID: 8300000, guid: d1e28a2f81ea446b2b23e275ad5c1f25, type: 3}
@@ -9495,10 +9496,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: 1
   sprites:
-  - {fileID: 21300026, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300042, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300032, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300036, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
+  - {fileID: 21300048, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300052, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300054, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300050, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   positiveDialogues: 0000000000000000
   negativeDialogues: 0000000000000000
   positiveSnippets: 0000000000000000
@@ -9540,7 +9541,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300026, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
+  m_Sprite: {fileID: 21300048, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10604,10 +10605,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: 2
   sprites:
-  - {fileID: 21300050, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300066, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300056, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
-  - {fileID: 21300060, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
+  - {fileID: 21300024, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300028, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300030, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300026, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   positiveDialogues: 00000000
   negativeDialogues: 00000000
   positiveSnippets: 0000000000000000
@@ -10649,7 +10650,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300050, guid: f1d8e546446984feba8e127f2a39cc6d, type: 3}
+  m_Sprite: {fileID: 21300024, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

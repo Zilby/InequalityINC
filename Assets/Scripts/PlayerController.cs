@@ -269,6 +269,7 @@ public class PlayerController : MonoBehaviour
 			if (characterFacing != null)
 			{
 				Logger.Log("Began dialogue with " + characterFacing.character.ToString() + ".");
+				SoundManager.ClickEvent();
 				characterFacing.Face(direction);
 				yield return new WaitForSeconds(0.3f);
 				int convos = characterFacing.conversationsRemaining;
@@ -280,6 +281,7 @@ public class PlayerController : MonoBehaviour
 			else if (objectFacing != null)
 			{
 				Logger.Log("Began description.");
+				SoundManager.ClickEvent();
 				readingDescrip = true;
 				UIManager.DescripEvent();
 				StringListWrapper s = objectFacing.DescriptionTexts;

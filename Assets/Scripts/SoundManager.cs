@@ -17,6 +17,8 @@ public class SoundManager : MonoBehaviour {
 
 	public static Action StopTextEvent;
 
+	public static Action ClickEvent;
+
 	public delegate void SongPlay(int i);
 	public static SongPlay SongEvent;
 
@@ -43,6 +45,7 @@ public class SoundManager : MonoBehaviour {
 		BumpEvent = Bump;
 		TextEvent = Text;
 		StopTextEvent = StopText;
+		ClickEvent = Click;
 		SongEvent = PlaySong;
 		PlaySong(0);
 	}
@@ -74,5 +77,9 @@ public class SoundManager : MonoBehaviour {
 	private void PlaySong(int i) {
 		aS[1].clip = music[i];
 		aS[1].Play();
+	}
+
+	private void Click() {
+		aS[0].PlayOneShot(sounds[2]);
 	}
 }
