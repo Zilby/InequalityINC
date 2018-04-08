@@ -7,6 +7,7 @@ public class RoomActivator : MonoBehaviour {
 
 	public float top;
 	public float bottom;
+	public List<GameObject> characters;
 
 	private static List<RoomActivator> rooms = new List<RoomActivator>();
 
@@ -24,6 +25,10 @@ public class RoomActivator : MonoBehaviour {
 	}
 
 	void SetActiveState(float y, RoomActivator r) {
-		r.gameObject.SetActive(y <= r.top && y > r.bottom);
+		bool active = y <= r.top && y > r.bottom;
+		r.gameObject.SetActive(active);
+		foreach (GameObject g in r.characters) {
+			g.SetActive(active);
+		}
 	}
 }

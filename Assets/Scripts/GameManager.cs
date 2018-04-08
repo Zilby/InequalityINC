@@ -26,12 +26,12 @@ public class GameManager : MonoBehaviour
 	{
 		PauseEvent = Pause;
 		characters = characterHolder.GetComponentsInChildren<NPCController>();
+		Stats.ResetAll();
 	}
 
 
 	void Start()
 	{
-		Stats.ResetAll();
 		StartCoroutine(NewDay());
 	}
 
