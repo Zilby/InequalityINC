@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public static Action PauseEvent;
 
-	public delegate void textEvent(int i, int c, bool b, DialogueManager.Character ch);
+	public delegate void textEvent(int i, int c, bool b, DialogueManager.Character ch, bool trust = true);
 	/// <summary>
 	/// Starts a given dialogue event (eg: scene 0). 
 	/// </summary>
@@ -89,6 +89,13 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public List<FadeableUI> leftCharacters;
 	public List<FadeableUI> rightCharacters;
+
+	public List<FadeableUI> trustUI;
+
+	/// <summary>
+	/// Used to determine if the trust UI is active for this dialogue scene. 
+	/// </summary>
+	private bool trustUIActive = true;
 
 	/// <summary>
 	/// The character portraits for each character
@@ -156,12 +163,14 @@ public class DialogueManager : MonoBehaviour
 	/// <param name="i">The scene index for dialogue.</param>
 	/// <param name="c">The number of conversations left for this character.</param>
 	/// <param name="b">Whether or not there is available dialogue.</param>
-	private void BeginText(int i, int c, bool b, DialogueManager.Character ch)
+	private void BeginText(int i, int c, bool b, Character ch, bool trust = true)
 	{
+		trustUIActive = trust;
 		GameManager.PauseEvent();
 		Pause();
 		ClearTexts();
 		ClearPortraits();
+		ClearTrustUI();
 		textOverlay.SelfFadeIn();
 		StartCoroutine(RunDialogue(i, c > 0 && !b, ch));
 	}
@@ -290,6 +299,14 @@ public class DialogueManager : MonoBehaviour
 	}
 
 
+	private void ClearTrustUI() {
+		foreach (FadeableUI f in trustUI)
+		{
+			f.Hide();
+		}
+	}
+
+
 	private void AssignExpression(ref Dictionary<Character, Expression> lastExpression, Character c, Expression e, string position)
 	{
 		if (!lastExpression.ContainsKey(c) || e != lastExpression[c])
@@ -325,11 +342,17 @@ public class DialogueManager : MonoBehaviour
 		DialogueParser.DialogueLine l = dParser.Head;
 		while (true)
 		{
+			// Handle things done before dialogue
 			string position = l.node.character == Character.player || l.node.forceLeft ? "L" : "R";
 			Image e = (position == "R" ? rightCharacterPortraits : leftCharacterPortraits)[(int)l.node.character][(int)l.node.expression].GetComponent<Image>();
+			HandleTrustUI(l);
 			e.color = Color.white;
+
+			// Handle dialogue
 			AssignExpression(ref lastExpression, l.node.character, l.node.expression, position);
 			yield return CharacterDialogue(l.node.character, l.node.dialogue);
+
+			// Handle things after dialogue
 			e.color = new Color(135 / 255.0f, 135 / 255.0f, 135 / 255.0f, 165 / 255.0f);
 			if (l.node.longOption)
 			{
@@ -389,6 +412,31 @@ public class DialogueManager : MonoBehaviour
 			}
 		}
 		FinishText();
+	}
+
+
+	private void HandleTrustUI(DialogueParser.DialogueLine l) {
+		int rp = Mathf.Clamp(Stats.relationshipPoints[l.node.character], -1, 1) + 1;
+		if (trustUIActive && l.node.character != Character.player)
+		{
+			for (int i = 0; i < trustUI.Count; ++i)
+			{
+				if (rp == i)
+				{
+					if (!trustUI[i].IsVisible)
+					{
+						trustUI[i].SelfFadeIn();
+					}
+				}
+				else
+				{
+					if (trustUI[i].IsVisible)
+					{
+						trustUI[i].SelfFadeOut();
+					}
+				}
+			}
+		}
 	}
 
 
