@@ -55,4 +55,9 @@ public class RoomActivator : MonoBehaviour
 			}
 		}
 	}
+
+	private void OnDestroy()
+	{
+		rooms = new List<RoomActivator>();
+	}
 }

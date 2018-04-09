@@ -145,4 +145,10 @@ public class NPCController : MonoBehaviour
 	{
 		rend.sprite = sprites[(int)d];
 	}
+
+
+	private void OnDestroy()
+	{
+		ArriveLeave = null;
+	}
 }

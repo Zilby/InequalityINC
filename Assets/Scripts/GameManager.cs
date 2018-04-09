@@ -77,37 +77,40 @@ public class GameManager : MonoBehaviour
 	/// </summary>
 	private IEnumerator NewDay()
 	{
-		Pause();
 		if (Stats.Day == 5)
 		{
 			SceneManager.LoadScene("Credits");
 		}
-		yield return UIManager.FadeDayInEvent();
-		Stats.ResetDay();
-		Stats.Day++;
-		PlayerController.ResetEvent();
-		yield return UIManager.FadeDayOutEvent();
-		if (Stats.Day == 1)
+		else
 		{
-			// Day 1 exclusive content
+			Pause();
+			yield return UIManager.FadeDayInEvent();
+			Stats.ResetDay();
+			Stats.Day++;
+			PlayerController.ResetEvent();
+			yield return UIManager.FadeDayOutEvent();
+			if (Stats.Day == 1)
+			{
+				// Day 1 exclusive content
+			}
+			if (Stats.Day == 2)
+			{
+				// Day 2 exclusive content
+			}
+			if (Stats.Day == 3)
+			{
+				// Day 3 exclusive content
+			}
+			if (Stats.Day == 4)
+			{
+				// Day 4 exclusive content
+			}
+			if (Stats.Day == 5)
+			{
+				// Day 5 exclusive content
+			}
+			Pause();
+			StartCoroutine(IncrementTime());
 		}
-		if (Stats.Day == 2)
-		{
-			// Day 2 exclusive content
-		}
-		if (Stats.Day == 3)
-		{
-			// Day 3 exclusive content
-		}
-		if (Stats.Day == 4)
-		{
-			// Day 4 exclusive content
-		}
-		if (Stats.Day == 5)
-		{
-			// Day 5 exclusive content
-		}
-		Pause();
-		StartCoroutine(IncrementTime());
 	}
 }
