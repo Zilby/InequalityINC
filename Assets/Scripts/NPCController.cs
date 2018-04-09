@@ -47,9 +47,7 @@ public class NPCController : MonoBehaviour
 	/// </summary>
 	public List<int> negativeSnippets;
 
-	public int conversationsRemaining = 1;
-
-	public List<Hours> hours = new List<Hours>(5);
+	public List<Hours> days = new List<Hours>(5);
 
 	[Serializable]
 	public class Hours
@@ -59,6 +57,8 @@ public class NPCController : MonoBehaviour
 		public int leave = 17 * 60;
 
 		public Vector3 location;
+
+		public int conversationsRemaining = 1;
 	}
 
 	public bool PresentInOffice
@@ -82,7 +82,7 @@ public class NPCController : MonoBehaviour
 
 	public Hours CurrentHours
 	{
-		get { return hours[Stats.Day]; }
+		get { return days[Stats.Day]; }
 	}
 
 	public FadeableSprite Fs
@@ -144,9 +144,9 @@ public class NPCController : MonoBehaviour
 		{
 			int index = Stats.dialogueIndex[character];
 			bool goodTerms = Stats.relationshipPoints[character] >= 0;
-			if (conversationsRemaining > 0 && !NoAvailableDialogue)
+			if (CurrentHours.conversationsRemaining > 0 && !NoAvailableDialogue)
 			{
-				conversationsRemaining--;
+				CurrentHours.conversationsRemaining--;
 				Stats.dialogueIndex[character]++;
 				return goodTerms ? positiveDialogues[index] : negativeDialogues[index];
 			}

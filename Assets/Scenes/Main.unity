@@ -7002,27 +7002,31 @@ MonoBehaviour:
   - {fileID: 21300044, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300046, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300042, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 0000000000000000
-  negativeDialogues: 0000000000000000
-  positiveSnippets: 0000000000000000
-  negativeSnippets: 0000000000000000
-  conversationsRemaining: 2
-  hours:
+  positiveDialogues: 00000000
+  negativeDialogues: 00000000
+  positiveSnippets: 00000000
+  negativeSnippets: 00000000
+  days:
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsRemaining: 1
 --- !u!65 &869282106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14496,27 +14500,31 @@ MonoBehaviour:
   - {fileID: 21300052, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300054, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300050, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 0000000000000000
-  negativeDialogues: 0000000000000000
-  positiveSnippets: 0000000000000000
-  negativeSnippets: 0000000000000000
-  conversationsRemaining: 2
-  hours:
+  positiveDialogues: 00000000
+  negativeDialogues: 00000000
+  positiveSnippets: 00000000
+  negativeSnippets: 00000000
+  days:
   - arrive: 540
     leave: 1020
     location: {x: 3, y: 2.5, z: 0}
-  - arrive: 540
-    leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-  - arrive: 540
-    leave: 1020
-    location: {x: 3, y: 2.5, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 3, y: 2.5, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: 3, y: 2.5, z: 0}
+    conversationsRemaining: 1
+  - arrive: 540
+    leave: 1020
+    location: {x: 3, y: 2.5, z: 0}
+    conversationsRemaining: 1
+  - arrive: 540
+    leave: 1020
+    location: {x: 3, y: 2.5, z: 0}
+    conversationsRemaining: 1
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15910,25 +15918,29 @@ MonoBehaviour:
   - {fileID: 21300026, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   positiveDialogues: 00000000
   negativeDialogues: 00000000
-  positiveSnippets: 0000000000000000
-  negativeSnippets: 0000000000000000
-  conversationsRemaining: 10
-  hours:
+  positiveSnippets: 00000000
+  negativeSnippets: 00000000
+  days:
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
-  - arrive: 1020
-    leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
+    conversationsRemaining: 1
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
+    conversationsRemaining: 1
+  - arrive: 540
+    leave: 1020
+    location: {x: -2, y: -2.5, z: 0}
+    conversationsRemaining: 1
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0

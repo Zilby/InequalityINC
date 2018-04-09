@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -86,7 +87,8 @@ public class DialogueNodeEditor : EditorWindow
 	}
 
 
-	private void DrawControls() {
+	private void DrawControls()
+	{
 		GUIContent content = new GUIContent("Character");
 		EditorGUI.LabelField(new Rect(5, 5, 60, 15), content);
 		tree.characterFile = (DialogueManager.Character)EditorGUI.EnumPopup(
@@ -99,7 +101,8 @@ public class DialogueNodeEditor : EditorWindow
 		EditorGUI.LabelField(new Rect(5, 45, 100, 20), content);
 		tree.scene = EditorGUI.IntField(new Rect(100, 45, 60, 15), tree.scene);
 		content = new GUIContent("Load Dialogue");
-		if(GUI.Button(new Rect(5, 65, 150, 20), content)) {
+		if (GUI.Button(new Rect(5, 65, 150, 20), content))
+		{
 			DialogueTree d = DialogueWriter.LoadTree(Path.Combine(tree.GetDirectory(), tree.GetFileName()));
 			if (d != null)
 			{
@@ -113,14 +116,15 @@ public class DialogueNodeEditor : EditorWindow
 		{
 			DialogueWriter.WriteTree(tree, tree.GetFileName(), tree.GetDirectory());
 		}
-		if (needsConnectionFuse) 
+		if (needsConnectionFuse)
 		{
 			FuseConnections();
 		}
 	}
 
 
-	private void FuseConnections() {
+	private void FuseConnections()
+	{
 		foreach (DialogueNode n in tree.Nodes)
 		{
 			if (!n.initialized || !n.inPoint.initialized || !n.outPoint.initialized)
@@ -356,3 +360,4 @@ public class DialogueNodeEditor : EditorWindow
 		tree.Nodes.Remove(node);
 	}
 }
+#endif

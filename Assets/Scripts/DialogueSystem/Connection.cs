@@ -1,5 +1,7 @@
 ﻿using System;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif 
 using UnityEngine;
 using System.Xml.Serialization;
 
@@ -26,7 +28,10 @@ public class Connection
 		readyToInit = true;
 	}
 
-	public void Init() {
+#if UNITY_EDITOR
+
+	public void Init()
+	{
 		this.OnClickRemoveConnection = DialogueNodeEditor.RemoveConnectionEvent;
 		initialized = true;
 	}
@@ -60,4 +65,6 @@ public class Connection
 			}
 		}
 	}
+
+#endif
 }

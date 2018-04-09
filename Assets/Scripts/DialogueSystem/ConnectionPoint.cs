@@ -1,7 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using System.Xml.Serialization;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [XmlInclude(typeof(ConnectionPoint))]
 public class ConnectionPoint
@@ -29,7 +31,8 @@ public class ConnectionPoint
 
 	private Action<ConnectionPoint> OnClickConnectionPoint;
 
-	public ConnectionPoint() {
+	public ConnectionPoint()
+	{
 	}
 
 	public ConnectionPoint(DialogueNode node, Type type)
@@ -40,11 +43,13 @@ public class ConnectionPoint
 		readyToInit = true;
 	}
 
+#if UNITY_EDITOR
+
 	/// <summary>
 	/// Initializes this connection point. 
 	/// Late init allows the xml deserializer to load variables.
 	/// </summary>
-	public void Init() 
+	public void Init()
 	{
 		style = new GUIStyle();
 		style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn.png") as Texture2D;
@@ -94,4 +99,7 @@ public class ConnectionPoint
 			}
 		}
 	}
+
+#endif
+
 }
