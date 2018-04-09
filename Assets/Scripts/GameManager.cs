@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.ImageEffects;
 
 /// <summary>
@@ -77,6 +78,10 @@ public class GameManager : MonoBehaviour
 	private IEnumerator NewDay()
 	{
 		Pause();
+		if (Stats.Day == 5)
+		{
+			SceneManager.LoadScene("Credits");
+		}
 		yield return UIManager.FadeDayInEvent();
 		Stats.ResetDay();
 		Stats.Day++;

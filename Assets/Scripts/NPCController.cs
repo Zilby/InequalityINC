@@ -51,6 +51,14 @@ public class NPCController : MonoBehaviour
 
 	public int leave = 17 * 60;
 
+	public bool PresentInOffice 
+	{
+		get 
+		{
+			return !Stats.fired[character] && Stats.CurrentTime >= arrive && Stats.CurrentTime < leave;
+		}
+	}
+
 	public bool NoAvailableDialogue
 	{
 		get
@@ -58,6 +66,10 @@ public class NPCController : MonoBehaviour
 			int index = Stats.dialogueIndex[character];
 			return positiveDialogues.Count <= index && negativeDialogues.Count <= index;
 		}
+	}
+
+	public FadeableSprite Fs {
+		get { return fs; }
 	}
 
 	/// <summary>
@@ -93,11 +105,11 @@ public class NPCController : MonoBehaviour
 
 	private void FadeInOut()
 	{
-		if (Stats.CurrentTime < arrive || Stats.CurrentTime > leave && fs.IsVisible)
+		if (!PresentInOffice && fs.IsVisible)
 		{
 			fs.SelfFadeOut();
 		}
-		if (!Stats.fired[character] && Stats.CurrentTime >= arrive && Stats.CurrentTime < leave && !fs.IsVisible)
+		if (PresentInOffice && !fs.IsVisible)
 		{
 			fs.SelfFadeIn();
 		}
