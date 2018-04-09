@@ -30,7 +30,7 @@ public class RoomActivator : MonoBehaviour
 		}
 	}
 
-	private void OnEnable()
+	private void StartDialogue()
 	{
 		foreach(DialogueOnEnter d in dialogueOnEnters) {
 			if(!d.Activated && Stats.Day == d.day) {
@@ -42,6 +42,9 @@ public class RoomActivator : MonoBehaviour
 	void SetActiveState(float y, RoomActivator r)
 	{
 		bool active = y <= r.top && y > r.bottom;
+		if(active) {
+			StartDialogue();
+		}
 		r.gameObject.SetActive(active);
 		foreach (NPCController n in r.characters)
 		{
