@@ -13,6 +13,8 @@ public class NPCController : MonoBehaviour
 	/// </summary>
 	public static Action ArriveLeave;
 
+	public static Action Relocate;
+
 	public DialogueManager.Character character;
 
 	/// <summary>
@@ -47,15 +49,25 @@ public class NPCController : MonoBehaviour
 
 	public int conversationsRemaining = 1;
 
-	public int arrive = 9 * 60;
+	public List<Hours> hours = new List<Hours>(5);
 
-	public int leave = 17 * 60;
-
-	public bool PresentInOffice 
+	[Serializable]
+	public class Hours
 	{
-		get 
+		public int arrive = 9 * 60;
+
+		public int leave = 17 * 60;
+
+		public Vector3 location;
+	}
+
+	public bool PresentInOffice
+	{
+		get
 		{
-			return !Stats.fired[character] && Stats.CurrentTime >= arrive && Stats.CurrentTime < leave;
+			return !Stats.fired[character] &&
+						 Stats.CurrentTime >= CurrentHours.arrive &&
+						 Stats.CurrentTime < CurrentHours.leave;
 		}
 	}
 
@@ -68,7 +80,13 @@ public class NPCController : MonoBehaviour
 		}
 	}
 
-	public FadeableSprite Fs {
+	public Hours CurrentHours
+	{
+		get { return hours[Stats.Day]; }
+	}
+
+	public FadeableSprite Fs
+	{
 		get { return fs; }
 	}
 
@@ -87,12 +105,13 @@ public class NPCController : MonoBehaviour
 		rend = GetComponent<SpriteRenderer>();
 		fs = GetComponent<FadeableSprite>();
 		ArriveLeave += FadeInOut;
+		Relocate += SetLocation;
 	}
 
 
-	private void Start() 
+	private void Start()
 	{
-		if (arrive > 9 * 60)
+		if (CurrentHours.arrive > 9 * 60)
 		{
 			fs.Hide();
 		}
@@ -147,8 +166,14 @@ public class NPCController : MonoBehaviour
 	}
 
 
+	private void SetLocation()
+	{
+		transform.localPosition = CurrentHours.location;
+	}
+
 	private void OnDestroy()
 	{
 		ArriveLeave = null;
+		Relocate = null;
 	}
 }

@@ -45,13 +45,18 @@ public class RoomActivator : MonoBehaviour
 		r.gameObject.SetActive(active);
 		foreach (NPCController n in r.characters)
 		{
-			if (n.PresentInOffice && active)
+			bool nRoom = n.CurrentHours.location.y <= r.top && 
+			                n.CurrentHours.location.y > r.bottom;
+			if (nRoom)
 			{
-				n.Fs.Show();
-			}
-			else
-			{
-				n.Fs.Hide();
+				if (n.PresentInOffice && active)
+				{
+					n.Fs.Show();
+				}
+				else
+				{
+					n.Fs.Hide();
+				}
 			}
 		}
 	}

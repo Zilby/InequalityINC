@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 			}
 		}
 		yield return null;
+		Stats.Day++;
 		StartCoroutine(NewDay());
 	}
 
@@ -86,8 +87,8 @@ public class GameManager : MonoBehaviour
 			Pause();
 			yield return UIManager.FadeDayInEvent();
 			Stats.ResetDay();
-			Stats.Day++;
 			PlayerController.ResetEvent();
+			NPCController.Relocate();
 			yield return UIManager.FadeDayOutEvent();
 			if (Stats.Day == 1)
 			{
