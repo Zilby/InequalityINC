@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2563170 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293512077662548, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1281059659}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &17926265
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +848,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &62717126 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293512077662548, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 914649723}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &86395403
 GameObject:
   m_ObjectHideFlags: 0
@@ -8900,6 +8912,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1036194834 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114532830871346998, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 914649723}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &1084574119
 GameObject:
   m_ObjectHideFlags: 0
@@ -9277,6 +9295,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1097240750 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114753371425447116, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1281059659}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &1108045619
 GameObject:
   m_ObjectHideFlags: 0
@@ -13382,6 +13406,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1452390189 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114656343753106130, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1281059659}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &1457230449
 GameObject:
   m_ObjectHideFlags: 0
@@ -17400,11 +17430,17 @@ MonoBehaviour:
   leftCharacters:
   - {fileID: 1644807518}
   - {fileID: 914649724}
+  - {fileID: 1036194834}
+  - {fileID: 2067569557}
+  - {fileID: 62717126}
   - {fileID: 841393417}
   rightCharacters:
   - {fileID: 1246491506}
   - {fileID: 1228093848}
   - {fileID: 1281059661}
+  - {fileID: 1452390189}
+  - {fileID: 2563170}
+  - {fileID: 1097240750}
   trustUI:
   - {fileID: 1259377988}
   - {fileID: 858351945}
@@ -17975,6 +18011,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &2067569557 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114656343753106130, guid: 8ebb8c37c077e4557b481b86e4d12db7,
+    type: 2}
+  m_PrefabInternal: {fileID: 914649723}
+  m_Script: {fileID: 11500000, guid: a6872639edfb34f4d9d7e19cf802bcd3, type: 3}
 --- !u!1 &2079672204
 GameObject:
   m_ObjectHideFlags: 0
@@ -18308,10 +18350,7 @@ MonoBehaviour:
   - {fileID: 1573069444}
   - {fileID: 1748731282}
   - {fileID: 869282105}
-  dialogueOnEnters:
-  - day: 0
-    scene: 0
-    character: 0
+  dialogueOnEnters: []
 --- !u!1 &2082628327
 GameObject:
   m_ObjectHideFlags: 0
