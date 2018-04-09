@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.Xml.Serialization;
 
 [XmlInclude(typeof(DialogueNode))]
@@ -61,6 +63,8 @@ public class DialogueNode
 		readyToInit = true;
 	}
 
+#if UNITY_EDITOR
+
 	public void Init()
 	{
 		style = new GUIStyle();
@@ -75,7 +79,7 @@ public class DialogueNode
 
 		EditorStyles.textField.wordWrap = false;
 		EditorStyles.textField.stretchHeight = false;
-		textfieldStyle = new GUIStyle(EditorStyles.textField); 
+		textfieldStyle = new GUIStyle(EditorStyles.textField);
 		textfieldStyle.wordWrap = true;
 		textfieldStyle.stretchHeight = true;
 		textfieldStyle.stretchWidth = false;
@@ -218,4 +222,6 @@ public class DialogueNode
 			OnRemoveNode(this);
 		}
 	}
+
+#endif
 }
