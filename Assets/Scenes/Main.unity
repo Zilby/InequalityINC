@@ -9758,7 +9758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterHolder: {fileID: 1358096564}
-  timeIncrementDelay: 0.1
+  timeIncrementDelay: 30
 --- !u!4 &1134758940
 Transform:
   m_ObjectHideFlags: 0
@@ -18308,7 +18308,10 @@ MonoBehaviour:
   - {fileID: 1573069444}
   - {fileID: 1748731282}
   - {fileID: 869282105}
-  dialogueOnEnters: []
+  dialogueOnEnters:
+  - day: 0
+    scene: 0
+    character: 0
 --- !u!1 &2082628327
 GameObject:
   m_ObjectHideFlags: 0
