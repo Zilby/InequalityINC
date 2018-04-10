@@ -89,31 +89,36 @@ public class GameManager : MonoBehaviour
 		else
 		{
 			Pause();
+			if (Stats.Day == 0)
+			{
+				// Day 1 exclusive content
+				SoundManager.SongEvent(0);
+			}
+			if (Stats.Day == 1)
+			{
+				// Day 2 exclusive content
+				SoundManager.SongEvent(2);
+			}
+			if (Stats.Day == 2)
+			{
+				// Day 3 exclusive content
+				SoundManager.SongEvent(3);
+			}
+			if (Stats.Day == 3)
+			{
+				// Day 4 exclusive content
+				SoundManager.SongEvent(4);
+			}
+			if (Stats.Day == 4)
+			{
+				// Day 5 exclusive content
+				SoundManager.SongEvent(0);
+			}
 			yield return UIManager.FadeDayInEvent();
 			Stats.ResetDay();
 			PlayerController.ResetEvent();
 			NPCController.Relocate();
 			yield return UIManager.FadeDayOutEvent();
-			if (Stats.Day == 0)
-			{
-				// Day 1 exclusive content
-			}
-			if (Stats.Day == 1)
-			{
-				// Day 2 exclusive content
-			}
-			if (Stats.Day == 2)
-			{
-				// Day 3 exclusive content
-			}
-			if (Stats.Day == 3)
-			{
-				// Day 4 exclusive content
-			}
-			if (Stats.Day == 4)
-			{
-				// Day 5 exclusive content
-			}
 			Pause();
 			StartCoroutine(IncrementTime());
 		}

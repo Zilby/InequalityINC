@@ -47,7 +47,6 @@ public class SoundManager : MonoBehaviour {
 		StopTextEvent = StopText;
 		ClickEvent = Click;
 		SongEvent = PlaySong;
-		PlaySong(0);
 	}
 
 

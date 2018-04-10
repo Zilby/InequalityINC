@@ -5,23 +5,23 @@
       <id>4</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>252</x>
-        <y>-664</y>
+        <x>323</x>
+        <y>102</y>
         <position>
-          <x>252</x>
-          <y>-664</y>
+          <x>323</x>
+          <y>102</y>
         </position>
         <center>
-          <x>352</x>
-          <y>-579.5</y>
+          <x>423</x>
+          <y>186.5</y>
         </center>
         <min>
-          <x>252</x>
-          <y>-664</y>
+          <x>323</x>
+          <y>102</y>
         </min>
         <max>
-          <x>452</x>
-          <y>-495</y>
+          <x>523</x>
+          <y>271</y>
         </max>
         <width>200</width>
         <height>169</height>
@@ -29,10 +29,10 @@
           <x>200</x>
           <y>169</y>
         </size>
-        <xMin>252</xMin>
-        <yMin>-664</yMin>
-        <xMax>452</xMax>
-        <yMax>-495</yMax>
+        <xMin>323</xMin>
+        <yMin>102</yMin>
+        <xMax>523</xMax>
+        <yMax>271</yMax>
       </rect>
       <defaultRect>
         <x>62</x>
@@ -86,23 +86,23 @@
         <id>4</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>342</x>
-          <y>-669</y>
+          <x>413</x>
+          <y>97</y>
           <position>
-            <x>342</x>
-            <y>-669</y>
+            <x>413</x>
+            <y>97</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-664</y>
+            <x>423</x>
+            <y>102</y>
           </center>
           <min>
-            <x>342</x>
-            <y>-669</y>
+            <x>413</x>
+            <y>97</y>
           </min>
           <max>
-            <x>362</x>
-            <y>-659</y>
+            <x>433</x>
+            <y>107</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -110,29 +110,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>342</xMin>
-          <yMin>-669</yMin>
-          <xMax>362</xMax>
-          <yMax>-659</yMax>
+          <xMin>413</xMin>
+          <yMin>97</yMin>
+          <xMax>433</xMax>
+          <yMax>107</yMax>
         </rect>
         <nodeRect>
-          <x>252</x>
-          <y>-664</y>
+          <x>323</x>
+          <y>102</y>
           <position>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-579.5</y>
+            <x>423</x>
+            <y>186.5</y>
           </center>
           <min>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </min>
           <max>
-            <x>452</x>
-            <y>-495</y>
+            <x>523</x>
+            <y>271</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -140,33 +140,33 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>252</xMin>
-          <yMin>-664</yMin>
-          <xMax>452</xMax>
-          <yMax>-495</yMax>
+          <xMin>323</xMin>
+          <yMin>102</yMin>
+          <xMax>523</xMax>
+          <yMax>271</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>4</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>342</x>
-          <y>-502</y>
+          <x>413</x>
+          <y>264</y>
           <position>
-            <x>342</x>
-            <y>-502</y>
+            <x>413</x>
+            <y>264</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-497</y>
+            <x>423</x>
+            <y>269</y>
           </center>
           <min>
-            <x>342</x>
-            <y>-502</y>
+            <x>413</x>
+            <y>264</y>
           </min>
           <max>
-            <x>362</x>
-            <y>-492</y>
+            <x>433</x>
+            <y>274</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -174,29 +174,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>342</xMin>
-          <yMin>-502</yMin>
-          <xMax>362</xMax>
-          <yMax>-492</yMax>
+          <xMin>413</xMin>
+          <yMin>264</yMin>
+          <xMax>433</xMax>
+          <yMax>274</yMax>
         </rect>
         <nodeRect>
-          <x>252</x>
-          <y>-664</y>
+          <x>323</x>
+          <y>102</y>
           <position>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-579.5</y>
+            <x>423</x>
+            <y>186.5</y>
           </center>
           <min>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </min>
           <max>
-            <x>452</x>
-            <y>-495</y>
+            <x>523</x>
+            <y>271</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -204,10 +204,10 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>252</xMin>
-          <yMin>-664</yMin>
-          <xMax>452</xMax>
-          <yMax>-495</yMax>
+          <xMin>323</xMin>
+          <yMin>102</yMin>
+          <xMax>523</xMax>
+          <yMax>271</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -215,23 +215,23 @@
       <id>75</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>251</x>
-        <y>-441</y>
+        <x>322</x>
+        <y>325</y>
         <position>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
         </position>
         <center>
-          <x>351</x>
-          <y>-350</y>
+          <x>422</x>
+          <y>416</y>
         </center>
         <min>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
         </min>
         <max>
-          <x>451</x>
-          <y>-259</y>
+          <x>522</x>
+          <y>507</y>
         </max>
         <width>200</width>
         <height>182</height>
@@ -239,10 +239,10 @@
           <x>200</x>
           <y>182</y>
         </size>
-        <xMin>251</xMin>
-        <yMin>-441</yMin>
-        <xMax>451</xMax>
-        <yMax>-259</yMax>
+        <xMin>322</xMin>
+        <yMin>325</yMin>
+        <xMax>522</xMax>
+        <yMax>507</yMax>
       </rect>
       <defaultRect>
         <x>83</x>
@@ -296,23 +296,23 @@
         <id>75</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>341</x>
-          <y>-446</y>
+          <x>412</x>
+          <y>320</y>
           <position>
-            <x>341</x>
-            <y>-446</y>
+            <x>412</x>
+            <y>320</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-441</y>
+            <x>422</x>
+            <y>325</y>
           </center>
           <min>
-            <x>341</x>
-            <y>-446</y>
+            <x>412</x>
+            <y>320</y>
           </min>
           <max>
-            <x>361</x>
-            <y>-436</y>
+            <x>432</x>
+            <y>330</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -320,29 +320,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>341</xMin>
-          <yMin>-446</yMin>
-          <xMax>361</xMax>
-          <yMax>-436</yMax>
+          <xMin>412</xMin>
+          <yMin>320</yMin>
+          <xMax>432</xMax>
+          <yMax>330</yMax>
         </rect>
         <nodeRect>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
           <position>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-350</y>
+            <x>422</x>
+            <y>416</y>
           </center>
           <min>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </min>
           <max>
-            <x>451</x>
-            <y>-259</y>
+            <x>522</x>
+            <y>507</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -350,33 +350,33 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>251</xMin>
-          <yMin>-441</yMin>
-          <xMax>451</xMax>
-          <yMax>-259</yMax>
+          <xMin>322</xMin>
+          <yMin>325</yMin>
+          <xMax>522</xMax>
+          <yMax>507</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>75</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>341</x>
-          <y>-266</y>
+          <x>412</x>
+          <y>500</y>
           <position>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-261</y>
+            <x>422</x>
+            <y>505</y>
           </center>
           <min>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </min>
           <max>
-            <x>361</x>
-            <y>-256</y>
+            <x>432</x>
+            <y>510</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -384,29 +384,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>341</xMin>
-          <yMin>-266</yMin>
-          <xMax>361</xMax>
-          <yMax>-256</yMax>
+          <xMin>412</xMin>
+          <yMin>500</yMin>
+          <xMax>432</xMax>
+          <yMax>510</yMax>
         </rect>
         <nodeRect>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
           <position>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-350</y>
+            <x>422</x>
+            <y>416</y>
           </center>
           <min>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </min>
           <max>
-            <x>451</x>
-            <y>-259</y>
+            <x>522</x>
+            <y>507</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -414,10 +414,10 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>251</xMin>
-          <yMin>-441</yMin>
-          <xMax>451</xMax>
-          <yMax>-259</yMax>
+          <xMin>322</xMin>
+          <yMin>325</yMin>
+          <xMax>522</xMax>
+          <yMax>507</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -425,23 +425,23 @@
       <id>76</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>82</x>
-        <y>-191</y>
+        <x>153</x>
+        <y>575</y>
         <position>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
         </position>
         <center>
-          <x>182</x>
-          <y>-80.5</y>
+          <x>253</x>
+          <y>685.5</y>
         </center>
         <min>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
         </min>
         <max>
-          <x>282</x>
-          <y>30</y>
+          <x>353</x>
+          <y>796</y>
         </max>
         <width>200</width>
         <height>221</height>
@@ -449,10 +449,10 @@
           <x>200</x>
           <y>221</y>
         </size>
-        <xMin>82</xMin>
-        <yMin>-191</yMin>
-        <xMax>282</xMax>
-        <yMax>30</yMax>
+        <xMin>153</xMin>
+        <yMin>575</yMin>
+        <xMax>353</xMax>
+        <yMax>796</yMax>
       </rect>
       <defaultRect>
         <x>57</x>
@@ -506,23 +506,23 @@
         <id>76</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>172</x>
-          <y>-196</y>
+          <x>243</x>
+          <y>570</y>
           <position>
-            <x>172</x>
-            <y>-196</y>
+            <x>243</x>
+            <y>570</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-191</y>
+            <x>253</x>
+            <y>575</y>
           </center>
           <min>
-            <x>172</x>
-            <y>-196</y>
+            <x>243</x>
+            <y>570</y>
           </min>
           <max>
-            <x>192</x>
-            <y>-186</y>
+            <x>263</x>
+            <y>580</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -530,29 +530,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>172</xMin>
-          <yMin>-196</yMin>
-          <xMax>192</xMax>
-          <yMax>-186</yMax>
+          <xMin>243</xMin>
+          <yMin>570</yMin>
+          <xMax>263</xMax>
+          <yMax>580</yMax>
         </rect>
         <nodeRect>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
           <position>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-80.5</y>
+            <x>253</x>
+            <y>685.5</y>
           </center>
           <min>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </min>
           <max>
-            <x>282</x>
-            <y>30</y>
+            <x>353</x>
+            <y>796</y>
           </max>
           <width>200</width>
           <height>221</height>
@@ -560,33 +560,33 @@
             <x>200</x>
             <y>221</y>
           </size>
-          <xMin>82</xMin>
-          <yMin>-191</yMin>
-          <xMax>282</xMax>
-          <yMax>30</yMax>
+          <xMin>153</xMin>
+          <yMin>575</yMin>
+          <xMax>353</xMax>
+          <yMax>796</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>76</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>172</x>
-          <y>23</y>
+          <x>243</x>
+          <y>789</y>
           <position>
-            <x>172</x>
-            <y>23</y>
+            <x>243</x>
+            <y>789</y>
           </position>
           <center>
-            <x>182</x>
-            <y>28</y>
+            <x>253</x>
+            <y>794</y>
           </center>
           <min>
-            <x>172</x>
-            <y>23</y>
+            <x>243</x>
+            <y>789</y>
           </min>
           <max>
-            <x>192</x>
-            <y>33</y>
+            <x>263</x>
+            <y>799</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -594,29 +594,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>172</xMin>
-          <yMin>23</yMin>
-          <xMax>192</xMax>
-          <yMax>33</yMax>
+          <xMin>243</xMin>
+          <yMin>789</yMin>
+          <xMax>263</xMax>
+          <yMax>799</yMax>
         </rect>
         <nodeRect>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
           <position>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-80.5</y>
+            <x>253</x>
+            <y>685.5</y>
           </center>
           <min>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </min>
           <max>
-            <x>282</x>
-            <y>30</y>
+            <x>353</x>
+            <y>796</y>
           </max>
           <width>200</width>
           <height>221</height>
@@ -624,10 +624,10 @@
             <x>200</x>
             <y>221</y>
           </size>
-          <xMin>82</xMin>
-          <yMin>-191</yMin>
-          <xMax>282</xMax>
-          <yMax>30</yMax>
+          <xMin>153</xMin>
+          <yMin>575</yMin>
+          <xMax>353</xMax>
+          <yMax>796</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -635,23 +635,23 @@
       <id>77</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>363</x>
-        <y>-185</y>
+        <x>434</x>
+        <y>581</y>
         <position>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
         </position>
         <center>
-          <x>463</x>
-          <y>-94</y>
+          <x>534</x>
+          <y>672</y>
         </center>
         <min>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
         </min>
         <max>
-          <x>563</x>
-          <y>-3</y>
+          <x>634</x>
+          <y>763</y>
         </max>
         <width>200</width>
         <height>182</height>
@@ -659,10 +659,10 @@
           <x>200</x>
           <y>182</y>
         </size>
-        <xMin>363</xMin>
-        <yMin>-185</yMin>
-        <xMax>563</xMax>
-        <yMax>-3</yMax>
+        <xMin>434</xMin>
+        <yMin>581</yMin>
+        <xMax>634</xMax>
+        <yMax>763</yMax>
       </rect>
       <defaultRect>
         <x>411</x>
@@ -716,23 +716,23 @@
         <id>77</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>453</x>
-          <y>-190</y>
+          <x>524</x>
+          <y>576</y>
           <position>
-            <x>453</x>
-            <y>-190</y>
+            <x>524</x>
+            <y>576</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-185</y>
+            <x>534</x>
+            <y>581</y>
           </center>
           <min>
-            <x>453</x>
-            <y>-190</y>
+            <x>524</x>
+            <y>576</y>
           </min>
           <max>
-            <x>473</x>
-            <y>-180</y>
+            <x>544</x>
+            <y>586</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -740,29 +740,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>453</xMin>
-          <yMin>-190</yMin>
-          <xMax>473</xMax>
-          <yMax>-180</yMax>
+          <xMin>524</xMin>
+          <yMin>576</yMin>
+          <xMax>544</xMax>
+          <yMax>586</yMax>
         </rect>
         <nodeRect>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
           <position>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-94</y>
+            <x>534</x>
+            <y>672</y>
           </center>
           <min>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </min>
           <max>
-            <x>563</x>
-            <y>-3</y>
+            <x>634</x>
+            <y>763</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -770,33 +770,33 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>363</xMin>
-          <yMin>-185</yMin>
-          <xMax>563</xMax>
-          <yMax>-3</yMax>
+          <xMin>434</xMin>
+          <yMin>581</yMin>
+          <xMax>634</xMax>
+          <yMax>763</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>77</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>453</x>
-          <y>-10</y>
+          <x>524</x>
+          <y>756</y>
           <position>
-            <x>453</x>
-            <y>-10</y>
+            <x>524</x>
+            <y>756</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-5</y>
+            <x>534</x>
+            <y>761</y>
           </center>
           <min>
-            <x>453</x>
-            <y>-10</y>
+            <x>524</x>
+            <y>756</y>
           </min>
           <max>
-            <x>473</x>
-            <y>0</y>
+            <x>544</x>
+            <y>766</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -804,29 +804,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>453</xMin>
-          <yMin>-10</yMin>
-          <xMax>473</xMax>
-          <yMax>0</yMax>
+          <xMin>524</xMin>
+          <yMin>756</yMin>
+          <xMax>544</xMax>
+          <yMax>766</yMax>
         </rect>
         <nodeRect>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
           <position>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-94</y>
+            <x>534</x>
+            <y>672</y>
           </center>
           <min>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </min>
           <max>
-            <x>563</x>
-            <y>-3</y>
+            <x>634</x>
+            <y>763</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -834,10 +834,10 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>363</xMin>
-          <yMin>-185</yMin>
-          <xMax>563</xMax>
-          <yMax>-3</yMax>
+          <xMin>434</xMin>
+          <yMin>581</yMin>
+          <xMax>634</xMax>
+          <yMax>763</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -845,23 +845,23 @@
       <id>78</id>
       <readyToInit>true</readyToInit>
       <rect>
-        <x>229</x>
-        <y>112</y>
+        <x>300</x>
+        <y>878</y>
         <position>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
         </position>
         <center>
-          <x>329</x>
-          <y>196.5</y>
+          <x>400</x>
+          <y>962.5</y>
         </center>
         <min>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
         </min>
         <max>
-          <x>429</x>
-          <y>281</y>
+          <x>500</x>
+          <y>1047</y>
         </max>
         <width>200</width>
         <height>169</height>
@@ -869,10 +869,10 @@
           <x>200</x>
           <y>169</y>
         </size>
-        <xMin>229</xMin>
-        <yMin>112</yMin>
-        <xMax>429</xMax>
-        <yMax>281</yMax>
+        <xMin>300</xMin>
+        <yMin>878</yMin>
+        <xMax>500</xMax>
+        <yMax>1047</yMax>
       </rect>
       <defaultRect>
         <x>334</x>
@@ -926,23 +926,23 @@
         <id>78</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>319</x>
-          <y>107</y>
+          <x>390</x>
+          <y>873</y>
           <position>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </position>
           <center>
-            <x>329</x>
-            <y>112</y>
+            <x>400</x>
+            <y>878</y>
           </center>
           <min>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </min>
           <max>
-            <x>339</x>
-            <y>117</y>
+            <x>410</x>
+            <y>883</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -950,29 +950,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>319</xMin>
-          <yMin>107</yMin>
-          <xMax>339</xMax>
-          <yMax>117</yMax>
+          <xMin>390</xMin>
+          <yMin>873</yMin>
+          <xMax>410</xMax>
+          <yMax>883</yMax>
         </rect>
         <nodeRect>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
           <position>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </position>
           <center>
-            <x>329</x>
-            <y>196.5</y>
+            <x>400</x>
+            <y>962.5</y>
           </center>
           <min>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </min>
           <max>
-            <x>429</x>
-            <y>281</y>
+            <x>500</x>
+            <y>1047</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -980,33 +980,33 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>229</xMin>
-          <yMin>112</yMin>
-          <xMax>429</xMax>
-          <yMax>281</yMax>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>78</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>319</x>
-          <y>274</y>
+          <x>390</x>
+          <y>1040</y>
           <position>
-            <x>319</x>
-            <y>274</y>
+            <x>390</x>
+            <y>1040</y>
           </position>
           <center>
-            <x>329</x>
-            <y>279</y>
+            <x>400</x>
+            <y>1045</y>
           </center>
           <min>
-            <x>319</x>
-            <y>274</y>
+            <x>390</x>
+            <y>1040</y>
           </min>
           <max>
-            <x>339</x>
-            <y>284</y>
+            <x>410</x>
+            <y>1050</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1014,29 +1014,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>319</xMin>
-          <yMin>274</yMin>
-          <xMax>339</xMax>
-          <yMax>284</yMax>
+          <xMin>390</xMin>
+          <yMin>1040</yMin>
+          <xMax>410</xMax>
+          <yMax>1050</yMax>
         </rect>
         <nodeRect>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
           <position>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </position>
           <center>
-            <x>329</x>
-            <y>196.5</y>
+            <x>400</x>
+            <y>962.5</y>
           </center>
           <min>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </min>
           <max>
-            <x>429</x>
-            <y>281</y>
+            <x>500</x>
+            <y>1047</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -1044,10 +1044,2320 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>229</xMin>
-          <yMin>112</yMin>
-          <xMax>429</xMax>
-          <yMax>281</yMax>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>79</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>158</x>
+        <y>1075</y>
+        <position>
+          <x>158</x>
+          <y>1075</y>
+        </position>
+        <center>
+          <x>258</x>
+          <y>1206</y>
+        </center>
+        <min>
+          <x>158</x>
+          <y>1075</y>
+        </min>
+        <max>
+          <x>358</x>
+          <y>1337</y>
+        </max>
+        <width>200</width>
+        <height>262</height>
+        <size>
+          <x>200</x>
+          <y>262</y>
+        </size>
+        <xMin>158</xMin>
+        <yMin>1075</yMin>
+        <xMax>358</xMax>
+        <yMax>1337</yMax>
+      </rect>
+      <defaultRect>
+        <x>372</x>
+        <y>300</y>
+        <position>
+          <x>372</x>
+          <y>300</y>
+        </position>
+        <center>
+          <x>472</x>
+          <y>370</y>
+        </center>
+        <min>
+          <x>372</x>
+          <y>300</y>
+        </min>
+        <max>
+          <x>572</x>
+          <y>440</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>372</xMin>
+        <yMin>300</yMin>
+        <xMax>572</xMax>
+        <yMax>440</yMax>
+      </defaultRect>
+      <dialogue> Yes... Stan blew up at me. I guess he wasn't satisfied with the quality of my work... </dialogue>
+      <character>sharon</character>
+      <expression>sad</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>true</restrictions>
+      <characterRestriction>sharon</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>0</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>79</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>248</x>
+          <y>1070</y>
+          <position>
+            <x>248</x>
+            <y>1070</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1075</y>
+          </center>
+          <min>
+            <x>248</x>
+            <y>1070</y>
+          </min>
+          <max>
+            <x>268</x>
+            <y>1080</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>248</xMin>
+          <yMin>1070</yMin>
+          <xMax>268</xMax>
+          <yMax>1080</yMax>
+        </rect>
+        <nodeRect>
+          <x>158</x>
+          <y>1075</y>
+          <position>
+            <x>158</x>
+            <y>1075</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1206</y>
+          </center>
+          <min>
+            <x>158</x>
+            <y>1075</y>
+          </min>
+          <max>
+            <x>358</x>
+            <y>1337</y>
+          </max>
+          <width>200</width>
+          <height>262</height>
+          <size>
+            <x>200</x>
+            <y>262</y>
+          </size>
+          <xMin>158</xMin>
+          <yMin>1075</yMin>
+          <xMax>358</xMax>
+          <yMax>1337</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>79</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>248</x>
+          <y>1330</y>
+          <position>
+            <x>248</x>
+            <y>1330</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1335</y>
+          </center>
+          <min>
+            <x>248</x>
+            <y>1330</y>
+          </min>
+          <max>
+            <x>268</x>
+            <y>1340</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>248</xMin>
+          <yMin>1330</yMin>
+          <xMax>268</xMax>
+          <yMax>1340</yMax>
+        </rect>
+        <nodeRect>
+          <x>158</x>
+          <y>1075</y>
+          <position>
+            <x>158</x>
+            <y>1075</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1206</y>
+          </center>
+          <min>
+            <x>158</x>
+            <y>1075</y>
+          </min>
+          <max>
+            <x>358</x>
+            <y>1337</y>
+          </max>
+          <width>200</width>
+          <height>262</height>
+          <size>
+            <x>200</x>
+            <y>262</y>
+          </size>
+          <xMin>158</xMin>
+          <yMin>1075</yMin>
+          <xMax>358</xMax>
+          <yMax>1337</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>80</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>454</x>
+        <y>1116</y>
+        <position>
+          <x>454</x>
+          <y>1116</y>
+        </position>
+        <center>
+          <x>554</x>
+          <y>1240.5</y>
+        </center>
+        <min>
+          <x>454</x>
+          <y>1116</y>
+        </min>
+        <max>
+          <x>654</x>
+          <y>1365</y>
+        </max>
+        <width>200</width>
+        <height>249</height>
+        <size>
+          <x>200</x>
+          <y>249</y>
+        </size>
+        <xMin>454</xMin>
+        <yMin>1116</yMin>
+        <xMax>654</xMax>
+        <yMax>1365</yMax>
+      </rect>
+      <defaultRect>
+        <x>761</x>
+        <y>301</y>
+        <position>
+          <x>761</x>
+          <y>301</y>
+        </position>
+        <center>
+          <x>861</x>
+          <y>371</y>
+        </center>
+        <min>
+          <x>761</x>
+          <y>301</y>
+        </min>
+        <max>
+          <x>961</x>
+          <y>441</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>761</xMin>
+        <yMin>301</yMin>
+        <xMax>961</xMax>
+        <yMax>441</yMax>
+      </defaultRect>
+      <dialogue>I don't know how comfortable I feel discussing this... </dialogue>
+      <character>sharon</character>
+      <expression>anxious</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>true</restrictions>
+      <characterRestriction>sharon</characterRestriction>
+      <positiveRestriction>1</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>80</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>544</x>
+          <y>1111</y>
+          <position>
+            <x>544</x>
+            <y>1111</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1116</y>
+          </center>
+          <min>
+            <x>544</x>
+            <y>1111</y>
+          </min>
+          <max>
+            <x>564</x>
+            <y>1121</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>544</xMin>
+          <yMin>1111</yMin>
+          <xMax>564</xMax>
+          <yMax>1121</yMax>
+        </rect>
+        <nodeRect>
+          <x>454</x>
+          <y>1116</y>
+          <position>
+            <x>454</x>
+            <y>1116</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1240.5</y>
+          </center>
+          <min>
+            <x>454</x>
+            <y>1116</y>
+          </min>
+          <max>
+            <x>654</x>
+            <y>1365</y>
+          </max>
+          <width>200</width>
+          <height>249</height>
+          <size>
+            <x>200</x>
+            <y>249</y>
+          </size>
+          <xMin>454</xMin>
+          <yMin>1116</yMin>
+          <xMax>654</xMax>
+          <yMax>1365</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>80</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>544</x>
+          <y>1358</y>
+          <position>
+            <x>544</x>
+            <y>1358</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1363</y>
+          </center>
+          <min>
+            <x>544</x>
+            <y>1358</y>
+          </min>
+          <max>
+            <x>564</x>
+            <y>1368</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>544</xMin>
+          <yMin>1358</yMin>
+          <xMax>564</xMax>
+          <yMax>1368</yMax>
+        </rect>
+        <nodeRect>
+          <x>454</x>
+          <y>1116</y>
+          <position>
+            <x>454</x>
+            <y>1116</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1240.5</y>
+          </center>
+          <min>
+            <x>454</x>
+            <y>1116</y>
+          </min>
+          <max>
+            <x>654</x>
+            <y>1365</y>
+          </max>
+          <width>200</width>
+          <height>249</height>
+          <size>
+            <x>200</x>
+            <y>249</y>
+          </size>
+          <xMin>454</xMin>
+          <yMin>1116</yMin>
+          <xMax>654</xMax>
+          <yMax>1365</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>81</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>812</x>
+        <y>1397</y>
+        <position>
+          <x>812</x>
+          <y>1397</y>
+        </position>
+        <center>
+          <x>912</x>
+          <y>1584</y>
+        </center>
+        <min>
+          <x>812</x>
+          <y>1397</y>
+        </min>
+        <max>
+          <x>1012</x>
+          <y>1771</y>
+        </max>
+        <width>200</width>
+        <height>374</height>
+        <size>
+          <x>200</x>
+          <y>374</y>
+        </size>
+        <xMin>812</xMin>
+        <yMin>1397</yMin>
+        <xMax>1012</xMax>
+        <yMax>1771</yMax>
+      </rect>
+      <defaultRect>
+        <x>948</x>
+        <y>556</y>
+        <position>
+          <x>948</x>
+          <y>556</y>
+        </position>
+        <center>
+          <x>1048</x>
+          <y>626</y>
+        </center>
+        <min>
+          <x>948</x>
+          <y>556</y>
+        </min>
+        <max>
+          <x>1148</x>
+          <y>696</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>948</xMin>
+        <yMin>556</yMin>
+        <xMax>1148</xMax>
+        <yMax>696</yMax>
+      </defaultRect>
+      <dialogue>Sharon, I completely understand. You don't have to talk about anything you're not comfortable with. But just know that I only want to help make this office a better place for everyone.</dialogue>
+      <character>player</character>
+      <expression>sad</expression>
+      <advancedOptions>true</advancedOptions>
+      <characterAffected>sharon</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>true</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>81</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>902</x>
+          <y>1392</y>
+          <position>
+            <x>902</x>
+            <y>1392</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1397</y>
+          </center>
+          <min>
+            <x>902</x>
+            <y>1392</y>
+          </min>
+          <max>
+            <x>922</x>
+            <y>1402</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>902</xMin>
+          <yMin>1392</yMin>
+          <xMax>922</xMax>
+          <yMax>1402</yMax>
+        </rect>
+        <nodeRect>
+          <x>812</x>
+          <y>1397</y>
+          <position>
+            <x>812</x>
+            <y>1397</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1584</y>
+          </center>
+          <min>
+            <x>812</x>
+            <y>1397</y>
+          </min>
+          <max>
+            <x>1012</x>
+            <y>1771</y>
+          </max>
+          <width>200</width>
+          <height>374</height>
+          <size>
+            <x>200</x>
+            <y>374</y>
+          </size>
+          <xMin>812</xMin>
+          <yMin>1397</yMin>
+          <xMax>1012</xMax>
+          <yMax>1771</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>81</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>902</x>
+          <y>1764</y>
+          <position>
+            <x>902</x>
+            <y>1764</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1769</y>
+          </center>
+          <min>
+            <x>902</x>
+            <y>1764</y>
+          </min>
+          <max>
+            <x>922</x>
+            <y>1774</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>902</xMin>
+          <yMin>1764</yMin>
+          <xMax>922</xMax>
+          <yMax>1774</yMax>
+        </rect>
+        <nodeRect>
+          <x>812</x>
+          <y>1397</y>
+          <position>
+            <x>812</x>
+            <y>1397</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1584</y>
+          </center>
+          <min>
+            <x>812</x>
+            <y>1397</y>
+          </min>
+          <max>
+            <x>1012</x>
+            <y>1771</y>
+          </max>
+          <width>200</width>
+          <height>374</height>
+          <size>
+            <x>200</x>
+            <y>374</y>
+          </size>
+          <xMin>812</xMin>
+          <yMin>1397</yMin>
+          <xMax>1012</xMax>
+          <yMax>1771</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>82</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>382</x>
+        <y>1412</y>
+        <position>
+          <x>382</x>
+          <y>1412</y>
+        </position>
+        <center>
+          <x>482</x>
+          <y>1592.5</y>
+        </center>
+        <min>
+          <x>382</x>
+          <y>1412</y>
+        </min>
+        <max>
+          <x>582</x>
+          <y>1773</y>
+        </max>
+        <width>200</width>
+        <height>361</height>
+        <size>
+          <x>200</x>
+          <y>361</y>
+        </size>
+        <xMin>382</xMin>
+        <yMin>1412</yMin>
+        <xMax>582</xMax>
+        <yMax>1773</yMax>
+      </rect>
+      <defaultRect>
+        <x>697</x>
+        <y>579</y>
+        <position>
+          <x>697</x>
+          <y>579</y>
+        </position>
+        <center>
+          <x>797</x>
+          <y>649</y>
+        </center>
+        <min>
+          <x>697</x>
+          <y>579</y>
+        </min>
+        <max>
+          <x>897</x>
+          <y>719</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>697</xMin>
+        <yMin>579</yMin>
+        <xMax>897</xMax>
+        <yMax>719</yMax>
+      </defaultRect>
+      <dialogue>I get that. It must be scary to open up about these things. I'd never force you to talk about something that would make you uncomfortable, but I want you to know that I'm on your side.</dialogue>
+      <character>player</character>
+      <expression>sad</expression>
+      <advancedOptions>true</advancedOptions>
+      <characterAffected>sharon</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>true</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>82</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>472</x>
+          <y>1407</y>
+          <position>
+            <x>472</x>
+            <y>1407</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1412</y>
+          </center>
+          <min>
+            <x>472</x>
+            <y>1407</y>
+          </min>
+          <max>
+            <x>492</x>
+            <y>1417</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>472</xMin>
+          <yMin>1407</yMin>
+          <xMax>492</xMax>
+          <yMax>1417</yMax>
+        </rect>
+        <nodeRect>
+          <x>382</x>
+          <y>1412</y>
+          <position>
+            <x>382</x>
+            <y>1412</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1592.5</y>
+          </center>
+          <min>
+            <x>382</x>
+            <y>1412</y>
+          </min>
+          <max>
+            <x>582</x>
+            <y>1773</y>
+          </max>
+          <width>200</width>
+          <height>361</height>
+          <size>
+            <x>200</x>
+            <y>361</y>
+          </size>
+          <xMin>382</xMin>
+          <yMin>1412</yMin>
+          <xMax>582</xMax>
+          <yMax>1773</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>82</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>472</x>
+          <y>1766</y>
+          <position>
+            <x>472</x>
+            <y>1766</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1771</y>
+          </center>
+          <min>
+            <x>472</x>
+            <y>1766</y>
+          </min>
+          <max>
+            <x>492</x>
+            <y>1776</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>472</xMin>
+          <yMin>1766</yMin>
+          <xMax>492</xMax>
+          <yMax>1776</yMax>
+        </rect>
+        <nodeRect>
+          <x>382</x>
+          <y>1412</y>
+          <position>
+            <x>382</x>
+            <y>1412</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1592.5</y>
+          </center>
+          <min>
+            <x>382</x>
+            <y>1412</y>
+          </min>
+          <max>
+            <x>582</x>
+            <y>1773</y>
+          </max>
+          <width>200</width>
+          <height>361</height>
+          <size>
+            <x>200</x>
+            <y>361</y>
+          </size>
+          <xMin>382</xMin>
+          <yMin>1412</yMin>
+          <xMax>582</xMax>
+          <yMax>1773</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>83</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>587</x>
+        <y>1784</y>
+        <position>
+          <x>587</x>
+          <y>1784</y>
+        </position>
+        <center>
+          <x>687</x>
+          <y>1881.5</y>
+        </center>
+        <min>
+          <x>587</x>
+          <y>1784</y>
+        </min>
+        <max>
+          <x>787</x>
+          <y>1979</y>
+        </max>
+        <width>200</width>
+        <height>195</height>
+        <size>
+          <x>200</x>
+          <y>195</y>
+        </size>
+        <xMin>587</xMin>
+        <yMin>1784</yMin>
+        <xMax>787</xMax>
+        <yMax>1979</yMax>
+      </rect>
+      <defaultRect>
+        <x>833</x>
+        <y>452</y>
+        <position>
+          <x>833</x>
+          <y>452</y>
+        </position>
+        <center>
+          <x>933</x>
+          <y>522</y>
+        </center>
+        <min>
+          <x>833</x>
+          <y>452</y>
+        </min>
+        <max>
+          <x>1033</x>
+          <y>592</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>833</xMin>
+        <yMin>452</yMin>
+        <xMax>1033</xMax>
+        <yMax>592</yMax>
+      </defaultRect>
+      <dialogue>Wow, thank you so much for understanding Alex. I'm truly blown away by how much you care. Thank you for saying that.</dialogue>
+      <character>sharon</character>
+      <expression>neutral</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>83</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>1779</y>
+          <position>
+            <x>677</x>
+            <y>1779</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1784</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>1779</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>1789</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>1779</yMin>
+          <xMax>697</xMax>
+          <yMax>1789</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>1784</y>
+          <position>
+            <x>587</x>
+            <y>1784</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1881.5</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>1784</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>1979</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>1784</yMin>
+          <xMax>787</xMax>
+          <yMax>1979</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>83</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>1972</y>
+          <position>
+            <x>677</x>
+            <y>1972</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1977</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>1972</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>1982</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>1972</yMin>
+          <xMax>697</xMax>
+          <yMax>1982</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>1784</y>
+          <position>
+            <x>587</x>
+            <y>1784</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1881.5</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>1784</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>1979</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>1784</yMin>
+          <xMax>787</xMax>
+          <yMax>1979</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>84</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>587</x>
+        <y>2030</y>
+        <position>
+          <x>587</x>
+          <y>2030</y>
+        </position>
+        <center>
+          <x>687</x>
+          <y>2147</y>
+        </center>
+        <min>
+          <x>587</x>
+          <y>2030</y>
+        </min>
+        <max>
+          <x>787</x>
+          <y>2264</y>
+        </max>
+        <width>200</width>
+        <height>234</height>
+        <size>
+          <x>200</x>
+          <y>234</y>
+        </size>
+        <xMin>587</xMin>
+        <yMin>2030</yMin>
+        <xMax>787</xMax>
+        <yMax>2264</yMax>
+      </rect>
+      <defaultRect>
+        <x>790</x>
+        <y>741</y>
+        <position>
+          <x>790</x>
+          <y>741</y>
+        </position>
+        <center>
+          <x>890</x>
+          <y>811</y>
+        </center>
+        <min>
+          <x>790</x>
+          <y>741</y>
+        </min>
+        <max>
+          <x>990</x>
+          <y>881</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>790</xMin>
+        <yMin>741</yMin>
+        <xMax>990</xMax>
+        <yMax>881</yMax>
+      </defaultRect>
+      <dialogue>You know what... I'll tell you what happened. It's true. Stan blew up at me. He told me that my hormones keep interfering with my work and that if I can't get a handle on my emotions I'd be fired.</dialogue>
+      <character>sharon</character>
+      <expression>neutral</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>84</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>2025</y>
+          <position>
+            <x>677</x>
+            <y>2025</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2030</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>2025</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>2035</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>2025</yMin>
+          <xMax>697</xMax>
+          <yMax>2035</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>2030</y>
+          <position>
+            <x>587</x>
+            <y>2030</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2147</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>2030</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>2264</y>
+          </max>
+          <width>200</width>
+          <height>234</height>
+          <size>
+            <x>200</x>
+            <y>234</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>2030</yMin>
+          <xMax>787</xMax>
+          <yMax>2264</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>84</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>2257</y>
+          <position>
+            <x>677</x>
+            <y>2257</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2262</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>2257</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>2267</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>2257</yMin>
+          <xMax>697</xMax>
+          <yMax>2267</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>2030</y>
+          <position>
+            <x>587</x>
+            <y>2030</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2147</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>2030</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>2264</y>
+          </max>
+          <width>200</width>
+          <height>234</height>
+          <size>
+            <x>200</x>
+            <y>234</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>2030</yMin>
+          <xMax>787</xMax>
+          <yMax>2264</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>85</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>132</x>
+        <y>1425</y>
+        <position>
+          <x>132</x>
+          <y>1425</y>
+        </position>
+        <center>
+          <x>232</x>
+          <y>1522.5</y>
+        </center>
+        <min>
+          <x>132</x>
+          <y>1425</y>
+        </min>
+        <max>
+          <x>332</x>
+          <y>1620</y>
+        </max>
+        <width>200</width>
+        <height>195</height>
+        <size>
+          <x>200</x>
+          <y>195</y>
+        </size>
+        <xMin>132</xMin>
+        <yMin>1425</yMin>
+        <xMax>332</xMax>
+        <yMax>1620</yMax>
+      </rect>
+      <defaultRect>
+        <x>440</x>
+        <y>326</y>
+        <position>
+          <x>440</x>
+          <y>326</y>
+        </position>
+        <center>
+          <x>540</x>
+          <y>396</y>
+        </center>
+        <min>
+          <x>440</x>
+          <y>326</y>
+        </min>
+        <max>
+          <x>640</x>
+          <y>466</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>440</xMin>
+        <yMin>326</yMin>
+        <xMax>640</xMax>
+        <yMax>466</yMax>
+      </defaultRect>
+      <dialogue>He told me that my hormones keep interfering with my work and that if I can't get a handle on my emotions I'd be fired.</dialogue>
+      <character>sharon</character>
+      <expression>angry</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>85</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>222</x>
+          <y>1420</y>
+          <position>
+            <x>222</x>
+            <y>1420</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1425</y>
+          </center>
+          <min>
+            <x>222</x>
+            <y>1420</y>
+          </min>
+          <max>
+            <x>242</x>
+            <y>1430</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>222</xMin>
+          <yMin>1420</yMin>
+          <xMax>242</xMax>
+          <yMax>1430</yMax>
+        </rect>
+        <nodeRect>
+          <x>132</x>
+          <y>1425</y>
+          <position>
+            <x>132</x>
+            <y>1425</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1522.5</y>
+          </center>
+          <min>
+            <x>132</x>
+            <y>1425</y>
+          </min>
+          <max>
+            <x>332</x>
+            <y>1620</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>132</xMin>
+          <yMin>1425</yMin>
+          <xMax>332</xMax>
+          <yMax>1620</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>85</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>222</x>
+          <y>1613</y>
+          <position>
+            <x>222</x>
+            <y>1613</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1618</y>
+          </center>
+          <min>
+            <x>222</x>
+            <y>1613</y>
+          </min>
+          <max>
+            <x>242</x>
+            <y>1623</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>222</xMin>
+          <yMin>1613</yMin>
+          <xMax>242</xMax>
+          <yMax>1623</yMax>
+        </rect>
+        <nodeRect>
+          <x>132</x>
+          <y>1425</y>
+          <position>
+            <x>132</x>
+            <y>1425</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1522.5</y>
+          </center>
+          <min>
+            <x>132</x>
+            <y>1425</y>
+          </min>
+          <max>
+            <x>332</x>
+            <y>1620</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>132</xMin>
+          <yMin>1425</yMin>
+          <xMax>332</xMax>
+          <yMax>1620</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>86</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>259</x>
+        <y>2092</y>
+        <position>
+          <x>259</x>
+          <y>2092</y>
+        </position>
+        <center>
+          <x>359</x>
+          <y>2189.5</y>
+        </center>
+        <min>
+          <x>259</x>
+          <y>2092</y>
+        </min>
+        <max>
+          <x>459</x>
+          <y>2287</y>
+        </max>
+        <width>200</width>
+        <height>195</height>
+        <size>
+          <x>200</x>
+          <y>195</y>
+        </size>
+        <xMin>259</xMin>
+        <yMin>2092</yMin>
+        <xMax>459</xMax>
+        <yMax>2287</yMax>
+      </rect>
+      <defaultRect>
+        <x>465</x>
+        <y>620</y>
+        <position>
+          <x>465</x>
+          <y>620</y>
+        </position>
+        <center>
+          <x>565</x>
+          <y>690</y>
+        </center>
+        <min>
+          <x>465</x>
+          <y>620</y>
+        </min>
+        <max>
+          <x>665</x>
+          <y>760</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>465</xMin>
+        <yMin>620</yMin>
+        <xMax>665</xMax>
+        <yMax>760</yMax>
+      </defaultRect>
+      <dialogue>I don't even know what to say, Sharon. I am so sorry you had to experience that. I will certainly be confronting Stan about that.</dialogue>
+      <character>player</character>
+      <expression>sad</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>86</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>349</x>
+          <y>2087</y>
+          <position>
+            <x>349</x>
+            <y>2087</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2092</y>
+          </center>
+          <min>
+            <x>349</x>
+            <y>2087</y>
+          </min>
+          <max>
+            <x>369</x>
+            <y>2097</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>349</xMin>
+          <yMin>2087</yMin>
+          <xMax>369</xMax>
+          <yMax>2097</yMax>
+        </rect>
+        <nodeRect>
+          <x>259</x>
+          <y>2092</y>
+          <position>
+            <x>259</x>
+            <y>2092</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2189.5</y>
+          </center>
+          <min>
+            <x>259</x>
+            <y>2092</y>
+          </min>
+          <max>
+            <x>459</x>
+            <y>2287</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>259</xMin>
+          <yMin>2092</yMin>
+          <xMax>459</xMax>
+          <yMax>2287</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>86</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>349</x>
+          <y>2280</y>
+          <position>
+            <x>349</x>
+            <y>2280</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2285</y>
+          </center>
+          <min>
+            <x>349</x>
+            <y>2280</y>
+          </min>
+          <max>
+            <x>369</x>
+            <y>2290</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>349</xMin>
+          <yMin>2280</yMin>
+          <xMax>369</xMax>
+          <yMax>2290</yMax>
+        </rect>
+        <nodeRect>
+          <x>259</x>
+          <y>2092</y>
+          <position>
+            <x>259</x>
+            <y>2092</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2189.5</y>
+          </center>
+          <min>
+            <x>259</x>
+            <y>2092</y>
+          </min>
+          <max>
+            <x>459</x>
+            <y>2287</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>259</xMin>
+          <yMin>2092</yMin>
+          <xMax>459</xMax>
+          <yMax>2287</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>87</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>11</x>
+        <y>2090</y>
+        <position>
+          <x>11</x>
+          <y>2090</y>
+        </position>
+        <center>
+          <x>111</x>
+          <y>2187.5</y>
+        </center>
+        <min>
+          <x>11</x>
+          <y>2090</y>
+        </min>
+        <max>
+          <x>211</x>
+          <y>2285</y>
+        </max>
+        <width>200</width>
+        <height>195</height>
+        <size>
+          <x>200</x>
+          <y>195</y>
+        </size>
+        <xMin>11</xMin>
+        <yMin>2090</yMin>
+        <xMax>211</xMax>
+        <yMax>2285</yMax>
+      </rect>
+      <defaultRect>
+        <x>275</x>
+        <y>616</y>
+        <position>
+          <x>275</x>
+          <y>616</y>
+        </position>
+        <center>
+          <x>375</x>
+          <y>686</y>
+        </center>
+        <min>
+          <x>275</x>
+          <y>616</y>
+        </min>
+        <max>
+          <x>475</x>
+          <y>756</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>275</xMin>
+        <yMin>616</yMin>
+        <xMax>475</xMax>
+        <yMax>756</yMax>
+      </defaultRect>
+      <dialogue>Sharon, that is truly awful. Would it be alright with you if I were to confront Stan about this?</dialogue>
+      <character>player</character>
+      <expression>angry</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>87</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>101</x>
+          <y>2085</y>
+          <position>
+            <x>101</x>
+            <y>2085</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2090</y>
+          </center>
+          <min>
+            <x>101</x>
+            <y>2085</y>
+          </min>
+          <max>
+            <x>121</x>
+            <y>2095</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>101</xMin>
+          <yMin>2085</yMin>
+          <xMax>121</xMax>
+          <yMax>2095</yMax>
+        </rect>
+        <nodeRect>
+          <x>11</x>
+          <y>2090</y>
+          <position>
+            <x>11</x>
+            <y>2090</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2187.5</y>
+          </center>
+          <min>
+            <x>11</x>
+            <y>2090</y>
+          </min>
+          <max>
+            <x>211</x>
+            <y>2285</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>11</xMin>
+          <yMin>2090</yMin>
+          <xMax>211</xMax>
+          <yMax>2285</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>87</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>101</x>
+          <y>2278</y>
+          <position>
+            <x>101</x>
+            <y>2278</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2283</y>
+          </center>
+          <min>
+            <x>101</x>
+            <y>2278</y>
+          </min>
+          <max>
+            <x>121</x>
+            <y>2288</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>101</xMin>
+          <yMin>2278</yMin>
+          <xMax>121</xMax>
+          <yMax>2288</yMax>
+        </rect>
+        <nodeRect>
+          <x>11</x>
+          <y>2090</y>
+          <position>
+            <x>11</x>
+            <y>2090</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2187.5</y>
+          </center>
+          <min>
+            <x>11</x>
+            <y>2090</y>
+          </min>
+          <max>
+            <x>211</x>
+            <y>2285</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>11</xMin>
+          <yMin>2090</yMin>
+          <xMax>211</xMax>
+          <yMax>2285</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>88</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>145</x>
+        <y>2339</y>
+        <position>
+          <x>145</x>
+          <y>2339</y>
+        </position>
+        <center>
+          <x>245</x>
+          <y>2436.5</y>
+        </center>
+        <min>
+          <x>145</x>
+          <y>2339</y>
+        </min>
+        <max>
+          <x>345</x>
+          <y>2534</y>
+        </max>
+        <width>200</width>
+        <height>195</height>
+        <size>
+          <x>200</x>
+          <y>195</y>
+        </size>
+        <xMin>145</xMin>
+        <yMin>2339</yMin>
+        <xMax>345</xMax>
+        <yMax>2534</yMax>
+      </rect>
+      <defaultRect>
+        <x>464</x>
+        <y>620</y>
+        <position>
+          <x>464</x>
+          <y>620</y>
+        </position>
+        <center>
+          <x>564</x>
+          <y>690</y>
+        </center>
+        <min>
+          <x>464</x>
+          <y>620</y>
+        </min>
+        <max>
+          <x>664</x>
+          <y>760</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>464</xMin>
+        <yMin>620</yMin>
+        <xMax>664</xMax>
+        <yMax>760</yMax>
+      </defaultRect>
+      <dialogue>Well I certainly think Stan's attitude needs to change. Just... don't tell him I told you any of this, okay?</dialogue>
+      <character>sharon</character>
+      <expression>anxious</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>88</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>235</x>
+          <y>2334</y>
+          <position>
+            <x>235</x>
+            <y>2334</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2339</y>
+          </center>
+          <min>
+            <x>235</x>
+            <y>2334</y>
+          </min>
+          <max>
+            <x>255</x>
+            <y>2344</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>235</xMin>
+          <yMin>2334</yMin>
+          <xMax>255</xMax>
+          <yMax>2344</yMax>
+        </rect>
+        <nodeRect>
+          <x>145</x>
+          <y>2339</y>
+          <position>
+            <x>145</x>
+            <y>2339</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2436.5</y>
+          </center>
+          <min>
+            <x>145</x>
+            <y>2339</y>
+          </min>
+          <max>
+            <x>345</x>
+            <y>2534</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>145</xMin>
+          <yMin>2339</yMin>
+          <xMax>345</xMax>
+          <yMax>2534</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>88</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>235</x>
+          <y>2527</y>
+          <position>
+            <x>235</x>
+            <y>2527</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2532</y>
+          </center>
+          <min>
+            <x>235</x>
+            <y>2527</y>
+          </min>
+          <max>
+            <x>255</x>
+            <y>2537</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>235</xMin>
+          <yMin>2527</yMin>
+          <xMax>255</xMax>
+          <yMax>2537</yMax>
+        </rect>
+        <nodeRect>
+          <x>145</x>
+          <y>2339</y>
+          <position>
+            <x>145</x>
+            <y>2339</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2436.5</y>
+          </center>
+          <min>
+            <x>145</x>
+            <y>2339</y>
+          </min>
+          <max>
+            <x>345</x>
+            <y>2534</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>145</xMin>
+          <yMin>2339</yMin>
+          <xMax>345</xMax>
+          <yMax>2534</yMax>
+        </nodeRect>
+      </outPoint>
+    </DialogueNode>
+    <DialogueNode>
+      <id>89</id>
+      <readyToInit>true</readyToInit>
+      <rect>
+        <x>140</x>
+        <y>2595</y>
+        <position>
+          <x>140</x>
+          <y>2595</y>
+        </position>
+        <center>
+          <x>240</x>
+          <y>2699</y>
+        </center>
+        <min>
+          <x>140</x>
+          <y>2595</y>
+        </min>
+        <max>
+          <x>340</x>
+          <y>2803</y>
+        </max>
+        <width>200</width>
+        <height>208</height>
+        <size>
+          <x>200</x>
+          <y>208</y>
+        </size>
+        <xMin>140</xMin>
+        <yMin>2595</yMin>
+        <xMax>340</xMax>
+        <yMax>2803</yMax>
+      </rect>
+      <defaultRect>
+        <x>434</x>
+        <y>598</y>
+        <position>
+          <x>434</x>
+          <y>598</y>
+        </position>
+        <center>
+          <x>534</x>
+          <y>668</y>
+        </center>
+        <min>
+          <x>434</x>
+          <y>598</y>
+        </min>
+        <max>
+          <x>634</x>
+          <y>738</y>
+        </max>
+        <width>200</width>
+        <height>140</height>
+        <size>
+          <x>200</x>
+          <y>140</y>
+        </size>
+        <xMin>434</xMin>
+        <yMin>598</yMin>
+        <xMax>634</xMax>
+        <yMax>738</yMax>
+      </defaultRect>
+      <dialogue>I promise you, your job is not at risk at all. We're going to sort this out as soon as possible. Thank you so much for your compliance and bravery.</dialogue>
+      <character>player</character>
+      <expression>sad</expression>
+      <advancedOptions>false</advancedOptions>
+      <characterAffected>player</characterAffected>
+      <forceLeft>false</forceLeft>
+      <longOption>false</longOption>
+      <positive>false</positive>
+      <negative>false</negative>
+      <infoGathered>-1</infoGathered>
+      <fired>false</fired>
+      <restrictions>false</restrictions>
+      <characterRestriction>player</characterRestriction>
+      <positiveRestriction>99</positiveRestriction>
+      <negativeRestriction>-99</negativeRestriction>
+      <infoRestriction>-1</infoRestriction>
+      <isDragged>false</isDragged>
+      <isSelected>false</isSelected>
+      <inPoint type="In">
+        <id>89</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>230</x>
+          <y>2590</y>
+          <position>
+            <x>230</x>
+            <y>2590</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2595</y>
+          </center>
+          <min>
+            <x>230</x>
+            <y>2590</y>
+          </min>
+          <max>
+            <x>250</x>
+            <y>2600</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>230</xMin>
+          <yMin>2590</yMin>
+          <xMax>250</xMax>
+          <yMax>2600</yMax>
+        </rect>
+        <nodeRect>
+          <x>140</x>
+          <y>2595</y>
+          <position>
+            <x>140</x>
+            <y>2595</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2699</y>
+          </center>
+          <min>
+            <x>140</x>
+            <y>2595</y>
+          </min>
+          <max>
+            <x>340</x>
+            <y>2803</y>
+          </max>
+          <width>200</width>
+          <height>208</height>
+          <size>
+            <x>200</x>
+            <y>208</y>
+          </size>
+          <xMin>140</xMin>
+          <yMin>2595</yMin>
+          <xMax>340</xMax>
+          <yMax>2803</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>89</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>230</x>
+          <y>2796</y>
+          <position>
+            <x>230</x>
+            <y>2796</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2801</y>
+          </center>
+          <min>
+            <x>230</x>
+            <y>2796</y>
+          </min>
+          <max>
+            <x>250</x>
+            <y>2806</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>230</xMin>
+          <yMin>2796</yMin>
+          <xMax>250</xMax>
+          <yMax>2806</yMax>
+        </rect>
+        <nodeRect>
+          <x>140</x>
+          <y>2595</y>
+          <position>
+            <x>140</x>
+            <y>2595</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2699</y>
+          </center>
+          <min>
+            <x>140</x>
+            <y>2595</y>
+          </min>
+          <max>
+            <x>340</x>
+            <y>2803</y>
+          </max>
+          <width>200</width>
+          <height>208</height>
+          <size>
+            <x>200</x>
+            <y>208</y>
+          </size>
+          <xMin>140</xMin>
+          <yMin>2595</yMin>
+          <xMax>340</xMax>
+          <yMax>2803</yMax>
         </nodeRect>
       </outPoint>
     </DialogueNode>
@@ -1059,23 +3369,23 @@
         <id>75</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>341</x>
-          <y>-446</y>
+          <x>412</x>
+          <y>320</y>
           <position>
-            <x>341</x>
-            <y>-446</y>
+            <x>412</x>
+            <y>320</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-441</y>
+            <x>422</x>
+            <y>325</y>
           </center>
           <min>
-            <x>341</x>
-            <y>-446</y>
+            <x>412</x>
+            <y>320</y>
           </min>
           <max>
-            <x>361</x>
-            <y>-436</y>
+            <x>432</x>
+            <y>330</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1083,29 +3393,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>341</xMin>
-          <yMin>-446</yMin>
-          <xMax>361</xMax>
-          <yMax>-436</yMax>
+          <xMin>412</xMin>
+          <yMin>320</yMin>
+          <xMax>432</xMax>
+          <yMax>330</yMax>
         </rect>
         <nodeRect>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
           <position>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-350</y>
+            <x>422</x>
+            <y>416</y>
           </center>
           <min>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </min>
           <max>
-            <x>451</x>
-            <y>-259</y>
+            <x>522</x>
+            <y>507</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -1113,33 +3423,33 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>251</xMin>
-          <yMin>-441</yMin>
-          <xMax>451</xMax>
-          <yMax>-259</yMax>
+          <xMin>322</xMin>
+          <yMin>325</yMin>
+          <xMax>522</xMax>
+          <yMax>507</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>4</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>342</x>
-          <y>-502</y>
+          <x>413</x>
+          <y>264</y>
           <position>
-            <x>342</x>
-            <y>-502</y>
+            <x>413</x>
+            <y>264</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-497</y>
+            <x>423</x>
+            <y>269</y>
           </center>
           <min>
-            <x>342</x>
-            <y>-502</y>
+            <x>413</x>
+            <y>264</y>
           </min>
           <max>
-            <x>362</x>
-            <y>-492</y>
+            <x>433</x>
+            <y>274</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1147,29 +3457,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>342</xMin>
-          <yMin>-502</yMin>
-          <xMax>362</xMax>
-          <yMax>-492</yMax>
+          <xMin>413</xMin>
+          <yMin>264</yMin>
+          <xMax>433</xMax>
+          <yMax>274</yMax>
         </rect>
         <nodeRect>
-          <x>252</x>
-          <y>-664</y>
+          <x>323</x>
+          <y>102</y>
           <position>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </position>
           <center>
-            <x>352</x>
-            <y>-579.5</y>
+            <x>423</x>
+            <y>186.5</y>
           </center>
           <min>
-            <x>252</x>
-            <y>-664</y>
+            <x>323</x>
+            <y>102</y>
           </min>
           <max>
-            <x>452</x>
-            <y>-495</y>
+            <x>523</x>
+            <y>271</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -1177,10 +3487,10 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>252</xMin>
-          <yMin>-664</yMin>
-          <xMax>452</xMax>
-          <yMax>-495</yMax>
+          <xMin>323</xMin>
+          <yMin>102</yMin>
+          <xMax>523</xMax>
+          <yMax>271</yMax>
         </nodeRect>
       </outPoint>
     </Connection>
@@ -1190,23 +3500,23 @@
         <id>76</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>172</x>
-          <y>-196</y>
+          <x>243</x>
+          <y>570</y>
           <position>
-            <x>172</x>
-            <y>-196</y>
+            <x>243</x>
+            <y>570</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-191</y>
+            <x>253</x>
+            <y>575</y>
           </center>
           <min>
-            <x>172</x>
-            <y>-196</y>
+            <x>243</x>
+            <y>570</y>
           </min>
           <max>
-            <x>192</x>
-            <y>-186</y>
+            <x>263</x>
+            <y>580</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1214,29 +3524,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>172</xMin>
-          <yMin>-196</yMin>
-          <xMax>192</xMax>
-          <yMax>-186</yMax>
+          <xMin>243</xMin>
+          <yMin>570</yMin>
+          <xMax>263</xMax>
+          <yMax>580</yMax>
         </rect>
         <nodeRect>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
           <position>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-80.5</y>
+            <x>253</x>
+            <y>685.5</y>
           </center>
           <min>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </min>
           <max>
-            <x>282</x>
-            <y>30</y>
+            <x>353</x>
+            <y>796</y>
           </max>
           <width>200</width>
           <height>221</height>
@@ -1244,33 +3554,33 @@
             <x>200</x>
             <y>221</y>
           </size>
-          <xMin>82</xMin>
-          <yMin>-191</yMin>
-          <xMax>282</xMax>
-          <yMax>30</yMax>
+          <xMin>153</xMin>
+          <yMin>575</yMin>
+          <xMax>353</xMax>
+          <yMax>796</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>75</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>341</x>
-          <y>-266</y>
+          <x>412</x>
+          <y>500</y>
           <position>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-261</y>
+            <x>422</x>
+            <y>505</y>
           </center>
           <min>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </min>
           <max>
-            <x>361</x>
-            <y>-256</y>
+            <x>432</x>
+            <y>510</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1278,29 +3588,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>341</xMin>
-          <yMin>-266</yMin>
-          <xMax>361</xMax>
-          <yMax>-256</yMax>
+          <xMin>412</xMin>
+          <yMin>500</yMin>
+          <xMax>432</xMax>
+          <yMax>510</yMax>
         </rect>
         <nodeRect>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
           <position>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-350</y>
+            <x>422</x>
+            <y>416</y>
           </center>
           <min>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </min>
           <max>
-            <x>451</x>
-            <y>-259</y>
+            <x>522</x>
+            <y>507</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -1308,10 +3618,10 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>251</xMin>
-          <yMin>-441</yMin>
-          <xMax>451</xMax>
-          <yMax>-259</yMax>
+          <xMin>322</xMin>
+          <yMin>325</yMin>
+          <xMax>522</xMax>
+          <yMax>507</yMax>
         </nodeRect>
       </outPoint>
     </Connection>
@@ -1321,23 +3631,23 @@
         <id>77</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>453</x>
-          <y>-190</y>
+          <x>524</x>
+          <y>576</y>
           <position>
-            <x>453</x>
-            <y>-190</y>
+            <x>524</x>
+            <y>576</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-185</y>
+            <x>534</x>
+            <y>581</y>
           </center>
           <min>
-            <x>453</x>
-            <y>-190</y>
+            <x>524</x>
+            <y>576</y>
           </min>
           <max>
-            <x>473</x>
-            <y>-180</y>
+            <x>544</x>
+            <y>586</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1345,29 +3655,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>453</xMin>
-          <yMin>-190</yMin>
-          <xMax>473</xMax>
-          <yMax>-180</yMax>
+          <xMin>524</xMin>
+          <yMin>576</yMin>
+          <xMax>544</xMax>
+          <yMax>586</yMax>
         </rect>
         <nodeRect>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
           <position>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-94</y>
+            <x>534</x>
+            <y>672</y>
           </center>
           <min>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </min>
           <max>
-            <x>563</x>
-            <y>-3</y>
+            <x>634</x>
+            <y>763</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -1375,33 +3685,33 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>363</xMin>
-          <yMin>-185</yMin>
-          <xMax>563</xMax>
-          <yMax>-3</yMax>
+          <xMin>434</xMin>
+          <yMin>581</yMin>
+          <xMax>634</xMax>
+          <yMax>763</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>75</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>341</x>
-          <y>-266</y>
+          <x>412</x>
+          <y>500</y>
           <position>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-261</y>
+            <x>422</x>
+            <y>505</y>
           </center>
           <min>
-            <x>341</x>
-            <y>-266</y>
+            <x>412</x>
+            <y>500</y>
           </min>
           <max>
-            <x>361</x>
-            <y>-256</y>
+            <x>432</x>
+            <y>510</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1409,29 +3719,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>341</xMin>
-          <yMin>-266</yMin>
-          <xMax>361</xMax>
-          <yMax>-256</yMax>
+          <xMin>412</xMin>
+          <yMin>500</yMin>
+          <xMax>432</xMax>
+          <yMax>510</yMax>
         </rect>
         <nodeRect>
-          <x>251</x>
-          <y>-441</y>
+          <x>322</x>
+          <y>325</y>
           <position>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </position>
           <center>
-            <x>351</x>
-            <y>-350</y>
+            <x>422</x>
+            <y>416</y>
           </center>
           <min>
-            <x>251</x>
-            <y>-441</y>
+            <x>322</x>
+            <y>325</y>
           </min>
           <max>
-            <x>451</x>
-            <y>-259</y>
+            <x>522</x>
+            <y>507</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -1439,10 +3749,10 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>251</xMin>
-          <yMin>-441</yMin>
-          <xMax>451</xMax>
-          <yMax>-259</yMax>
+          <xMin>322</xMin>
+          <yMin>325</yMin>
+          <xMax>522</xMax>
+          <yMax>507</yMax>
         </nodeRect>
       </outPoint>
     </Connection>
@@ -1452,23 +3762,23 @@
         <id>78</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>319</x>
-          <y>107</y>
+          <x>390</x>
+          <y>873</y>
           <position>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </position>
           <center>
-            <x>329</x>
-            <y>112</y>
+            <x>400</x>
+            <y>878</y>
           </center>
           <min>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </min>
           <max>
-            <x>339</x>
-            <y>117</y>
+            <x>410</x>
+            <y>883</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1476,29 +3786,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>319</xMin>
-          <yMin>107</yMin>
-          <xMax>339</xMax>
-          <yMax>117</yMax>
+          <xMin>390</xMin>
+          <yMin>873</yMin>
+          <xMax>410</xMax>
+          <yMax>883</yMax>
         </rect>
         <nodeRect>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
           <position>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </position>
           <center>
-            <x>329</x>
-            <y>196.5</y>
+            <x>400</x>
+            <y>962.5</y>
           </center>
           <min>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </min>
           <max>
-            <x>429</x>
-            <y>281</y>
+            <x>500</x>
+            <y>1047</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -1506,33 +3816,33 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>229</xMin>
-          <yMin>112</yMin>
-          <xMax>429</xMax>
-          <yMax>281</yMax>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>76</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>172</x>
-          <y>23</y>
+          <x>243</x>
+          <y>789</y>
           <position>
-            <x>172</x>
-            <y>23</y>
+            <x>243</x>
+            <y>789</y>
           </position>
           <center>
-            <x>182</x>
-            <y>28</y>
+            <x>253</x>
+            <y>794</y>
           </center>
           <min>
-            <x>172</x>
-            <y>23</y>
+            <x>243</x>
+            <y>789</y>
           </min>
           <max>
-            <x>192</x>
-            <y>33</y>
+            <x>263</x>
+            <y>799</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1540,29 +3850,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>172</xMin>
-          <yMin>23</yMin>
-          <xMax>192</xMax>
-          <yMax>33</yMax>
+          <xMin>243</xMin>
+          <yMin>789</yMin>
+          <xMax>263</xMax>
+          <yMax>799</yMax>
         </rect>
         <nodeRect>
-          <x>82</x>
-          <y>-191</y>
+          <x>153</x>
+          <y>575</y>
           <position>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </position>
           <center>
-            <x>182</x>
-            <y>-80.5</y>
+            <x>253</x>
+            <y>685.5</y>
           </center>
           <min>
-            <x>82</x>
-            <y>-191</y>
+            <x>153</x>
+            <y>575</y>
           </min>
           <max>
-            <x>282</x>
-            <y>30</y>
+            <x>353</x>
+            <y>796</y>
           </max>
           <width>200</width>
           <height>221</height>
@@ -1570,10 +3880,10 @@
             <x>200</x>
             <y>221</y>
           </size>
-          <xMin>82</xMin>
-          <yMin>-191</yMin>
-          <xMax>282</xMax>
-          <yMax>30</yMax>
+          <xMin>153</xMin>
+          <yMin>575</yMin>
+          <xMax>353</xMax>
+          <yMax>796</yMax>
         </nodeRect>
       </outPoint>
     </Connection>
@@ -1583,23 +3893,23 @@
         <id>78</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>319</x>
-          <y>107</y>
+          <x>390</x>
+          <y>873</y>
           <position>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </position>
           <center>
-            <x>329</x>
-            <y>112</y>
+            <x>400</x>
+            <y>878</y>
           </center>
           <min>
-            <x>319</x>
-            <y>107</y>
+            <x>390</x>
+            <y>873</y>
           </min>
           <max>
-            <x>339</x>
-            <y>117</y>
+            <x>410</x>
+            <y>883</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1607,29 +3917,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>319</xMin>
-          <yMin>107</yMin>
-          <xMax>339</xMax>
-          <yMax>117</yMax>
+          <xMin>390</xMin>
+          <yMin>873</yMin>
+          <xMax>410</xMax>
+          <yMax>883</yMax>
         </rect>
         <nodeRect>
-          <x>229</x>
-          <y>112</y>
+          <x>300</x>
+          <y>878</y>
           <position>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </position>
           <center>
-            <x>329</x>
-            <y>196.5</y>
+            <x>400</x>
+            <y>962.5</y>
           </center>
           <min>
-            <x>229</x>
-            <y>112</y>
+            <x>300</x>
+            <y>878</y>
           </min>
           <max>
-            <x>429</x>
-            <y>281</y>
+            <x>500</x>
+            <y>1047</y>
           </max>
           <width>200</width>
           <height>169</height>
@@ -1637,33 +3947,33 @@
             <x>200</x>
             <y>169</y>
           </size>
-          <xMin>229</xMin>
-          <yMin>112</yMin>
-          <xMax>429</xMax>
-          <yMax>281</yMax>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
         </nodeRect>
       </inPoint>
       <outPoint type="Out">
         <id>77</id>
         <readyToInit>true</readyToInit>
         <rect>
-          <x>453</x>
-          <y>-10</y>
+          <x>524</x>
+          <y>756</y>
           <position>
-            <x>453</x>
-            <y>-10</y>
+            <x>524</x>
+            <y>756</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-5</y>
+            <x>534</x>
+            <y>761</y>
           </center>
           <min>
-            <x>453</x>
-            <y>-10</y>
+            <x>524</x>
+            <y>756</y>
           </min>
           <max>
-            <x>473</x>
-            <y>0</y>
+            <x>544</x>
+            <y>766</y>
           </max>
           <width>20</width>
           <height>10</height>
@@ -1671,29 +3981,29 @@
             <x>20</x>
             <y>10</y>
           </size>
-          <xMin>453</xMin>
-          <yMin>-10</yMin>
-          <xMax>473</xMax>
-          <yMax>0</yMax>
+          <xMin>524</xMin>
+          <yMin>756</yMin>
+          <xMax>544</xMax>
+          <yMax>766</yMax>
         </rect>
         <nodeRect>
-          <x>363</x>
-          <y>-185</y>
+          <x>434</x>
+          <y>581</y>
           <position>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </position>
           <center>
-            <x>463</x>
-            <y>-94</y>
+            <x>534</x>
+            <y>672</y>
           </center>
           <min>
-            <x>363</x>
-            <y>-185</y>
+            <x>434</x>
+            <y>581</y>
           </min>
           <max>
-            <x>563</x>
-            <y>-3</y>
+            <x>634</x>
+            <y>763</y>
           </max>
           <width>200</width>
           <height>182</height>
@@ -1701,10 +4011,1844 @@
             <x>200</x>
             <y>182</y>
           </size>
-          <xMin>363</xMin>
-          <yMin>-185</yMin>
-          <xMax>563</xMax>
-          <yMax>-3</yMax>
+          <xMin>434</xMin>
+          <yMin>581</yMin>
+          <xMax>634</xMax>
+          <yMax>763</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>79</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>248</x>
+          <y>1070</y>
+          <position>
+            <x>248</x>
+            <y>1070</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1075</y>
+          </center>
+          <min>
+            <x>248</x>
+            <y>1070</y>
+          </min>
+          <max>
+            <x>268</x>
+            <y>1080</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>248</xMin>
+          <yMin>1070</yMin>
+          <xMax>268</xMax>
+          <yMax>1080</yMax>
+        </rect>
+        <nodeRect>
+          <x>158</x>
+          <y>1075</y>
+          <position>
+            <x>158</x>
+            <y>1075</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1206</y>
+          </center>
+          <min>
+            <x>158</x>
+            <y>1075</y>
+          </min>
+          <max>
+            <x>358</x>
+            <y>1337</y>
+          </max>
+          <width>200</width>
+          <height>262</height>
+          <size>
+            <x>200</x>
+            <y>262</y>
+          </size>
+          <xMin>158</xMin>
+          <yMin>1075</yMin>
+          <xMax>358</xMax>
+          <yMax>1337</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>78</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>390</x>
+          <y>1040</y>
+          <position>
+            <x>390</x>
+            <y>1040</y>
+          </position>
+          <center>
+            <x>400</x>
+            <y>1045</y>
+          </center>
+          <min>
+            <x>390</x>
+            <y>1040</y>
+          </min>
+          <max>
+            <x>410</x>
+            <y>1050</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>390</xMin>
+          <yMin>1040</yMin>
+          <xMax>410</xMax>
+          <yMax>1050</yMax>
+        </rect>
+        <nodeRect>
+          <x>300</x>
+          <y>878</y>
+          <position>
+            <x>300</x>
+            <y>878</y>
+          </position>
+          <center>
+            <x>400</x>
+            <y>962.5</y>
+          </center>
+          <min>
+            <x>300</x>
+            <y>878</y>
+          </min>
+          <max>
+            <x>500</x>
+            <y>1047</y>
+          </max>
+          <width>200</width>
+          <height>169</height>
+          <size>
+            <x>200</x>
+            <y>169</y>
+          </size>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>80</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>544</x>
+          <y>1111</y>
+          <position>
+            <x>544</x>
+            <y>1111</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1116</y>
+          </center>
+          <min>
+            <x>544</x>
+            <y>1111</y>
+          </min>
+          <max>
+            <x>564</x>
+            <y>1121</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>544</xMin>
+          <yMin>1111</yMin>
+          <xMax>564</xMax>
+          <yMax>1121</yMax>
+        </rect>
+        <nodeRect>
+          <x>454</x>
+          <y>1116</y>
+          <position>
+            <x>454</x>
+            <y>1116</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1240.5</y>
+          </center>
+          <min>
+            <x>454</x>
+            <y>1116</y>
+          </min>
+          <max>
+            <x>654</x>
+            <y>1365</y>
+          </max>
+          <width>200</width>
+          <height>249</height>
+          <size>
+            <x>200</x>
+            <y>249</y>
+          </size>
+          <xMin>454</xMin>
+          <yMin>1116</yMin>
+          <xMax>654</xMax>
+          <yMax>1365</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>78</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>390</x>
+          <y>1040</y>
+          <position>
+            <x>390</x>
+            <y>1040</y>
+          </position>
+          <center>
+            <x>400</x>
+            <y>1045</y>
+          </center>
+          <min>
+            <x>390</x>
+            <y>1040</y>
+          </min>
+          <max>
+            <x>410</x>
+            <y>1050</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>390</xMin>
+          <yMin>1040</yMin>
+          <xMax>410</xMax>
+          <yMax>1050</yMax>
+        </rect>
+        <nodeRect>
+          <x>300</x>
+          <y>878</y>
+          <position>
+            <x>300</x>
+            <y>878</y>
+          </position>
+          <center>
+            <x>400</x>
+            <y>962.5</y>
+          </center>
+          <min>
+            <x>300</x>
+            <y>878</y>
+          </min>
+          <max>
+            <x>500</x>
+            <y>1047</y>
+          </max>
+          <width>200</width>
+          <height>169</height>
+          <size>
+            <x>200</x>
+            <y>169</y>
+          </size>
+          <xMin>300</xMin>
+          <yMin>878</yMin>
+          <xMax>500</xMax>
+          <yMax>1047</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>82</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>472</x>
+          <y>1407</y>
+          <position>
+            <x>472</x>
+            <y>1407</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1412</y>
+          </center>
+          <min>
+            <x>472</x>
+            <y>1407</y>
+          </min>
+          <max>
+            <x>492</x>
+            <y>1417</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>472</xMin>
+          <yMin>1407</yMin>
+          <xMax>492</xMax>
+          <yMax>1417</yMax>
+        </rect>
+        <nodeRect>
+          <x>382</x>
+          <y>1412</y>
+          <position>
+            <x>382</x>
+            <y>1412</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1592.5</y>
+          </center>
+          <min>
+            <x>382</x>
+            <y>1412</y>
+          </min>
+          <max>
+            <x>582</x>
+            <y>1773</y>
+          </max>
+          <width>200</width>
+          <height>361</height>
+          <size>
+            <x>200</x>
+            <y>361</y>
+          </size>
+          <xMin>382</xMin>
+          <yMin>1412</yMin>
+          <xMax>582</xMax>
+          <yMax>1773</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>80</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>544</x>
+          <y>1358</y>
+          <position>
+            <x>544</x>
+            <y>1358</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1363</y>
+          </center>
+          <min>
+            <x>544</x>
+            <y>1358</y>
+          </min>
+          <max>
+            <x>564</x>
+            <y>1368</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>544</xMin>
+          <yMin>1358</yMin>
+          <xMax>564</xMax>
+          <yMax>1368</yMax>
+        </rect>
+        <nodeRect>
+          <x>454</x>
+          <y>1116</y>
+          <position>
+            <x>454</x>
+            <y>1116</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1240.5</y>
+          </center>
+          <min>
+            <x>454</x>
+            <y>1116</y>
+          </min>
+          <max>
+            <x>654</x>
+            <y>1365</y>
+          </max>
+          <width>200</width>
+          <height>249</height>
+          <size>
+            <x>200</x>
+            <y>249</y>
+          </size>
+          <xMin>454</xMin>
+          <yMin>1116</yMin>
+          <xMax>654</xMax>
+          <yMax>1365</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>81</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>902</x>
+          <y>1392</y>
+          <position>
+            <x>902</x>
+            <y>1392</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1397</y>
+          </center>
+          <min>
+            <x>902</x>
+            <y>1392</y>
+          </min>
+          <max>
+            <x>922</x>
+            <y>1402</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>902</xMin>
+          <yMin>1392</yMin>
+          <xMax>922</xMax>
+          <yMax>1402</yMax>
+        </rect>
+        <nodeRect>
+          <x>812</x>
+          <y>1397</y>
+          <position>
+            <x>812</x>
+            <y>1397</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1584</y>
+          </center>
+          <min>
+            <x>812</x>
+            <y>1397</y>
+          </min>
+          <max>
+            <x>1012</x>
+            <y>1771</y>
+          </max>
+          <width>200</width>
+          <height>374</height>
+          <size>
+            <x>200</x>
+            <y>374</y>
+          </size>
+          <xMin>812</xMin>
+          <yMin>1397</yMin>
+          <xMax>1012</xMax>
+          <yMax>1771</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>80</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>544</x>
+          <y>1358</y>
+          <position>
+            <x>544</x>
+            <y>1358</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1363</y>
+          </center>
+          <min>
+            <x>544</x>
+            <y>1358</y>
+          </min>
+          <max>
+            <x>564</x>
+            <y>1368</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>544</xMin>
+          <yMin>1358</yMin>
+          <xMax>564</xMax>
+          <yMax>1368</yMax>
+        </rect>
+        <nodeRect>
+          <x>454</x>
+          <y>1116</y>
+          <position>
+            <x>454</x>
+            <y>1116</y>
+          </position>
+          <center>
+            <x>554</x>
+            <y>1240.5</y>
+          </center>
+          <min>
+            <x>454</x>
+            <y>1116</y>
+          </min>
+          <max>
+            <x>654</x>
+            <y>1365</y>
+          </max>
+          <width>200</width>
+          <height>249</height>
+          <size>
+            <x>200</x>
+            <y>249</y>
+          </size>
+          <xMin>454</xMin>
+          <yMin>1116</yMin>
+          <xMax>654</xMax>
+          <yMax>1365</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>83</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>1779</y>
+          <position>
+            <x>677</x>
+            <y>1779</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1784</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>1779</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>1789</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>1779</yMin>
+          <xMax>697</xMax>
+          <yMax>1789</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>1784</y>
+          <position>
+            <x>587</x>
+            <y>1784</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1881.5</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>1784</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>1979</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>1784</yMin>
+          <xMax>787</xMax>
+          <yMax>1979</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>82</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>472</x>
+          <y>1766</y>
+          <position>
+            <x>472</x>
+            <y>1766</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1771</y>
+          </center>
+          <min>
+            <x>472</x>
+            <y>1766</y>
+          </min>
+          <max>
+            <x>492</x>
+            <y>1776</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>472</xMin>
+          <yMin>1766</yMin>
+          <xMax>492</xMax>
+          <yMax>1776</yMax>
+        </rect>
+        <nodeRect>
+          <x>382</x>
+          <y>1412</y>
+          <position>
+            <x>382</x>
+            <y>1412</y>
+          </position>
+          <center>
+            <x>482</x>
+            <y>1592.5</y>
+          </center>
+          <min>
+            <x>382</x>
+            <y>1412</y>
+          </min>
+          <max>
+            <x>582</x>
+            <y>1773</y>
+          </max>
+          <width>200</width>
+          <height>361</height>
+          <size>
+            <x>200</x>
+            <y>361</y>
+          </size>
+          <xMin>382</xMin>
+          <yMin>1412</yMin>
+          <xMax>582</xMax>
+          <yMax>1773</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>83</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>1779</y>
+          <position>
+            <x>677</x>
+            <y>1779</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1784</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>1779</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>1789</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>1779</yMin>
+          <xMax>697</xMax>
+          <yMax>1789</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>1784</y>
+          <position>
+            <x>587</x>
+            <y>1784</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1881.5</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>1784</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>1979</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>1784</yMin>
+          <xMax>787</xMax>
+          <yMax>1979</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>81</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>902</x>
+          <y>1764</y>
+          <position>
+            <x>902</x>
+            <y>1764</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1769</y>
+          </center>
+          <min>
+            <x>902</x>
+            <y>1764</y>
+          </min>
+          <max>
+            <x>922</x>
+            <y>1774</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>902</xMin>
+          <yMin>1764</yMin>
+          <xMax>922</xMax>
+          <yMax>1774</yMax>
+        </rect>
+        <nodeRect>
+          <x>812</x>
+          <y>1397</y>
+          <position>
+            <x>812</x>
+            <y>1397</y>
+          </position>
+          <center>
+            <x>912</x>
+            <y>1584</y>
+          </center>
+          <min>
+            <x>812</x>
+            <y>1397</y>
+          </min>
+          <max>
+            <x>1012</x>
+            <y>1771</y>
+          </max>
+          <width>200</width>
+          <height>374</height>
+          <size>
+            <x>200</x>
+            <y>374</y>
+          </size>
+          <xMin>812</xMin>
+          <yMin>1397</yMin>
+          <xMax>1012</xMax>
+          <yMax>1771</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>84</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>2025</y>
+          <position>
+            <x>677</x>
+            <y>2025</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2030</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>2025</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>2035</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>2025</yMin>
+          <xMax>697</xMax>
+          <yMax>2035</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>2030</y>
+          <position>
+            <x>587</x>
+            <y>2030</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2147</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>2030</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>2264</y>
+          </max>
+          <width>200</width>
+          <height>234</height>
+          <size>
+            <x>200</x>
+            <y>234</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>2030</yMin>
+          <xMax>787</xMax>
+          <yMax>2264</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>83</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>1972</y>
+          <position>
+            <x>677</x>
+            <y>1972</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1977</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>1972</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>1982</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>1972</yMin>
+          <xMax>697</xMax>
+          <yMax>1982</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>1784</y>
+          <position>
+            <x>587</x>
+            <y>1784</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>1881.5</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>1784</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>1979</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>1784</yMin>
+          <xMax>787</xMax>
+          <yMax>1979</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>85</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>222</x>
+          <y>1420</y>
+          <position>
+            <x>222</x>
+            <y>1420</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1425</y>
+          </center>
+          <min>
+            <x>222</x>
+            <y>1420</y>
+          </min>
+          <max>
+            <x>242</x>
+            <y>1430</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>222</xMin>
+          <yMin>1420</yMin>
+          <xMax>242</xMax>
+          <yMax>1430</yMax>
+        </rect>
+        <nodeRect>
+          <x>132</x>
+          <y>1425</y>
+          <position>
+            <x>132</x>
+            <y>1425</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1522.5</y>
+          </center>
+          <min>
+            <x>132</x>
+            <y>1425</y>
+          </min>
+          <max>
+            <x>332</x>
+            <y>1620</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>132</xMin>
+          <yMin>1425</yMin>
+          <xMax>332</xMax>
+          <yMax>1620</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>79</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>248</x>
+          <y>1330</y>
+          <position>
+            <x>248</x>
+            <y>1330</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1335</y>
+          </center>
+          <min>
+            <x>248</x>
+            <y>1330</y>
+          </min>
+          <max>
+            <x>268</x>
+            <y>1340</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>248</xMin>
+          <yMin>1330</yMin>
+          <xMax>268</xMax>
+          <yMax>1340</yMax>
+        </rect>
+        <nodeRect>
+          <x>158</x>
+          <y>1075</y>
+          <position>
+            <x>158</x>
+            <y>1075</y>
+          </position>
+          <center>
+            <x>258</x>
+            <y>1206</y>
+          </center>
+          <min>
+            <x>158</x>
+            <y>1075</y>
+          </min>
+          <max>
+            <x>358</x>
+            <y>1337</y>
+          </max>
+          <width>200</width>
+          <height>262</height>
+          <size>
+            <x>200</x>
+            <y>262</y>
+          </size>
+          <xMin>158</xMin>
+          <yMin>1075</yMin>
+          <xMax>358</xMax>
+          <yMax>1337</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>86</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>349</x>
+          <y>2087</y>
+          <position>
+            <x>349</x>
+            <y>2087</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2092</y>
+          </center>
+          <min>
+            <x>349</x>
+            <y>2087</y>
+          </min>
+          <max>
+            <x>369</x>
+            <y>2097</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>349</xMin>
+          <yMin>2087</yMin>
+          <xMax>369</xMax>
+          <yMax>2097</yMax>
+        </rect>
+        <nodeRect>
+          <x>259</x>
+          <y>2092</y>
+          <position>
+            <x>259</x>
+            <y>2092</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2189.5</y>
+          </center>
+          <min>
+            <x>259</x>
+            <y>2092</y>
+          </min>
+          <max>
+            <x>459</x>
+            <y>2287</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>259</xMin>
+          <yMin>2092</yMin>
+          <xMax>459</xMax>
+          <yMax>2287</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>85</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>222</x>
+          <y>1613</y>
+          <position>
+            <x>222</x>
+            <y>1613</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1618</y>
+          </center>
+          <min>
+            <x>222</x>
+            <y>1613</y>
+          </min>
+          <max>
+            <x>242</x>
+            <y>1623</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>222</xMin>
+          <yMin>1613</yMin>
+          <xMax>242</xMax>
+          <yMax>1623</yMax>
+        </rect>
+        <nodeRect>
+          <x>132</x>
+          <y>1425</y>
+          <position>
+            <x>132</x>
+            <y>1425</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1522.5</y>
+          </center>
+          <min>
+            <x>132</x>
+            <y>1425</y>
+          </min>
+          <max>
+            <x>332</x>
+            <y>1620</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>132</xMin>
+          <yMin>1425</yMin>
+          <xMax>332</xMax>
+          <yMax>1620</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>86</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>349</x>
+          <y>2087</y>
+          <position>
+            <x>349</x>
+            <y>2087</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2092</y>
+          </center>
+          <min>
+            <x>349</x>
+            <y>2087</y>
+          </min>
+          <max>
+            <x>369</x>
+            <y>2097</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>349</xMin>
+          <yMin>2087</yMin>
+          <xMax>369</xMax>
+          <yMax>2097</yMax>
+        </rect>
+        <nodeRect>
+          <x>259</x>
+          <y>2092</y>
+          <position>
+            <x>259</x>
+            <y>2092</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2189.5</y>
+          </center>
+          <min>
+            <x>259</x>
+            <y>2092</y>
+          </min>
+          <max>
+            <x>459</x>
+            <y>2287</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>259</xMin>
+          <yMin>2092</yMin>
+          <xMax>459</xMax>
+          <yMax>2287</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>84</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>677</x>
+          <y>2257</y>
+          <position>
+            <x>677</x>
+            <y>2257</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2262</y>
+          </center>
+          <min>
+            <x>677</x>
+            <y>2257</y>
+          </min>
+          <max>
+            <x>697</x>
+            <y>2267</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>677</xMin>
+          <yMin>2257</yMin>
+          <xMax>697</xMax>
+          <yMax>2267</yMax>
+        </rect>
+        <nodeRect>
+          <x>587</x>
+          <y>2030</y>
+          <position>
+            <x>587</x>
+            <y>2030</y>
+          </position>
+          <center>
+            <x>687</x>
+            <y>2147</y>
+          </center>
+          <min>
+            <x>587</x>
+            <y>2030</y>
+          </min>
+          <max>
+            <x>787</x>
+            <y>2264</y>
+          </max>
+          <width>200</width>
+          <height>234</height>
+          <size>
+            <x>200</x>
+            <y>234</y>
+          </size>
+          <xMin>587</xMin>
+          <yMin>2030</yMin>
+          <xMax>787</xMax>
+          <yMax>2264</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>87</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>101</x>
+          <y>2085</y>
+          <position>
+            <x>101</x>
+            <y>2085</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2090</y>
+          </center>
+          <min>
+            <x>101</x>
+            <y>2085</y>
+          </min>
+          <max>
+            <x>121</x>
+            <y>2095</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>101</xMin>
+          <yMin>2085</yMin>
+          <xMax>121</xMax>
+          <yMax>2095</yMax>
+        </rect>
+        <nodeRect>
+          <x>11</x>
+          <y>2090</y>
+          <position>
+            <x>11</x>
+            <y>2090</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2187.5</y>
+          </center>
+          <min>
+            <x>11</x>
+            <y>2090</y>
+          </min>
+          <max>
+            <x>211</x>
+            <y>2285</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>11</xMin>
+          <yMin>2090</yMin>
+          <xMax>211</xMax>
+          <yMax>2285</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>85</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>222</x>
+          <y>1613</y>
+          <position>
+            <x>222</x>
+            <y>1613</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1618</y>
+          </center>
+          <min>
+            <x>222</x>
+            <y>1613</y>
+          </min>
+          <max>
+            <x>242</x>
+            <y>1623</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>222</xMin>
+          <yMin>1613</yMin>
+          <xMax>242</xMax>
+          <yMax>1623</yMax>
+        </rect>
+        <nodeRect>
+          <x>132</x>
+          <y>1425</y>
+          <position>
+            <x>132</x>
+            <y>1425</y>
+          </position>
+          <center>
+            <x>232</x>
+            <y>1522.5</y>
+          </center>
+          <min>
+            <x>132</x>
+            <y>1425</y>
+          </min>
+          <max>
+            <x>332</x>
+            <y>1620</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>132</xMin>
+          <yMin>1425</yMin>
+          <xMax>332</xMax>
+          <yMax>1620</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>88</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>235</x>
+          <y>2334</y>
+          <position>
+            <x>235</x>
+            <y>2334</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2339</y>
+          </center>
+          <min>
+            <x>235</x>
+            <y>2334</y>
+          </min>
+          <max>
+            <x>255</x>
+            <y>2344</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>235</xMin>
+          <yMin>2334</yMin>
+          <xMax>255</xMax>
+          <yMax>2344</yMax>
+        </rect>
+        <nodeRect>
+          <x>145</x>
+          <y>2339</y>
+          <position>
+            <x>145</x>
+            <y>2339</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2436.5</y>
+          </center>
+          <min>
+            <x>145</x>
+            <y>2339</y>
+          </min>
+          <max>
+            <x>345</x>
+            <y>2534</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>145</xMin>
+          <yMin>2339</yMin>
+          <xMax>345</xMax>
+          <yMax>2534</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>87</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>101</x>
+          <y>2278</y>
+          <position>
+            <x>101</x>
+            <y>2278</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2283</y>
+          </center>
+          <min>
+            <x>101</x>
+            <y>2278</y>
+          </min>
+          <max>
+            <x>121</x>
+            <y>2288</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>101</xMin>
+          <yMin>2278</yMin>
+          <xMax>121</xMax>
+          <yMax>2288</yMax>
+        </rect>
+        <nodeRect>
+          <x>11</x>
+          <y>2090</y>
+          <position>
+            <x>11</x>
+            <y>2090</y>
+          </position>
+          <center>
+            <x>111</x>
+            <y>2187.5</y>
+          </center>
+          <min>
+            <x>11</x>
+            <y>2090</y>
+          </min>
+          <max>
+            <x>211</x>
+            <y>2285</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>11</xMin>
+          <yMin>2090</yMin>
+          <xMax>211</xMax>
+          <yMax>2285</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>88</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>235</x>
+          <y>2334</y>
+          <position>
+            <x>235</x>
+            <y>2334</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2339</y>
+          </center>
+          <min>
+            <x>235</x>
+            <y>2334</y>
+          </min>
+          <max>
+            <x>255</x>
+            <y>2344</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>235</xMin>
+          <yMin>2334</yMin>
+          <xMax>255</xMax>
+          <yMax>2344</yMax>
+        </rect>
+        <nodeRect>
+          <x>145</x>
+          <y>2339</y>
+          <position>
+            <x>145</x>
+            <y>2339</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2436.5</y>
+          </center>
+          <min>
+            <x>145</x>
+            <y>2339</y>
+          </min>
+          <max>
+            <x>345</x>
+            <y>2534</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>145</xMin>
+          <yMin>2339</yMin>
+          <xMax>345</xMax>
+          <yMax>2534</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>86</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>349</x>
+          <y>2280</y>
+          <position>
+            <x>349</x>
+            <y>2280</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2285</y>
+          </center>
+          <min>
+            <x>349</x>
+            <y>2280</y>
+          </min>
+          <max>
+            <x>369</x>
+            <y>2290</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>349</xMin>
+          <yMin>2280</yMin>
+          <xMax>369</xMax>
+          <yMax>2290</yMax>
+        </rect>
+        <nodeRect>
+          <x>259</x>
+          <y>2092</y>
+          <position>
+            <x>259</x>
+            <y>2092</y>
+          </position>
+          <center>
+            <x>359</x>
+            <y>2189.5</y>
+          </center>
+          <min>
+            <x>259</x>
+            <y>2092</y>
+          </min>
+          <max>
+            <x>459</x>
+            <y>2287</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>259</xMin>
+          <yMin>2092</yMin>
+          <xMax>459</xMax>
+          <yMax>2287</yMax>
+        </nodeRect>
+      </outPoint>
+    </Connection>
+    <Connection>
+      <readyToInit>true</readyToInit>
+      <inPoint type="In">
+        <id>89</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>230</x>
+          <y>2590</y>
+          <position>
+            <x>230</x>
+            <y>2590</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2595</y>
+          </center>
+          <min>
+            <x>230</x>
+            <y>2590</y>
+          </min>
+          <max>
+            <x>250</x>
+            <y>2600</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>230</xMin>
+          <yMin>2590</yMin>
+          <xMax>250</xMax>
+          <yMax>2600</yMax>
+        </rect>
+        <nodeRect>
+          <x>140</x>
+          <y>2595</y>
+          <position>
+            <x>140</x>
+            <y>2595</y>
+          </position>
+          <center>
+            <x>240</x>
+            <y>2699</y>
+          </center>
+          <min>
+            <x>140</x>
+            <y>2595</y>
+          </min>
+          <max>
+            <x>340</x>
+            <y>2803</y>
+          </max>
+          <width>200</width>
+          <height>208</height>
+          <size>
+            <x>200</x>
+            <y>208</y>
+          </size>
+          <xMin>140</xMin>
+          <yMin>2595</yMin>
+          <xMax>340</xMax>
+          <yMax>2803</yMax>
+        </nodeRect>
+      </inPoint>
+      <outPoint type="Out">
+        <id>88</id>
+        <readyToInit>true</readyToInit>
+        <rect>
+          <x>235</x>
+          <y>2527</y>
+          <position>
+            <x>235</x>
+            <y>2527</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2532</y>
+          </center>
+          <min>
+            <x>235</x>
+            <y>2527</y>
+          </min>
+          <max>
+            <x>255</x>
+            <y>2537</y>
+          </max>
+          <width>20</width>
+          <height>10</height>
+          <size>
+            <x>20</x>
+            <y>10</y>
+          </size>
+          <xMin>235</xMin>
+          <yMin>2527</yMin>
+          <xMax>255</xMax>
+          <yMax>2537</yMax>
+        </rect>
+        <nodeRect>
+          <x>145</x>
+          <y>2339</y>
+          <position>
+            <x>145</x>
+            <y>2339</y>
+          </position>
+          <center>
+            <x>245</x>
+            <y>2436.5</y>
+          </center>
+          <min>
+            <x>145</x>
+            <y>2339</y>
+          </min>
+          <max>
+            <x>345</x>
+            <y>2534</y>
+          </max>
+          <width>200</width>
+          <height>195</height>
+          <size>
+            <x>200</x>
+            <y>195</y>
+          </size>
+          <xMin>145</xMin>
+          <yMin>2339</yMin>
+          <xMax>345</xMax>
+          <yMax>2534</yMax>
         </nodeRect>
       </outPoint>
     </Connection>
