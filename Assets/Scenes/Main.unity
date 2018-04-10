@@ -2519,32 +2519,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
+    - target: {fileID: 114798245095130512, guid: f359532086cef47988faeaa2b0edfe2b,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114246583980348230, guid: f359532086cef47988faeaa2b0edfe2b,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114246583980348230, guid: f359532086cef47988faeaa2b0edfe2b,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114753883203461780, guid: f359532086cef47988faeaa2b0edfe2b,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114753883203461780, guid: f359532086cef47988faeaa2b0edfe2b,
+    - target: {fileID: 114798245095130512, guid: f359532086cef47988faeaa2b0edfe2b,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -2559,12 +2539,32 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114798245095130512, guid: f359532086cef47988faeaa2b0edfe2b,
+    - target: {fileID: 114753883203461780, guid: f359532086cef47988faeaa2b0edfe2b,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114798245095130512, guid: f359532086cef47988faeaa2b0edfe2b,
+    - target: {fileID: 114753883203461780, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246583980348230, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246583980348230, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114985176715704694, guid: f359532086cef47988faeaa2b0edfe2b,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -2577,10 +2577,6 @@ Prefab:
     - target: {fileID: 114436070029483306, guid: f359532086cef47988faeaa2b0edfe2b,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195883701407922, guid: f359532086cef47988faeaa2b0edfe2b, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7173,6 +7169,10 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
+    conversationsAvailable: 0
+  - arrive: 540
+    leave: 1020
+    location: {x: 0, y: 7.8, z: 0}
     conversationsAvailable: 1
   - arrive: 540
     leave: 1020
@@ -7182,10 +7182,6 @@ MonoBehaviour:
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
     conversationsAvailable: 3
-  - arrive: 540
-    leave: 1020
-    location: {x: 0, y: 7.8, z: 0}
-    conversationsAvailable: 4
 --- !u!65 &869282106
 BoxCollider:
   m_ObjectHideFlags: 0
