@@ -128,4 +128,13 @@ public class Stats
 			((currentTime % 60) == 0 ? "00" : (currentTime % 60).ToString()) +
 			(currentTime < 12 * 60 ? " AM" : " PM");
 	}
+
+	public static string ReplacePlayerName(string message)
+	{
+		message = message.Replace("Player", Stats.PlayerName);
+		message = message.Replace("player", Stats.PlayerName);
+		message = message.Replace("Alex", Stats.PlayerName);
+		message = message.Replace("alex", Stats.PlayerName);
+		return message;
+	}
 }
