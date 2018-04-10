@@ -14677,7 +14677,7 @@ MonoBehaviour:
     conversationsAvailable: 2
   - arrive: 540
     leave: 1020
-    location: {x: -3, y: -15.5, z: 0}
+    location: {x: 5, y: 2.5, z: 0}
     conversationsAvailable: 3
   - arrive: 540
     leave: 1020
@@ -17020,11 +17020,11 @@ MonoBehaviour:
     conversationsAvailable: 2
   - arrive: 540
     leave: 1020
-    location: {x: 5, y: -7.5, z: 0}
+    location: {x: -3, y: -15.5, z: 0}
     conversationsAvailable: 3
   - arrive: 540
     leave: 1020
-    location: {x: -5, y: -9.5, z: 0}
+    location: {x: 5, y: -7.5, z: 0}
     conversationsAvailable: 4
 --- !u!114 &1835376828
 MonoBehaviour:
