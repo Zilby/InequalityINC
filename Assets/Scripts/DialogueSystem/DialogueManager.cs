@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	public static Action PauseEvent;
 
-	public delegate void textEvent(int i, int c, bool b, DialogueManager.Character ch, bool trust = true);
+	public delegate void textEvent(int i, bool b, DialogueManager.Character ch, bool trust = true);
 	/// <summary>
 	/// Starts a given dialogue event (eg: scene 0). 
 	/// </summary>
@@ -163,7 +163,7 @@ public class DialogueManager : MonoBehaviour
 	/// <param name="i">The scene index for dialogue.</param>
 	/// <param name="c">The number of conversations left for this character.</param>
 	/// <param name="b">Whether or not there is available dialogue.</param>
-	private void BeginText(int i, int c, bool b, Character ch, bool trust = true)
+	private void BeginText(int i, bool b, Character ch, bool trust = true)
 	{
 		trustUIActive = trust;
 		GameManager.PauseEvent();
@@ -172,7 +172,7 @@ public class DialogueManager : MonoBehaviour
 		ClearPortraits();
 		ClearTrustUI();
 		textOverlay.SelfFadeIn();
-		StartCoroutine(RunDialogue(i, c > 0 && !b, ch));
+		StartCoroutine(RunDialogue(i, !b, ch));
 	}
 
 

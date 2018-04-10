@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
 	void Awake()
 	{
-		defaultPos = transform.position;
+		defaultPos = new Vector3(0, -0.5f, 0);
 		ResetEvent = Reset;
 		GetPosition = CurrentPosition;
 		destination = transform.position;
@@ -272,9 +272,8 @@ public class PlayerController : MonoBehaviour
 				SoundManager.ClickEvent();
 				characterFacing.Face(direction);
 				yield return new WaitForSeconds(0.3f);
-				int convos = characterFacing.CurrentHours.conversationsRemaining;
 				bool noDialogue = characterFacing.NoAvailableDialogue;
-				DialogueManager.StartText(characterFacing.DialogueScene, convos, noDialogue, characterFacing.character);
+				DialogueManager.StartText(characterFacing.DialogueScene, noDialogue, characterFacing.character);
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
 			}
@@ -327,11 +326,19 @@ public class PlayerController : MonoBehaviour
 
 	private void Reset()
 	{
-		transform.position = defaultPos;
+		if (Stats.Day == 0)
+		{
+			direction = Direction.up;
+			transform.localPosition = new Vector3(0, 6.5f, 0);
+		}
+		else
+		{
+			direction = Direction.down;
+			transform.localPosition = defaultPos;
+		}
 		destination = transform.position;
 		lastPos = destination;
 		moving = false;
-		direction = Direction.down;
 		ani.SetInteger("Direction", (int)direction);
 	}
 }

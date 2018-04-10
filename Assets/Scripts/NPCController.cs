@@ -58,7 +58,7 @@ public class NPCController : MonoBehaviour
 
 		public Vector3 location;
 
-		public int conversationsRemaining = 1;
+		public int conversationsAvailable = 0;
 	}
 
 	public bool PresentInOffice
@@ -76,7 +76,7 @@ public class NPCController : MonoBehaviour
 		get
 		{
 			int index = Stats.dialogueIndex[character];
-			return positiveDialogues.Count <= index && negativeDialogues.Count <= index;
+			return positiveDialogues.Count <= index || negativeDialogues.Count <= index || index > CurrentHours.conversationsAvailable;
 		}
 	}
 
@@ -144,15 +144,14 @@ public class NPCController : MonoBehaviour
 		{
 			int index = Stats.dialogueIndex[character];
 			bool goodTerms = Stats.relationshipPoints[character] >= 0;
-			if (CurrentHours.conversationsRemaining > 0 && !NoAvailableDialogue)
+			if (CurrentHours.conversationsAvailable >= index && !NoAvailableDialogue)
 			{
-				CurrentHours.conversationsRemaining--;
 				Stats.dialogueIndex[character]++;
 				return goodTerms ? positiveDialogues[index] : negativeDialogues[index];
 			}
 			else
 			{
-				return goodTerms ? positiveSnippets[index - 1] : negativeSnippets[index - 1];
+				return goodTerms ? positiveSnippets[index] : negativeSnippets[index];
 			}
 		}
 	}

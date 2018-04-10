@@ -904,7 +904,12 @@ MonoBehaviour:
   - {fileID: 1573069444}
   - {fileID: 1748731282}
   - {fileID: 869282105}
-  dialogueOnEnters: []
+  - {fileID: 1835376827}
+  - {fileID: 302774133}
+  dialogueOnEnters:
+  - day: 1
+    scene: 3
+    character: 1
 --- !u!1 &89639901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,6 +3462,160 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 11
+--- !u!1 &302774132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 302774138}
+  - component: {fileID: 302774137}
+  - component: {fileID: 302774136}
+  - component: {fileID: 302774133}
+  - component: {fileID: 302774135}
+  - component: {fileID: 302774134}
+  m_Layer: 0
+  m_Name: Stan
+  m_TagString: Character
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &302774133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: 3
+  sprites:
+  - {fileID: 21300032, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300036, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300038, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300034, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  positiveDialogues: 0000000001000000020000000300000004000000
+  negativeDialogues: 0000000001000000020000000300000004000000
+  positiveSnippets: 0000000001000000020000000300000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000
+  days:
+  - arrive: 540
+    leave: 1020
+    location: {x: -5, y: -9.5, z: 0}
+    conversationsAvailable: 0
+  - arrive: 540
+    leave: 1020
+    location: {x: 6, y: -2.5, z: 0}
+    conversationsAvailable: 1
+  - arrive: 540
+    leave: 1020
+    location: {x: 4, y: -2.5, z: 0}
+    conversationsAvailable: 2
+  - arrive: 540
+    leave: 1020
+    location: {x: 6, y: -2.5, z: 0}
+    conversationsAvailable: 3
+  - arrive: 540
+    leave: 1020
+    location: {x: 0, y: -13.5, z: 0}
+    conversationsAvailable: 4
+--- !u!114 &302774134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2325f168842024e36afc58b91bcc9080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &302774135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca57759f96d0c4311913d4da80567d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 5
+--- !u!65 &302774136
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: -0.7, z: 0}
+--- !u!212 &302774137
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300032, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &302774138
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302774132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7, y: -14.5, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1358096565}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322671678
 GameObject:
   m_ObjectHideFlags: 0
@@ -7002,31 +7161,31 @@ MonoBehaviour:
   - {fileID: 21300044, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300046, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300042, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 00000000
-  negativeDialogues: 00000000
-  positiveSnippets: 00000000
-  negativeSnippets: 00000000
+  positiveDialogues: 01000000020000000300000004000000
+  negativeDialogues: 01000000020000000300000004000000
+  positiveSnippets: 0000000001000000020000000300000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000
   days:
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: -1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: 1
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: 4
 --- !u!65 &869282106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9694,7 +9853,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132473482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 10}
   m_Children: []
   m_Father: {fileID: 1358096565}
@@ -9786,7 +9945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterHolder: {fileID: 1358096564}
-  timeIncrementDelay: 30
+  timeIncrementDelay: 7
 --- !u!4 &1134758940
 Transform:
   m_ObjectHideFlags: 0
@@ -12094,6 +12253,8 @@ Transform:
   - {fileID: 1573069446}
   - {fileID: 1748731284}
   - {fileID: 869282102}
+  - {fileID: 1835376832}
+  - {fileID: 302774138}
   m_Father: {fileID: 1012358281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12523,13 +12684,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionTexts:
   - list:
-    - This printer never works
-    - '"I''m out of ink" my ass'
-    - I JUST saw you get a new cartridge you piece of garbage
-  - list:
-    - Even when everything seems like it's going to work with this printer...
-    - BAM!
-    - 'Another paper jam... '
+    - I heard this printer never works
+    - Just like my one back home
+    - You think you're safe because you just got a new cartridge
+    - And then BAM!
+    - Paperjam.
   characterAffected: 0
   infoGathered: -1
 --- !u!65 &1376439051
@@ -14500,31 +14659,31 @@ MonoBehaviour:
   - {fileID: 21300052, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300054, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300050, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 00000000
-  negativeDialogues: 00000000
-  positiveSnippets: 00000000
-  negativeSnippets: 00000000
+  positiveDialogues: 0500000001000000060000000000000000000000
+  negativeDialogues: 0500000001000000060000000000000000000000
+  positiveSnippets: 0000000001000000020000000300000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000
   days:
   - arrive: 540
     leave: 1020
-    location: {x: 3, y: 2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -2, y: -2.5, z: 0}
+    conversationsAvailable: 0
+  - arrive: 540
+    leave: 1020
+    location: {x: 3, y: -10.5, z: 0}
+    conversationsAvailable: 1
   - arrive: 540
     leave: 1020
     location: {x: 3, y: 2.5, z: 0}
-    conversationsRemaining: 1
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
-    location: {x: 3, y: 2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -3, y: -15.5, z: 0}
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
-    location: {x: 3, y: 2.5, z: 0}
-    conversationsRemaining: 1
-  - arrive: 540
-    leave: 1020
-    location: {x: 3, y: 2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -2, y: -2.5, z: 0}
+    conversationsAvailable: 4
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14576,7 +14735,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1573069442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 2.5, z: 0}
+  m_LocalPosition: {x: -3, y: -15.5, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1358096565}
@@ -15436,6 +15595,8 @@ MonoBehaviour:
   - {fileID: 1573069444}
   - {fileID: 1748731282}
   - {fileID: 869282105}
+  - {fileID: 1835376827}
+  - {fileID: 302774133}
   dialogueOnEnters: []
 --- !u!1 &1676856260
 GameObject:
@@ -15916,31 +16077,31 @@ MonoBehaviour:
   - {fileID: 21300028, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300030, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300026, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 00000000
-  negativeDialogues: 00000000
-  positiveSnippets: 00000000
-  negativeSnippets: 00000000
+  positiveDialogues: 0000000001000000020000000300000004000000
+  negativeDialogues: 0000000001000000020000000300000004000000
+  positiveSnippets: 0000000001000000020000000300000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000
   days:
   - arrive: 540
     leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: 3, y: 2.5, z: 0}
+    conversationsAvailable: 0
   - arrive: 540
     leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -6, y: -7.5, z: 0}
+    conversationsAvailable: 1
   - arrive: 540
     leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: 6, y: -14.5, z: 0}
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -3, y: 2.5, z: 0}
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
-    location: {x: -2, y: -2.5, z: 0}
-    conversationsRemaining: 1
+    location: {x: -5, y: -15.5, z: 0}
+    conversationsAvailable: 4
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15992,7 +16153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748731280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -2.5, z: 0}
+  m_LocalPosition: {x: -3, y: 2.5, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1358096565}
@@ -16804,6 +16965,160 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1835376826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1835376832}
+  - component: {fileID: 1835376831}
+  - component: {fileID: 1835376830}
+  - component: {fileID: 1835376827}
+  - component: {fileID: 1835376829}
+  - component: {fileID: 1835376828}
+  m_Layer: 0
+  m_Name: Janet
+  m_TagString: Character
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1835376827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f2cdb036df645eda8c34654d253736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: 4
+  sprites:
+  - {fileID: 21300056, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300060, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300062, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  - {fileID: 21300058, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  positiveDialogues: 0000000001000000020000000300000004000000
+  negativeDialogues: 0000000001000000020000000300000004000000
+  positiveSnippets: 0000000001000000020000000300000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000
+  days:
+  - arrive: 540
+    leave: 1020
+    location: {x: 5, y: -14.5, z: 0}
+    conversationsAvailable: 0
+  - arrive: 540
+    leave: 1020
+    location: {x: 5, y: -7.5, z: 0}
+    conversationsAvailable: 1
+  - arrive: 540
+    leave: 1020
+    location: {x: -5, y: 2.5, z: 0}
+    conversationsAvailable: 2
+  - arrive: 540
+    leave: 1020
+    location: {x: 5, y: -7.5, z: 0}
+    conversationsAvailable: 3
+  - arrive: 540
+    leave: 1020
+    location: {x: -5, y: -9.5, z: 0}
+    conversationsAvailable: 4
+--- !u!114 &1835376828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2325f168842024e36afc58b91bcc9080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1835376829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca57759f96d0c4311913d4da80567d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 5
+--- !u!65 &1835376830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: -0.7, z: 0}
+--- !u!212 &1835376831
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300056, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1835376832
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835376826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: -9.5, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1358096565}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866397782
 GameObject:
   m_ObjectHideFlags: 0
@@ -18362,7 +18677,12 @@ MonoBehaviour:
   - {fileID: 1573069444}
   - {fileID: 1748731282}
   - {fileID: 869282105}
-  dialogueOnEnters: []
+  - {fileID: 1835376827}
+  - {fileID: 302774133}
+  dialogueOnEnters:
+  - day: 0
+    scene: 0
+    character: 5
 --- !u!1 &2082628327
 GameObject:
   m_ObjectHideFlags: 0

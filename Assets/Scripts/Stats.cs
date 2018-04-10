@@ -10,7 +10,7 @@ public class Stats
 	/// <summary>
 	/// Used for incrementing the time when dialogue starts. 
 	/// </summary>
-	public const int DIALOGUE_START_TIME_INCREMENT = 30;
+	public const int DIALOGUE_START_TIME_INCREMENT = 60;
 
 	/// <summary>
 	/// Used for incrementing the time with longer dialogue. 

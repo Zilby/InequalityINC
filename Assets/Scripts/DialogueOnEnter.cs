@@ -19,7 +19,7 @@ public class DialogueOnEnter
 
 	public void StartDialogue()
 	{
-		DialogueManager.StartText(scene, 9, false, character, false);
+		DialogueManager.StartText(scene, false, character, false);
 		activated = true;
 	}
 }

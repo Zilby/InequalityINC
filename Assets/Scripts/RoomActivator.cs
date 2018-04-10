@@ -52,9 +52,14 @@ public class RoomActivator : MonoBehaviour
 	/// </summary>
 	private void StartDialogue()
 	{
-		foreach(DialogueOnEnter d in dialogueOnEnters) {
-			if(!d.Activated && Stats.Day == d.day) {
-				d.StartDialogue();
+		if (Time.timeScale != 0)
+		{
+			foreach (DialogueOnEnter d in dialogueOnEnters)
+			{
+				if (!d.Activated && Stats.Day == d.day)
+				{
+					d.StartDialogue();
+				}
 			}
 		}
 	}
@@ -73,8 +78,8 @@ public class RoomActivator : MonoBehaviour
 		r.gameObject.SetActive(active);
 		foreach (NPCController n in r.characters)
 		{
-			bool nRoom = n.CurrentHours.location.y <= r.top && 
-			                n.CurrentHours.location.y > r.bottom;
+			bool nRoom = n.CurrentHours.location.y < r.top && 
+			                n.CurrentHours.location.y >= r.bottom;
 			if (nRoom)
 			{
 				if (n.PresentInOffice && active)
