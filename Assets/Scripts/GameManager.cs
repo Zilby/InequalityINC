@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
+		if(Input.GetKey(KeyCode.L)) 
+		{
+			Stats.CurrentTime = 17 * 60;
+		}
 		NPCController.ArriveLeave();
 	}
 
