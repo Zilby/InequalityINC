@@ -54,6 +54,16 @@ public class RoomActivator : MonoBehaviour
 	{
 		if (Time.timeScale != 0)
 		{
+			for (int i = 0; i < dialogueOnEnters.Count; ++i)
+			{
+				DialogueOnEnter d = dialogueOnEnters[i];
+				if (!d.Activated && Stats.Day >= d.day)
+				{
+					d.StartDialogue();
+					dialogueOnEnters.Remove(d);
+					break;
+				}
+			}
 			foreach (DialogueOnEnter d in dialogueOnEnters)
 			{
 				if (!d.Activated && Stats.Day == d.day)
