@@ -461,6 +461,7 @@ public class DialogueManager : MonoBehaviour
 	private void GotInfoOnCharacter(Character c, int info)
 	{
 		Stats.hasInfoOn[c][info] = true;
+		Debug.LogFormat(c.ToString() + " info #" + info.ToString() + "obtained.");
 		Logger.Log(c.ToString() + " info #" + info.ToString() + "obtained.");
 	}
 

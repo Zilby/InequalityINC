@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
 				SoundManager.ClickEvent();
 				characterFacing.Face(direction);
 				yield return new WaitForSeconds(0.3f);
-				bool noDialogue = characterFacing.NoAvailableDialogue;
+				bool noDialogue = characterFacing.NoAvailableDialogue && !characterFacing.LockedDialogueAvailable;
 				DialogueManager.StartText(characterFacing.DialogueScene, noDialogue, characterFacing.character);
 				// Delay after talking to avoid accidental second talk. 
 				yield return new WaitForSeconds(0.5f);
