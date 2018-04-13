@@ -27,6 +27,8 @@ public class RoomActivator : MonoBehaviour
 	[SerializeField]
 	public List<DialogueOnEnter> dialogueOnEnters;
 
+	public DialogueOnEnter finalBossDialogue = null;
+
 	/// <summary>
 	/// The list of all rooms. 
 	/// </summary>
@@ -54,6 +56,20 @@ public class RoomActivator : MonoBehaviour
 	{
 		if (Time.timeScale != 0)
 		{
+			if (Stats.hasInfoOn[DialogueManager.Character.stan][3] && finalBossDialogue.character != DialogueManager.Character.player 
+				&& !finalBossDialogue.Activated)
+			{
+				if (finalBossDialogue.scene == 11 && Stats.fired[DialogueManager.Character.stan])
+				{
+					finalBossDialogue.scene++;
+				}
+				finalBossDialogue.StartDialogue();
+				if (finalBossDialogue.scene > 10)
+				{
+					Stats.CurrentTime = 60 * 17;
+				}
+			}
+			
 			for (int i = 0; i < dialogueOnEnters.Count; ++i)
 			{
 				DialogueOnEnter d = dialogueOnEnters[i];

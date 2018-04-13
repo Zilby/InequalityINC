@@ -61,7 +61,12 @@ public class GameManager : MonoBehaviour
 	{
 		while (Stats.CurrentTime < 17 * 60)
 		{
-			yield return new WaitForSeconds(timeIncrementDelay);
+			float delay = 0.0f;
+			while (delay < timeIncrementDelay)
+			{
+				yield return new WaitForSeconds (0.1f);
+				delay += 0.1f;
+			}
 			if (Stats.CurrentTime < 17 * 60)
 			{
 				Stats.CurrentTime += 10;
