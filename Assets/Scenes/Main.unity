@@ -12161,6 +12161,7 @@ GameObject:
   - component: {fileID: 1290675394}
   - component: {fileID: 1290675396}
   - component: {fileID: 1290675395}
+  - component: {fileID: 1290675397}
   m_Layer: 0
   m_Name: fridge
   m_TagString: NoCollide
@@ -12175,7 +12176,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290675393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 3.0000002, z: 0}
+  m_LocalPosition: {x: -4, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 251419279}
@@ -12196,7 +12197,7 @@ MonoBehaviour:
   - list:
     - 'There''s a variety of food items here. '
     - 'There''s a bag labeled "Property of Stan" '
-    - We get it Stan, it's your day old tuna sandwich.
+    - We get it Stan, the day old tuna sandwich is yours.
   characterAffected: 0
   infoGathered: -1
 --- !u!65 &1290675396
@@ -12211,6 +12212,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1290675397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1290675393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &1305104278
 GameObject:
   m_ObjectHideFlags: 0
@@ -15877,6 +15890,7 @@ GameObject:
   - component: {fileID: 1621555801}
   - component: {fileID: 1621555803}
   - component: {fileID: 1621555802}
+  - component: {fileID: 1621555804}
   m_Layer: 0
   m_Name: Trash
   m_TagString: NoCollide
@@ -15891,7 +15905,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1621555800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 3.0000002, z: 0}
+  m_LocalPosition: {x: -2, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 251419279}
@@ -15926,6 +15940,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1621555804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621555800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &1621947983
 GameObject:
   m_ObjectHideFlags: 0
@@ -20115,6 +20141,7 @@ GameObject:
   - component: {fileID: 2123164252}
   - component: {fileID: 2123164254}
   - component: {fileID: 2123164253}
+  - component: {fileID: 2123164255}
   m_Layer: 0
   m_Name: Sink
   m_TagString: NoCollide
@@ -20129,7 +20156,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123164251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 3.0000002, z: 0}
+  m_LocalPosition: {x: -3, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 251419279}
@@ -20165,3 +20192,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2123164255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2123164251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.9, z: 0}
