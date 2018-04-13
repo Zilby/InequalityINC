@@ -64,10 +64,6 @@ public class RoomActivator : MonoBehaviour
 					finalBossDialogue.scene++;
 				}
 				finalBossDialogue.StartDialogue();
-				if (finalBossDialogue.scene > 10)
-				{
-					Stats.CurrentTime = 60 * 17;
-				}
 			}
 			
 			for (int i = 0; i < dialogueOnEnters.Count; ++i)

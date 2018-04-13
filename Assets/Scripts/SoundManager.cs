@@ -6,7 +6,8 @@ using UnityEngine;
 /// <summary>
 /// Manages all in-game sounds.
 /// </summary>
-public class SoundManager : MonoBehaviour {
+public class SoundManager : MonoBehaviour
+{
 
 	/// <summary>
 	/// Event called when the player bumps into something. 
@@ -19,7 +20,8 @@ public class SoundManager : MonoBehaviour {
 
 	public static Action ClickEvent;
 
-	public delegate void SongPlay(int i);
+	public delegate void SongPlay (int i);
+
 	public static SongPlay SongEvent;
 
 	/// <summary>
@@ -40,31 +42,41 @@ public class SoundManager : MonoBehaviour {
 	private AudioSource[] aS;
 
 
-	private void Awake() {
-		aS = GetComponents<AudioSource>();
-		BumpEvent = Bump;
-		TextEvent = Text;
-		StopTextEvent = StopText;
-		ClickEvent = Click;
-		SongEvent = PlaySong;
+	private void Awake ()
+	{
+		if (BumpEvent == null)
+		{
+			DontDestroyOnLoad(gameObject);
+			aS = GetComponents<AudioSource>();
+			BumpEvent = Bump;
+			TextEvent = Text;
+			StopTextEvent = StopText;
+			ClickEvent = Click;
+			SongEvent = PlaySong;
+			SongEvent(5);
+		} else
+		{
+			Destroy(gameObject);
+		}
 	}
 
 
 	/// <summary>
 	/// Creates a bump sound effect. 
 	/// </summary>
-	private void Bump() {
+	private void Bump ()
+	{
 		aS[0].PlayOneShot(sounds[0]);
 	}
 
 
-	private void Text() 
+	private void Text ()
 	{
 		aS[2].clip = sounds[1];
 		aS[2].Play();
 	}
 
-	private void StopText()
+	private void StopText ()
 	{
 		aS[2].Stop();
 	}
@@ -73,12 +85,15 @@ public class SoundManager : MonoBehaviour {
 	/// <summary>
 	/// Plays a given song of index i in music.
 	/// </summary>
-	private void PlaySong(int i) {
+	private void PlaySong (int i)
+	{
 		aS[1].clip = music[i];
 		aS[1].Play();
 	}
 
-	private void Click() {
+	private void Click ()
+	{
 		aS[0].PlayOneShot(sounds[2]);
 	}
+		
 }

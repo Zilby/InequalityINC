@@ -64,13 +64,14 @@ public class GameManager : MonoBehaviour
 			float delay = 0.0f;
 			while (delay < timeIncrementDelay)
 			{
+				if (Stats.CurrentTime >= 17 * 60)
+				{
+					break;
+				}
 				yield return new WaitForSeconds (0.1f);
 				delay += 0.1f;
 			}
-			if (Stats.CurrentTime < 17 * 60)
-			{
-				Stats.CurrentTime += 10;
-			}
+			Stats.CurrentTime += 10;
 		}
 		yield return null;
 		Stats.Day++;

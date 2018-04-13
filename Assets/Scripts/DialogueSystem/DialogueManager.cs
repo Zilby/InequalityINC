@@ -329,6 +329,10 @@ public class DialogueManager : MonoBehaviour
 	/// </summary>
 	private IEnumerator RunDialogue(int scene, bool dialogue, Character c)
 	{
+		if (c == Character.stan && scene == 4)
+		{
+			SoundManager.SongEvent(1);
+		}
 		Dictionary<Character, Expression> lastExpression = new Dictionary<Character, Expression>();
 		if (dialogue)
 		{
@@ -413,6 +417,21 @@ public class DialogueManager : MonoBehaviour
 
 				question.SelfFadeOut();
 			}
+		}
+		if (c == Character.stan && scene == 4)
+		{
+			if (Stats.fired[Character.stan])
+			{
+				SoundManager.SongEvent(5);
+			}
+			else
+			{
+				SoundManager.SongEvent(4);
+			}
+		}
+		if (scene > 10)
+		{
+			Stats.CurrentTime = 60 * 17;
 		}
 		FinishText();
 	}
