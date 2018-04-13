@@ -54,8 +54,8 @@ public class NPCController : MonoBehaviour
 	[Serializable]
 	public class LockedDialogue
 	{
-		public DialogueManager.Character character;
-		public int info;
+		public List<DialogueManager.Character> characters;
+		public List<int> info;
 		public int dialogue;
 	}
 
@@ -96,10 +96,19 @@ public class NPCController : MonoBehaviour
 		{
 			foreach (LockedDialogue d in lockedDialogues)
 			{
-				if (Stats.hasInfoOn[d.character][d.info])
+				bool viable = true;
+				for (int j = 0; j < d.characters.Count; ++j)
+				{
+					if (!Stats.hasInfoOn[d.characters[j]][d.info[j]])
+					{
+						viable = false;
+					}
+				}
+				if (viable)
 				{
 					return true;
 				}
+
 			}
 			return false;
 		}
@@ -112,7 +121,15 @@ public class NPCController : MonoBehaviour
 			for(int i = 0; i < lockedDialogues.Count; ++i)
 			{
 				LockedDialogue d = lockedDialogues[i];
-				if (Stats.hasInfoOn[d.character][d.info])
+				bool viable = true;
+				for (int j = 0; j < d.characters.Count; ++j)
+				{
+					if (!Stats.hasInfoOn[d.characters[j]][d.info[j]])
+					{
+						viable = false;
+					}
+				}
+				if (viable)
 				{
 					int dialogue = d.dialogue;
 					lockedDialogues.Remove(d);
