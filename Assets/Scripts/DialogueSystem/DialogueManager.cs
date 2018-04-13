@@ -394,7 +394,7 @@ public class DialogueManager : MonoBehaviour
 				for (int j = 0; j < l.connections.Count; ++j)
 				{
 					dialogueButtons[j].gameObject.SetActive(true);
-					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = l.connections[j].node.dialogue;
+					dialogueButtons[j].GetComponent<TextMeshProUGUI>().text = Stats.ReplacePlayerName(l.connections[j].node.dialogue);
 					// On click gets called after j is incremented, so we have to save it as a temp value. 
 					int temp = j;
 					dialogueButtons[j].onClick.AddListener(() => UpdateLine(ref l, l.connections[temp]));
