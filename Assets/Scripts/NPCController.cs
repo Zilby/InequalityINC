@@ -47,7 +47,17 @@ public class NPCController : MonoBehaviour
 	/// </summary>
 	public List<int> negativeSnippets;
 
+	public List<LockedDialogue> lockedDialogues = new List<LockedDialogue> ();
+
 	public List<Hours> days = new List<Hours>(5);
+
+	[Serializable]
+	public class LockedDialogue
+	{
+		public DialogueManager.Character character;
+		public int info;
+		public int dialogue;
+	}
 
 	[Serializable]
 	public class Hours
@@ -77,6 +87,39 @@ public class NPCController : MonoBehaviour
 		{
 			int index = Stats.dialogueIndex[character];
 			return positiveDialogues.Count <= index || negativeDialogues.Count <= index || index > CurrentHours.conversationsAvailable;
+		}
+	}
+
+	public bool LockedDialogueAvailable 
+	{
+		get 
+		{
+			foreach (LockedDialogue d in lockedDialogues)
+			{
+				if (Stats.hasInfoOn[d.character][d.info])
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+
+	public int GetLockedDialogue 
+	{
+		get 
+		{
+			for(int i = 0; i < lockedDialogues.Count; ++i)
+			{
+				LockedDialogue d = lockedDialogues[i];
+				if (Stats.hasInfoOn[d.character][d.info])
+				{
+					int dialogue = d.dialogue;
+					lockedDialogues.Remove(d);
+					return dialogue;
+				}
+			}
+			return -1;
 		}
 	}
 
@@ -144,6 +187,10 @@ public class NPCController : MonoBehaviour
 		{
 			int index = Stats.dialogueIndex[character];
 			bool goodTerms = Stats.relationshipPoints[character] >= 0;
+			if (LockedDialogueAvailable)
+			{
+				return GetLockedDialogue;
+			}
 			if (CurrentHours.conversationsAvailable >= index && !NoAvailableDialogue)
 			{
 				Stats.dialogueIndex[character]++;
