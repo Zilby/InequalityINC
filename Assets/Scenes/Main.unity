@@ -3495,11 +3495,14 @@ MonoBehaviour:
   - {fileID: 21300036, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300038, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300034, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 000000000100000005000000020000000300000004000000
-  negativeDialogues: 000000000100000005000000020000000300000004000000
-  positiveSnippets: 000000000100000002000000030000000400000004000000
-  negativeSnippets: 000000000500000006000000070000000800000008000000
-  lockedDialogues: []
+  positiveDialogues: 0000000001000000050000000300000004000000
+  negativeDialogues: 0000000001000000050000000300000004000000
+  positiveSnippets: 00000000010000000200000003000000040000000400000004000000
+  negativeSnippets: 00000000050000000600000007000000080000000800000008000000
+  lockedDialogues:
+  - characters: 00000000
+    info: 02000000
+    dialogue: 2
   days:
   - arrive: 540
     leave: 1020
@@ -3516,7 +3519,7 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: 6, y: -2.5, z: 0}
-    conversationsAvailable: 4
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
     location: {x: 0, y: -13.5, z: 0}
@@ -7158,11 +7161,14 @@ MonoBehaviour:
   - {fileID: 21300044, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300046, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300042, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 01000000020000000300000004000000
-  negativeDialogues: 01000000020000000300000004000000
+  positiveDialogues: 01000000040000000500000002000000
+  negativeDialogues: 01000000040000000500000002000000
   positiveSnippets: 0000000001000000020000000300000004000000
   negativeSnippets: 0000000005000000060000000700000008000000
-  lockedDialogues: []
+  lockedDialogues:
+  - characters: 03000000
+    info: 01000000
+    dialogue: 3
   days:
   - arrive: 540
     leave: 1020
@@ -7171,15 +7177,15 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
-    conversationsAvailable: 0
-  - arrive: 540
-    leave: 1020
-    location: {x: 0, y: 7.8, z: 0}
-    conversationsAvailable: 1
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
     conversationsAvailable: 2
+  - arrive: 540
+    leave: 1020
+    location: {x: 0, y: 7.8, z: 0}
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
     location: {x: 0, y: 7.8, z: 0}
@@ -14660,11 +14666,17 @@ MonoBehaviour:
   - {fileID: 21300052, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300054, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300050, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 05000000020000000100000007000000040000000600000008000000
-  negativeDialogues: 05000000020000000100000007000000040000000600000008000000
+  positiveDialogues: 050000000200000001000000070000000600000008000000
+  negativeDialogues: 050000000200000001000000070000000600000008000000
   positiveSnippets: 00000000010000000200000003000000040000000400000004000000
   negativeSnippets: 00000000050000000600000007000000080000000800000008000000
-  lockedDialogues: []
+  lockedDialogues:
+  - characters: 00000000
+    info: 02000000
+    dialogue: 4
+  - characters: 04000000
+    info: 01000000
+    dialogue: 9
   days:
   - arrive: 540
     leave: 1020
@@ -14677,15 +14689,15 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: 3, y: 2.5, z: 0}
-    conversationsAvailable: 4
+    conversationsAvailable: 3
   - arrive: 540
     leave: 1020
     location: {x: -5, y: -2.5, z: 0}
-    conversationsAvailable: 5
+    conversationsAvailable: 4
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
-    conversationsAvailable: 6
+    conversationsAvailable: 5
 --- !u!212 &1573069445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15599,7 +15611,10 @@ MonoBehaviour:
   - {fileID: 869282105}
   - {fileID: 1835376827}
   - {fileID: 302774133}
-  dialogueOnEnters: []
+  dialogueOnEnters:
+  - day: 2
+    scene: 6
+    character: 5
 --- !u!1 &1676856260
 GameObject:
   m_ObjectHideFlags: 0
@@ -16079,14 +16094,17 @@ MonoBehaviour:
   - {fileID: 21300028, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300030, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   - {fileID: 21300026, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
-  positiveDialogues: 0000000001000000020000000500000004000000
-  negativeDialogues: 0000000001000000020000000500000004000000
-  positiveSnippets: 0000000001000000020000000300000004000000
-  negativeSnippets: 0000000005000000060000000700000008000000
+  positiveDialogues: 00000000010000000500000004000000
+  negativeDialogues: 00000000010000000500000004000000
+  positiveSnippets: 0000000001000000020000000300000003000000
+  negativeSnippets: 0000000005000000060000000700000007000000
   lockedDialogues:
   - characters: 03000000
     info: 01000000
     dialogue: 3
+  - characters: 00000000
+    info: 02000000
+    dialogue: 2
   days:
   - arrive: 540
     leave: 1020
@@ -16095,7 +16113,7 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: -6, y: -7.5, z: 0}
-    conversationsAvailable: 1
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
     location: {x: 6, y: -14.5, z: 0}
@@ -16103,11 +16121,11 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: -3, y: 2.5, z: 0}
-    conversationsAvailable: 3
+    conversationsAvailable: 2
   - arrive: 540
     leave: 1020
     location: {x: -5, y: -15.5, z: 0}
-    conversationsAvailable: 4
+    conversationsAvailable: 3
 --- !u!212 &1748731283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17010,8 +17028,8 @@ MonoBehaviour:
   - {fileID: 21300058, guid: 44b070f6a27cc4b81934430f29f52f81, type: 3}
   positiveDialogues: 00000000010000000600000002000000050000000300000004000000
   negativeDialogues: 00000000010000000600000002000000050000000300000004000000
-  positiveSnippets: 00000000010000000200000003000000040000000400000004000000
-  negativeSnippets: 00000000050000000600000007000000080000000800000008000000
+  positiveSnippets: 0000000001000000020000000300000004000000040000000400000004000000
+  negativeSnippets: 0000000005000000060000000700000008000000080000000800000008000000
   lockedDialogues:
   - characters: 0400000003000000
     info: 0100000001000000
@@ -18692,6 +18710,9 @@ MonoBehaviour:
   dialogueOnEnters:
   - day: 0
     scene: 0
+    character: 5
+  - day: 2
+    scene: 7
     character: 5
 --- !u!1 &2082628327
 GameObject:
