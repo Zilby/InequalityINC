@@ -333,7 +333,10 @@ public class DialogueManager : MonoBehaviour
 		if (dialogue)
 		{
 			yield return dParser.LoadDialogue(Path.Combine(Path.Combine("Dialogue", c.ToString()), "Dialogue" + scene));
-			Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+			if (trustUIActive)
+			{
+				Stats.CurrentTime += Stats.DIALOGUE_START_TIME_INCREMENT;
+			}
 		}
 		else
 		{
