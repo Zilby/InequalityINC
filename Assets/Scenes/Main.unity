@@ -14693,7 +14693,7 @@ MonoBehaviour:
   - arrive: 540
     leave: 1020
     location: {x: -5, y: -2.5, z: 0}
-    conversationsAvailable: 4
+    conversationsAvailable: 5
   - arrive: 540
     leave: 1020
     location: {x: -2, y: -2.5, z: 0}
