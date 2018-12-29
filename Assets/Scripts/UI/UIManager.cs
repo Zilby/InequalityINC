@@ -56,6 +56,8 @@ public class UIManager : MonoBehaviour
 	/// The clock text.
 	/// </summary>
 	public TextMeshProUGUI clockText;
+	public Transform minutes;
+	public Transform hours;
 
 	public FadeableUI dayTransition;
 	public TextMeshProUGUI dayTransitionText;
@@ -103,6 +105,8 @@ public class UIManager : MonoBehaviour
 	private void UpdateClock()
 	{
 		clockText.text = Stats.GetTime();
+		minutes.localEulerAngles = new Vector3(0, 0, ((Stats.CurrentTime % 60) / 60f) * -360f);
+		hours.localEulerAngles = new Vector3(0, 0, (((Stats.CurrentTime / 60) % 12f) / 12f) * -360f);
 	}
 
 
